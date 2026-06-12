@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust Center — Veristasis Shield</title>
-    <meta name="description" content="Zero-Trust, Zero-Knowledge architecture built on FIPS 140-3 validated cryptography, AAL3 hardware identity, and continuous compliance monitoring.">
+    <title>Trust Center — VeriStasis</title>
+    <meta name="description" content="An empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced TOTP MFA, Wazuh SIEM monitoring, and strict tenant isolation.">
+    <!-- Social sharing (set og:url + absolute og:image once deployed) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VeriStasis">
+    <meta property="og:title" content="Trust Center — VeriStasis">
+    <meta property="og:description" content="An empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced TOTP MFA, Wazuh SIEM monitoring, and strict tenant isolation.">
+    <meta property="og:image" content="assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trust Center — VeriStasis">
+    <meta name="twitter:description" content="An empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced TOTP MFA, Wazuh SIEM monitoring, and strict tenant isolation.">
+    <meta name="twitter:image" content="assets/og.png">
     <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="ambient">
     <div class="glow-orb"></div>
@@ -22,8 +36,8 @@
 <header class="topbar" id="topbar">
     <div class="topbar-inner">
         <a href="index.html" class="logo-mark">
-            <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
-            <span class="logo-wordmark">Veristasis</span>
+            <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+            <span class="logo-wordmark">VeriStasis</span>
         </a>
         <nav class="nav-center">
             <a href="platform.html">Platform</a>
@@ -33,21 +47,19 @@
         </nav>
         <div class="nav-end">
             <a href="signin.html" class="signin">Sign in</a>
-            <a href="contact.html">
-                <button class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></button>
-            </a>
+            <a href="contact.html" class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </header>
 
 <!-- HERO -->
-<section class="page-hero">
+<section class="page-hero" id="main">
     <div class="wrap">
         <div class="reveal"><div class="sect-eyebrow">Trust Center</div></div>
         <h1 class="reveal d1">Secured by mathematics,<br><span class="gradient-text">not promises.</span></h1>
-        <p class="lead reveal d2">Veristasis runs a Zero-Trust, Zero-Knowledge architecture built exclusively on FIPS 140-3 validated cryptographic modules. We can't read your data — and we can prove it.</p>
+        <p class="lead reveal d2">VeriStasis runs an empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced MFA, and strict tenant isolation — proven by autonomous penetration testing, not promised in a brochure.</p>
         <div class="hero-buttons reveal d3">
-            <a href="contact.html"><button class="btn btn-hero-primary">Request the Security Whitepaper <i data-lucide="arrow-right"></i></button></a>
+            <a href="contact.html" class="btn btn-hero-primary">Request the Security Whitepaper <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -58,29 +70,29 @@
         <div class="grid reveal">
             <div class="cell big">
                 <div class="cell-icon"><i data-lucide="lock"></i></div>
-                <h3>Zero-Knowledge Cryptography</h3>
-                <p>All sensitive CUI and ITAR artifacts are encrypted client-side before transmission. Veristasis never possesses the keys required to decrypt your data — the platform is architecturally incapable of reading your evidence.</p>
+                <h3>Streaming Encryption at Scale</h3>
+                <p>All CUI and audit evidence is sealed with AES-256-GCM chunked streaming encryption — gigabytes encrypted on-the-fly in constant memory, immune to memory-exhaustion attacks — and TOTP secrets are encrypted at rest.</p>
                 <div class="codeblock">
                     <div class="codeblock-bar">
                         <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
                         <span class="codeblock-name">crypto_profile.yml</span>
                     </div>
 <pre><span class="k">symmetric</span>: <span class="v">AES-256-GCM</span>
-<span class="k">kdf</span>: <span class="v">HKDF-SHA-384</span>
-<span class="k">post_quantum_kem</span>: <span class="v">ML-KEM-768</span>
-<span class="k">module</span>: <span class="v">FIPS 140-3 validated</span>
-<span class="k">server_held_keys</span>: <span class="b">0</span></pre>
+<span class="k">mode</span>: <span class="v">chunked-streaming</span>
+<span class="k">memory_profile</span>: <span class="v">constant</span>
+<span class="k">totp_secrets</span>: <span class="v">encrypted-at-rest</span>
+<span class="k">unauthorized_requests</span>: <span class="v">401-verified</span></pre>
                 </div>
             </div>
             <div class="cell">
                 <div class="cell-icon"><i data-lucide="key"></i></div>
-                <h3>AAL3 Identity Assurance</h3>
-                <p>Authenticator Assurance Level 3 enforced across all access points via FIDO2 WebAuthn and PIV/CAC smart cards. Phishing is mathematically impossible.</p>
+                <h3>Zero-Trust Identity</h3>
+                <p>Robust passwords plus TOTP multi-factor authentication, enforced on every access attempt. Empirical tests prove unauthorized access is actively blocked — verified 401 responses.</p>
             </div>
             <div class="cell">
                 <div class="cell-icon"><i data-lucide="eye"></i></div>
-                <h3>24/7/365 US-Based Monitoring</h3>
-                <p>Infrastructure is monitored around the clock by US-person security analysts. Drift detection is instantaneous — the boundary never silently falls out of compliance.</p>
+                <h3>Continuous Wazuh SIEM Monitoring</h3>
+                <p>Integrated Wazuh SIEM watches threats, suspicious logins, and vulnerabilities around the clock. Containerized network tiers contain breaches and stop lateral movement.</p>
             </div>
         </div>
     </div>
@@ -92,20 +104,20 @@
         <div class="sect-header reveal" style="text-align:center;">
             <div class="sect-eyebrow" style="justify-content:center;">Continuous Posture</div>
             <h2 class="sect-title" style="text-align:center;">Audited, attested, always-on.</h2>
-            <p class="sect-desc" style="margin:0 auto;text-align:center;">Independent attestations and live control coverage — not a point-in-time snapshot.</p>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">Live control coverage and empirically tested security — not a point-in-time snapshot.</p>
         </div>
         <div class="metrics reveal">
             <div class="metric"><div class="metric-val">110<span class="hi">/</span>110</div><div class="metric-lbl">NIST 800-171 Controls</div></div>
-            <div class="metric"><div class="metric-val">0</div><div class="metric-lbl">Server-Side Keys</div></div>
-            <div class="metric"><div class="metric-val">24<span class="hi">/</span>7</div><div class="metric-lbl">US-Based Monitoring</div></div>
-            <div class="metric"><div class="metric-val">SOC <span class="hi">2</span></div><div class="metric-lbl">Type II Certified</div></div>
+            <div class="metric"><div class="metric-val">0</div><div class="metric-lbl">Cross-Tenant Data Leaks</div></div>
+            <div class="metric"><div class="metric-val">24<span class="hi">/</span>7</div><div class="metric-lbl">Wazuh SIEM Monitoring</div></div>
+            <div class="metric"><div class="metric-val">401</div><div class="metric-lbl">Unauthorized Access: Blocked</div></div>
         </div>
         <div class="framework-tags reveal">
-            <span class="framework-tag">SOC 2 Type II</span>
-            <span class="framework-tag">ISO 27001</span>
-            <span class="framework-tag">NIST 800-53</span>
-            <span class="framework-tag">FedRAMP Ready</span>
-            <span class="framework-tag">FIPS 140-3</span>
+            <span class="framework-tag">CMMC Level 2</span>
+            <span class="framework-tag">NIST 800-171 Rev 2</span>
+            <span class="framework-tag">DFARS 252.204-7012</span>
+            <span class="framework-tag">Zero-Trust</span>
+            <span class="framework-tag">AES-256-GCM</span>
         </div>
     </div>
 </section>
@@ -116,9 +128,9 @@
         <div class="cta-box reveal">
             <div class="cta-glow"></div>
             <h2>Verify it for yourself.</h2>
-            <p>Request our architecture whitepaper and SOC 2 report, or book a session with our security engineers.</p>
+            <p>Request our architecture whitepaper and penetration-test summary, or book a session with our security engineers.</p>
             <div class="cta-btns">
-                <a href="contact.html"><button class="btn btn-hero-primary">Talk to a Security Engineer <i data-lucide="arrow-right"></i></button></a>
+                <a href="contact.html" class="btn btn-hero-primary">Talk to a Security Engineer <i data-lucide="arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -130,42 +142,42 @@
         <div class="ft-grid">
             <div>
                 <div class="ft-brand-logo">
-                    <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
-                    <span class="logo-wordmark">Veristasis Shield</span>
+                    <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+                    <span class="logo-wordmark">VeriStasis</span>
                 </div>
-                <p class="ft-brand-desc">The zero-knowledge compliance platform engineered for the Defense Industrial Base. Mathematically provable security.</p>
+                <p class="ft-brand-desc">The all-in-one CMMC Level 2 compliance platform engineered for the Defense Industrial Base. Proof, not promises.</p>
             </div>
             <div class="ft-col">
-                <h6>Platform</h6>
+                <h3>Platform</h3>
                 <a href="platform.html">Architecture</a>
                 <a href="security.html">Security Vault</a>
-                <a href="#">Integrations</a>
-                <a href="#">Changelog</a>
+                <a href="platform.html">Integrations</a>
+                <a href="platform.html">Changelog</a>
             </div>
             <div class="ft-col">
-                <h6>Solutions</h6>
-                <a href="solutions.html">DIB Contractors</a>
+                <h3>Solutions</h3>
+                <a href="solutions.html">Prime Contractors</a>
+                <a href="solutions.html">Subcontractors</a>
                 <a href="solutions.html">MSP Partners</a>
-                <a href="#">CMMC Assessors</a>
-                <a href="#">Federal Agencies</a>
+                <a href="solutions.html">Pricing &amp; Tiers</a>
             </div>
             <div class="ft-col">
-                <h6>Company</h6>
+                <h3>Company</h3>
                 <a href="company.html">About Us</a>
                 <a href="company.html">Leadership</a>
                 <a href="contact.html">Contact</a>
-                <a href="#">Careers</a>
+                <a href="company.html">Careers</a>
             </div>
         </div>
         <div class="ft-bottom">
             <div>
-                <p>&copy; 2026 Veristasis Shield. All rights reserved.</p>
-                <p style="margin-top:4px;">Veristasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+                <p>&copy; 2026 VeriStasis. All rights reserved.</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
             </div>
             <div class="ft-legal">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Security</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="security.html">Security</a>
             </div>
         </div>
     </div>

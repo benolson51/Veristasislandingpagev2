@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Demo — Veristasis Shield</title>
-    <meta name="description" content="Schedule a technical deep-dive with the Veristasis engineering team and see how zero-knowledge compliance upgrades your posture in days.">
+    <title>Request a Demo — VeriStasis</title>
+    <meta name="description" content="Schedule a technical deep-dive with the VeriStasis engineering team and see how the all-in-one CMMC Level 2 platform upgrades your posture in days.">
+    <!-- Social sharing (set og:url + absolute og:image once deployed) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VeriStasis">
+    <meta property="og:title" content="Request a Demo — VeriStasis">
+    <meta property="og:description" content="Schedule a technical deep-dive with the VeriStasis engineering team and see how the all-in-one CMMC Level 2 platform upgrades your posture in days.">
+    <meta property="og:image" content="assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Request a Demo — VeriStasis">
+    <meta name="twitter:description" content="Schedule a technical deep-dive with the VeriStasis engineering team and see how the all-in-one CMMC Level 2 platform upgrades your posture in days.">
+    <meta name="twitter:image" content="assets/og.png">
     <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="ambient">
     <div class="glow-orb"></div>
@@ -22,8 +36,8 @@
 <header class="topbar" id="topbar">
     <div class="topbar-inner">
         <a href="index.html" class="logo-mark">
-            <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
-            <span class="logo-wordmark">Veristasis</span>
+            <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+            <span class="logo-wordmark">VeriStasis</span>
         </a>
         <nav class="nav-center">
             <a href="platform.html">Platform</a>
@@ -33,21 +47,19 @@
         </nav>
         <div class="nav-end">
             <a href="signin.html" class="signin">Sign in</a>
-            <a href="contact.html">
-                <button class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></button>
-            </a>
+            <a href="contact.html" class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </header>
 
 <!-- HERO + FORM -->
-<section class="hero">
+<section class="hero" id="main">
     <div class="wrap">
         <div class="hero-inner">
             <div class="hero-copy">
                 <div class="reveal"><div class="hero-eyebrow"><span class="eyebrow-dot"></span> Get Started</div></div>
                 <h1 class="reveal d1">Secure your supply chain <span class="gradient-text">today.</span></h1>
-                <p class="hero-desc reveal d2">Schedule a technical deep-dive with our engineers to see how Veristasis can instantly upgrade your compliance posture.</p>
+                <p class="hero-desc reveal d2">Schedule a technical deep-dive with our engineers to see how VeriStasis can instantly upgrade your compliance posture.</p>
                 <ul class="feature-list reveal d3" style="max-width:420px;">
                     <li><i data-lucide="check-circle-2"></i> 14-day zero-risk tenant deployment</li>
                     <li><i data-lucide="check-circle-2"></i> Custom control mapping to your CUI</li>
@@ -59,25 +71,25 @@
                 <form action="#" method="POST" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').style.display='flex';">
                     <div class="field-row">
                         <div class="field">
-                            <label>First Name</label>
-                            <input type="text" class="input" required placeholder="Jane">
+                            <label for="contact-first-name">First Name</label>
+                            <input type="text" class="input" id="contact-first-name" name="first_name" autocomplete="given-name" required placeholder="Jane">
                         </div>
                         <div class="field">
-                            <label>Last Name</label>
-                            <input type="text" class="input" required placeholder="Doe">
+                            <label for="contact-last-name">Last Name</label>
+                            <input type="text" class="input" id="contact-last-name" name="last_name" autocomplete="family-name" required placeholder="Doe">
                         </div>
                     </div>
                     <div class="field">
-                        <label>Work Email</label>
-                        <input type="email" class="input" required placeholder="jane@company.com">
+                        <label for="contact-email">Work Email</label>
+                        <input type="email" class="input" id="contact-email" name="email" autocomplete="email" required placeholder="jane@company.com">
                     </div>
                     <div class="field">
-                        <label>Company Name</label>
-                        <input type="text" class="input" required placeholder="Acme Defense Corp">
+                        <label for="contact-company">Company Name</label>
+                        <input type="text" class="input" id="contact-company" name="company" autocomplete="organization" required placeholder="Acme Defense Corp">
                     </div>
                     <div class="field">
-                        <label>Primary Compliance Framework</label>
-                        <select class="input" required>
+                        <label for="contact-framework">Primary Compliance Framework</label>
+                        <select class="input" id="contact-framework" name="framework" required>
                             <option value="" disabled selected>Select an option…</option>
                             <option value="cmmc">CMMC Level 2/3</option>
                             <option value="nist">NIST 800-171</option>
@@ -91,7 +103,7 @@
                         <i data-lucide="shield-check" style="width:16px;height:16px;color:var(--emerald);"></i>
                         <span style="font-size:12px;color:var(--text-2);">Request submitted securely. We'll reach out within one business day.</span>
                     </div>
-                    <p class="form-note">By submitting, you agree to our Terms of Service and Privacy Policy. We will never share your information.</p>
+                    <p class="form-note">By submitting, you agree to our <a href="terms.html" style="color:var(--cyan);">Terms of Service</a> and <a href="privacy.html" style="color:var(--cyan);">Privacy Policy</a>. We will never share your information.</p>
                 </form>
             </div>
         </div>
@@ -104,42 +116,42 @@
         <div class="ft-grid">
             <div>
                 <div class="ft-brand-logo">
-                    <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
-                    <span class="logo-wordmark">Veristasis Shield</span>
+                    <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+                    <span class="logo-wordmark">VeriStasis</span>
                 </div>
-                <p class="ft-brand-desc">The zero-knowledge compliance platform engineered for the Defense Industrial Base. Mathematically provable security.</p>
+                <p class="ft-brand-desc">The all-in-one CMMC Level 2 compliance platform engineered for the Defense Industrial Base. Proof, not promises.</p>
             </div>
             <div class="ft-col">
-                <h6>Platform</h6>
+                <h3>Platform</h3>
                 <a href="platform.html">Architecture</a>
                 <a href="security.html">Security Vault</a>
-                <a href="#">Integrations</a>
-                <a href="#">Changelog</a>
+                <a href="platform.html">Integrations</a>
+                <a href="platform.html">Changelog</a>
             </div>
             <div class="ft-col">
-                <h6>Solutions</h6>
-                <a href="solutions.html">DIB Contractors</a>
+                <h3>Solutions</h3>
+                <a href="solutions.html">Prime Contractors</a>
+                <a href="solutions.html">Subcontractors</a>
                 <a href="solutions.html">MSP Partners</a>
-                <a href="#">CMMC Assessors</a>
-                <a href="#">Federal Agencies</a>
+                <a href="solutions.html">Pricing &amp; Tiers</a>
             </div>
             <div class="ft-col">
-                <h6>Company</h6>
+                <h3>Company</h3>
                 <a href="company.html">About Us</a>
                 <a href="company.html">Leadership</a>
                 <a href="contact.html">Contact</a>
-                <a href="#">Careers</a>
+                <a href="company.html">Careers</a>
             </div>
         </div>
         <div class="ft-bottom">
             <div>
-                <p>&copy; 2026 Veristasis Shield. All rights reserved.</p>
-                <p style="margin-top:4px;">Veristasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+                <p>&copy; 2026 VeriStasis. All rights reserved.</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
             </div>
             <div class="ft-legal">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Security</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="security.html">Security</a>
             </div>
         </div>
     </div>

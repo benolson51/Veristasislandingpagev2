@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# VeriStasis — Marketing Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Static marketing site for **VeriStasis**, an all-in-one CMMC Level 2 compliance platform for the Defense Industrial Base (CMMC Level 2, NIST 800-171 Rev 2).
 
-Currently, two official plugins are available:
+VeriStasis is a DBA of Ensight LLC · Kingsburg, CA · Co-founded by Brian & Benjamin Olson.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+Pure static HTML/CSS/JS — no framework, no build step.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `style.css` — shared design system (dark theme, gradients, bento grids, animations)
+- `script.js` — shared interactions (scroll reveal, navbar, FAQ accordion, live encryption demo, cursor glow)
+- [Lucide](https://lucide.dev) icons via CDN (pinned), Google Fonts (Inter, Plus Jakarta Sans, JetBrains Mono)
 
-## Expanding the ESLint configuration
+## Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Page | Purpose |
+|---|---|
+| `index.html` | Landing — hero with live evidence-vault encryption demo, features, comparison, pipeline, FAQ |
+| `platform.html` | Platform architecture — evidence workflow, telemetry, Wazuh SIEM, kiosk |
+| `solutions.html` | Solutions by segment — primes, subcontractors, MSPs, government |
+| `security.html` | Trust center — streaming encryption, zero-trust identity, empirical testing |
+| `company.html` | About — leadership, headquarters, mission |
+| `contact.html` | Demo request form |
+| `signin.html` | Sign-in (MFA-themed mock) |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Preview locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Any static server works:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npx serve .
+# or
+npm run dev   # serves on http://localhost:5599
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Assets
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `assets/logo.svg` — primary shield mark (gradient, transparent background)
+- `assets/og.png` — 1200×630 social share image
+- `public/favicon.svg` — favicon variant of the shield
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Before deploying
+
+- Set `og:url` and switch `og:image` to an absolute URL in each page's `<head>`.
+- The contact and sign-in forms are front-end only — wire `contact.html`'s form to a backend or form service (fields are named and ready).

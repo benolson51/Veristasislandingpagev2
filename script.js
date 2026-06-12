@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ── CMMC Phase 2 deadline countdown ──
+    const phase2 = document.getElementById('phase2Days');
+    if (phase2) {
+        const days = Math.ceil((new Date('2026-11-10T00:00:00') - Date.now()) / 86400000);
+        phase2.textContent = days > 0 ? days + ' days away' : 'now in effect';
+    }
+
     // ── Navbar scroll effect + scroll progress bar ──
     const topbar = document.getElementById('topbar');
     const progress = document.getElementById('scrollProgress');
@@ -115,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (other !== item) {
                     other.classList.remove('open');
                     other.querySelector('.faq-a').style.maxHeight = null;
+                    other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
                 }
             });
 
@@ -125,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.classList.add('open');
                 ans.style.maxHeight = ans.scrollHeight + 'px';
             }
+            q.setAttribute('aria-expanded', String(!isOpen));
         });
     });
 

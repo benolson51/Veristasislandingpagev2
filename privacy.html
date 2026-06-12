@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — VeriStasis</title>
+    <meta name="description" content="How VeriStasis collects, uses, and protects your information — and how customer evidence stays encrypted, isolated, and yours.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VeriStasis">
+    <meta property="og:title" content="Privacy Policy — VeriStasis">
+    <meta property="og:description" content="How VeriStasis collects, uses, and protects your information — and how customer evidence stays encrypted, isolated, and yours.">
+    <meta property="og:image" content="assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="topbar" id="topbar">
+    <div class="topbar-inner">
+        <a href="index.html" class="logo-mark">
+            <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+            <span class="logo-wordmark">VeriStasis</span>
+        </a>
+        <nav class="nav-center">
+            <a href="platform.html">Platform</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="security.html">Security</a>
+            <a href="company.html">Company</a>
+        </nav>
+        <div class="nav-end">
+            <a href="signin.html" class="signin">Sign in</a>
+            <a href="contact.html" class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero" id="main" style="padding-bottom:48px;">
+    <div class="wrap">
+        <div class="reveal"><div class="sect-eyebrow">Legal</div></div>
+        <h1 class="reveal d1">Privacy <span class="gradient-text">Policy.</span></h1>
+        <p class="lead reveal d2">How we collect, use, and protect your information — and how your evidence stays encrypted, isolated, and yours.</p>
+    </div>
+</section>
+
+<!-- BODY -->
+<section class="sect" style="padding-top:24px;">
+    <div class="wrap">
+        <div class="legal reveal">
+            <p class="updated">Last updated: June 12, 2026</p>
+
+            <h2>1. Who we are</h2>
+            <p>VeriStasis is a DBA of <strong>Ensight LLC</strong>, headquartered in Kingsburg, California ("VeriStasis," "we," "us"). This Privacy Policy describes how we handle information in connection with our website and the VeriStasis compliance platform (together, the "Service").</p>
+
+            <h2>2. Information we collect</h2>
+            <p><strong>Information you provide.</strong> When you request a demo or contact us, we collect your name, work email, company name, and the compliance framework you're working toward. When you create an account, we collect your email address, a credential we store only in protected form, and your TOTP multi-factor enrollment data (TOTP secrets are encrypted at rest).</p>
+            <p><strong>Customer Content.</strong> Documents, evidence, visitor logs, and other materials you upload to the platform ("Customer Content") are encrypted with AES-256-GCM and processed solely to provide the Service. Customer Content belongs to you — see Section 4.</p>
+            <p><strong>Security and usage data.</strong> We automatically collect authentication events, IP addresses, timestamps, and related security telemetry. This data feeds our integrated Wazuh SIEM and exists to protect your account and tenant — detecting suspicious logins, blocked access attempts, and anomalies.</p>
+
+            <h2>3. How we use information</h2>
+            <ul>
+                <li>To provide, operate, and secure the Service — including MFA enforcement, threat monitoring, and tenant isolation</li>
+                <li>To respond to demo requests and support inquiries</li>
+                <li>To generate the compliance scores, control mappings, and reports you ask the platform to produce</li>
+                <li>To meet our own legal and contractual obligations</li>
+            </ul>
+            <p><strong>We do not sell your personal information.</strong> We do not use Customer Content for advertising, model training, or any purpose other than providing the Service to you.</p>
+
+            <h2>4. Customer Content and CUI</h2>
+            <div class="callout">
+                <p><strong>Your evidence is yours.</strong> Customer Content — including any Controlled Unclassified Information (CUI) you store — remains your property. It is encrypted at rest, siloed by strict cross-tenant isolation and role-based access control, and accessed by our systems only as needed to deliver the features you use.</p>
+            </div>
+            <p>You are responsible for ensuring that your storage and handling of CUI in the Service complies with your contracts and applicable regulations, including DFARS 252.204-7012 and NIST SP 800-171 obligations that apply to your organization.</p>
+
+            <h2>5. How we share information</h2>
+            <p>We share information only with: (a) infrastructure and service providers who host and support the Service under confidentiality obligations; (b) authorities when required by law, subpoena, or to protect rights and safety; and (c) a successor entity in the event of a merger or acquisition, subject to this policy. We never sell or rent personal information to third parties.</p>
+
+            <h2>6. Security</h2>
+            <p>The platform protects information with AES-256-GCM chunked streaming encryption, enforced TOTP multi-factor authentication, strict role-based access control, containerized network tiers that prevent lateral movement, and continuous Wazuh SIEM monitoring. Our security controls undergo autonomous dynamic penetration testing. No method of transmission or storage is 100% secure, but we engineer for — and empirically test — defense in depth.</p>
+
+            <h2>7. Data retention</h2>
+            <p>We retain account information for as long as your account is active and as needed to meet legal obligations. Customer Content is retained per your subscription agreement; upon termination, you may export your evidence, after which it is deleted from active systems on a defined schedule.</p>
+
+            <h2>8. Your rights and choices</h2>
+            <p>You may request access to, correction of, or deletion of your personal information by contacting us through our <a href="contact.html">contact page</a>. California residents may have additional rights under the CCPA/CPRA, including the right to know and the right to delete. We do not discriminate against anyone for exercising privacy rights.</p>
+
+            <h2>9. Cookies and third parties</h2>
+            <p>Our website does not use advertising or cross-site tracking cookies. Pages load fonts and icon assets from third-party CDNs (Google Fonts, unpkg), which may receive standard request data such as your IP address when those assets load.</p>
+
+            <h2>10. Children</h2>
+            <p>The Service is a business product for the defense supply chain and is not directed to anyone under 18. We do not knowingly collect information from minors.</p>
+
+            <h2>11. Changes to this policy</h2>
+            <p>We may update this policy from time to time. Material changes will be posted on this page with an updated "Last updated" date, and account holders will be notified of significant changes.</p>
+
+            <h2>12. Contact us</h2>
+            <p>Questions about this policy or your data? Reach us through the <a href="contact.html">contact page</a> or write to: Ensight LLC (DBA VeriStasis), Kingsburg, California.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="ft-grid">
+            <div>
+                <div class="ft-brand-logo">
+                    <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+                    <span class="logo-wordmark">VeriStasis</span>
+                </div>
+                <p class="ft-brand-desc">The all-in-one CMMC Level 2 compliance platform engineered for the Defense Industrial Base. Proof, not promises.</p>
+            </div>
+            <div class="ft-col">
+                <h3>Platform</h3>
+                <a href="platform.html">Architecture</a>
+                <a href="security.html">Security Vault</a>
+                <a href="platform.html">Integrations</a>
+                <a href="platform.html">Changelog</a>
+            </div>
+            <div class="ft-col">
+                <h3>Solutions</h3>
+                <a href="solutions.html">Prime Contractors</a>
+                <a href="solutions.html">Subcontractors</a>
+                <a href="solutions.html">MSP Partners</a>
+                <a href="solutions.html">Pricing &amp; Tiers</a>
+            </div>
+            <div class="ft-col">
+                <h3>Company</h3>
+                <a href="company.html">About Us</a>
+                <a href="company.html">Leadership</a>
+                <a href="contact.html">Contact</a>
+                <a href="company.html">Careers</a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div>
+                <p>&copy; 2026 VeriStasis. All rights reserved.</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+            </div>
+            <div class="ft-legal">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="security.html">Security</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>
