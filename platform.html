@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Architecture — Veristasis Shield</title>
+    <meta name="description" content="The Veristasis compliance engine: IaC-native policy enforcement, real-time telemetry, and continuous CMMC / NIST 800-171 automation.">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+    <div class="glow-orb-3"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="topbar" id="topbar">
+    <div class="topbar-inner">
+        <a href="index.html" class="logo-mark">
+            <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
+            <span class="logo-wordmark">Veristasis</span>
+        </a>
+        <nav class="nav-center">
+            <a href="platform.html" class="active">Platform</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="security.html">Security</a>
+            <a href="company.html">Company</a>
+        </nav>
+        <div class="nav-end">
+            <a href="signin.html" class="signin">Sign in</a>
+            <a href="contact.html">
+                <button class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></button>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+    <div class="wrap">
+        <div class="reveal"><div class="sect-eyebrow">The Veristasis Engine</div></div>
+        <h1 class="reveal d1">Continuous compliance <span class="gradient-text">infrastructure.</span></h1>
+        <p class="lead reveal d2">We abstract the complexity of NIST 800-171, CMMC, and ITAR compliance so your engineering teams can focus on shipping — not writing SSPs by hand.</p>
+        <div class="hero-buttons reveal d3">
+            <a href="contact.html"><button class="btn btn-hero-primary">Request a Demo <i data-lucide="arrow-right"></i></button></a>
+            <a href="security.html"><button class="btn btn-hero-ghost">View Security Model</button></a>
+        </div>
+    </div>
+</section>
+
+<!-- IaC SPLIT -->
+<section class="sect" style="padding-top:40px;">
+    <div class="wrap">
+        <div class="split reveal">
+            <div>
+                <div class="sect-eyebrow">Infrastructure as Code</div>
+                <h2>Policy enforcement, native to your pipeline.</h2>
+                <p class="muted">Veristasis Shield integrates directly with your existing CI/CD via GitHub Actions or GitLab CI. Our automated policy engine checks every pull request against strict Defense Department baselines — before anything ships.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check"></i> Blocks non-compliant Terraform applies in real time</li>
+                    <li><i data-lucide="check"></i> FIPS 140-3 cryptographic validation on every commit</li>
+                    <li><i data-lucide="check"></i> Generates audit-ready compliance artifacts automatically</li>
+                </ul>
+            </div>
+            <div class="codeblock">
+                <div class="codeblock-bar">
+                    <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                    <span class="codeblock-name">.github/workflows/deploy.yml</span>
+                </div>
+<pre><span class="k">name</span>: <span class="v">Production Deployment</span>
+<span class="k">on</span>:
+  <span class="k">push</span>:
+    <span class="k">branches</span>: [ <span class="v">main</span> ]
+
+<span class="k">jobs</span>:
+  <span class="k">veristasis-compliance-check</span>:
+    <span class="k">runs-on</span>: <span class="v">self-hosted-us-gov</span>
+    <span class="k">steps</span>:
+      - <span class="k">uses</span>: <span class="v">actions/checkout@v3</span>
+      - <span class="k">uses</span>: <span class="v">veristasis/shield-action@v2</span>
+        <span class="k">with</span>:
+          <span class="k">framework</span>: <span class="v">cmmc-level-2</span>
+          <span class="k">enforce_fips</span>: <span class="b">true</span>
+          <span class="k">generate_ssp</span>: <span class="b">true</span></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TELEMETRY BENTO -->
+<section class="sect" style="padding-top:0;">
+    <div class="wrap">
+        <div class="sect-header reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">Live Operations</div>
+            <h2 class="sect-title" style="text-align:center;">Real-time telemetry &amp; alerting.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">Continuous monitoring isn't just a compliance requirement — it's active defense. See drift across your entire multi-tenant organization from a single pane of glass.</p>
+        </div>
+        <div class="grid reveal">
+            <div class="cell big">
+                <div class="cell-icon"><i data-lucide="radar"></i></div>
+                <h3>Single Pane of Glass</h3>
+                <p>Monitor compliance posture across every tenant, environment, and control family in one unified dashboard. Drift, evidence freshness, and AAL3 access events stream live — no batch jobs, no stale reports.</p>
+                <div class="codeblock">
+                    <div class="codeblock-bar">
+                        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                        <span class="codeblock-name">posture.stream</span>
+                    </div>
+<pre><span class="c"># live control posture</span>
+<span class="k">controls_passing</span>: <span class="v">110/110</span>
+<span class="k">open_findings</span>: <span class="b">0</span>
+<span class="k">drift_events_24h</span>: <span class="b">0</span>
+<span class="k">last_attestation</span>: <span class="v">12s ago</span></pre>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="activity"></i></div>
+                <h3>SIEM Integration</h3>
+                <p>Stream standardized, AAL3-compliant audit logs directly into Splunk, Sentinel, or QRadar over our zero-latency event bus.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="shield-alert"></i></div>
+                <h3>Drift Remediation</h3>
+                <p>Detect when manual changes in AWS or Azure break a CMMC boundary, then auto-rollback or open an incident ticket instantly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap">
+    <div class="wrap">
+        <div class="cta-box reveal">
+            <div class="cta-glow"></div>
+            <h2>Compliance that runs itself.</h2>
+            <p>See the Veristasis engine map your CUI boundary and enforce all 110 controls — live, in your own pipeline.</p>
+            <div class="cta-btns">
+                <a href="contact.html"><button class="btn btn-hero-primary">Schedule a Technical Deep-Dive <i data-lucide="arrow-right"></i></button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="ft-grid">
+            <div>
+                <div class="ft-brand-logo">
+                    <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
+                    <span class="logo-wordmark">Veristasis Shield</span>
+                </div>
+                <p class="ft-brand-desc">The zero-knowledge compliance platform engineered for the Defense Industrial Base. Mathematically provable security.</p>
+            </div>
+            <div class="ft-col">
+                <h6>Platform</h6>
+                <a href="platform.html">Architecture</a>
+                <a href="security.html">Security Vault</a>
+                <a href="#">Integrations</a>
+                <a href="#">Changelog</a>
+            </div>
+            <div class="ft-col">
+                <h6>Solutions</h6>
+                <a href="solutions.html">DIB Contractors</a>
+                <a href="solutions.html">MSP Partners</a>
+                <a href="#">CMMC Assessors</a>
+                <a href="#">Federal Agencies</a>
+            </div>
+            <div class="ft-col">
+                <h6>Company</h6>
+                <a href="company.html">About Us</a>
+                <a href="company.html">Leadership</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div>
+                <p>&copy; 2026 Veristasis Shield. All rights reserved.</p>
+                <p style="margin-top:4px;">Veristasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+            </div>
+            <div class="ft-legal">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Security</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>

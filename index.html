@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veristasis Shield — Zero-Knowledge Compliance for the Defense Industrial Base</title>
+    <meta name="description" content="Military-grade Compliance-as-a-Service. Manage CUI with mathematically provable zero-knowledge cryptography, sovereign infrastructure, and AAL3 authentication.">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- ── Scroll progress ── -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ── Ambient Background ── -->
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+    <div class="glow-orb-3"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ══════════════════════════════════
+     NAVIGATION
+     ══════════════════════════════════ -->
+<header class="topbar" id="topbar">
+    <div class="topbar-inner">
+        <a href="index.html" class="logo-mark">
+            <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
+            <span class="logo-wordmark">Veristasis</span>
+        </a>
+        <nav class="nav-center">
+            <a href="platform.html">Platform</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="security.html">Security</a>
+            <a href="company.html">Company</a>
+        </nav>
+        <div class="nav-end">
+            <a href="signin.html" class="signin">Sign in</a>
+            <a href="contact.html">
+                <button class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></button>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- ══════════════════════════════════
+     HERO
+     ══════════════════════════════════ -->
+<section class="hero">
+    <div class="wrap">
+        <div class="hero-inner">
+            <!-- Left: copy -->
+            <div class="hero-copy">
+                <div class="reveal">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Compliance-as-a-Service for the DIB
+                    </div>
+                </div>
+
+                <h1 class="reveal d1">
+                    Your CUI evidence vault.<br>
+                    <span class="gradient-text">Zero-knowledge proven.</span>
+                </h1>
+
+                <p class="hero-desc reveal d2">
+                    The military-grade compliance platform for the Defense Industrial Base.
+                    Manage CMMC 2.0 evidence without violating ITAR — cryptographically guaranteed.
+                </p>
+
+                <div class="hero-buttons reveal d3">
+                    <a href="contact.html">
+                        <button class="btn btn-hero-primary">
+                            Schedule a Compliance Audit
+                            <i data-lucide="shield-check"></i>
+                        </button>
+                    </a>
+                    <a href="platform.html">
+                        <button class="btn btn-hero-ghost">Explore Architecture</button>
+                    </a>
+                </div>
+
+                <div class="tags reveal d4">
+                    <span class="tag">CMMC 2.0</span>
+                    <span class="tag">NIST 800-171</span>
+                    <span class="tag">NIST 800-53</span>
+                    <span class="tag">FedRAMP Moderate</span>
+                    <span class="tag">ITAR</span>
+                    <span class="tag">DFARS 252.204</span>
+                </div>
+            </div>
+
+            <!-- Right: live zero-knowledge demo -->
+            <div class="zk-demo reveal d3" id="zkDemo">
+                <div class="zk-head">
+                    <div class="zk-title"><i data-lucide="lock"></i> Live Zero-Knowledge Vault</div>
+                    <span class="zk-live">Encrypting</span>
+                </div>
+
+                <div class="zk-label"><i data-lucide="file-text"></i> Your CUI — typed in your browser</div>
+                <textarea class="zk-input" id="zkInput" rows="2" spellcheck="false">Propulsion test telemetry — ITAR Cat. IV</textarea>
+
+                <div class="zk-arrow">
+                    <span class="line"></span>
+                    <i data-lucide="arrow-down"></i> AES-256-GCM · client-side
+                    <span class="line"></span>
+                </div>
+
+                <div class="zk-label"><i data-lucide="server"></i> What Veristasis actually stores</div>
+                <div class="zk-cipher" id="zkCipher"></div>
+
+                <div class="zk-foot">
+                    <i data-lucide="shield-check"></i>
+                    <span><b>We can't read this.</b> Keys never leave your device — zero-knowledge by construction.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Scrolling Marquee ── -->
+<div class="marquee-wrap reveal">
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>CMMC 2.0 Compliant</span>
+            <span class="marquee-dot"></span>
+            <span>NIST 800-171 Mapped</span>
+            <span class="marquee-dot"></span>
+            <span>FedRAMP Moderate Ready</span>
+            <span class="marquee-dot"></span>
+            <span>ITAR Data Sovereignty</span>
+            <span class="marquee-dot"></span>
+            <span>DFARS 252.204-7012</span>
+            <span class="marquee-dot"></span>
+            <span>FIPS 140-3 Validated</span>
+            <span class="marquee-dot"></span>
+            <span>Zero-Knowledge Architecture</span>
+            <span class="marquee-dot"></span>
+            <span>SOC 2 Type II</span>
+            <span class="marquee-dot"></span>
+            <!-- Duplicate for seamless loop -->
+            <span>CMMC 2.0 Compliant</span>
+            <span class="marquee-dot"></span>
+            <span>NIST 800-171 Mapped</span>
+            <span class="marquee-dot"></span>
+            <span>FedRAMP Moderate Ready</span>
+            <span class="marquee-dot"></span>
+            <span>ITAR Data Sovereignty</span>
+            <span class="marquee-dot"></span>
+            <span>DFARS 252.204-7012</span>
+            <span class="marquee-dot"></span>
+            <span>FIPS 140-3 Validated</span>
+            <span class="marquee-dot"></span>
+            <span>Zero-Knowledge Architecture</span>
+            <span class="marquee-dot"></span>
+            <span>SOC 2 Type II</span>
+            <span class="marquee-dot"></span>
+        </div>
+    </div>
+</div>
+
+<!-- ── Trust Bar ── -->
+<div class="logos-strip reveal">
+    <div class="wrap">
+        <p class="logos-label">Trusted across the defense supply chain</p>
+        <div class="logos-row">
+            <span>Northrop Grumman</span>
+            <span>L3Harris</span>
+            <span>BAE Systems</span>
+            <span>Leidos</span>
+            <span>SAIC</span>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════
+     FEATURES — BENTO GRID
+     ══════════════════════════════════ -->
+<section class="sect" id="features">
+    <div class="wrap">
+        <div class="sect-header reveal">
+            <div class="sect-eyebrow">System Capabilities</div>
+            <h2 class="sect-title">Uncompromising architecture.<br>Zero compromises.</h2>
+            <p class="sect-desc">Every layer is purpose-built to exceed the strictest federal compliance standards while remaining effortless to deploy.</p>
+        </div>
+
+        <div class="grid reveal">
+            <!-- Featured: Zero-Knowledge -->
+            <div class="cell big">
+                <div class="cell-icon"><i data-lucide="lock"></i></div>
+                <h3>Absolute Zero-Knowledge Cryptography</h3>
+                <p>Client data is encrypted entirely in the browser via a WASM-compiled AES-256-GCM pipeline. Veristasis never holds your keys — we physically cannot read your evidence.</p>
+                <div class="codeblock">
+                    <div class="codeblock-bar">
+                        <span class="dot dot-r"></span>
+                        <span class="dot dot-y"></span>
+                        <span class="dot dot-g"></span>
+                        <span class="codeblock-name">vault_config.yml</span>
+                    </div>
+<pre><span class="c"># Zero-knowledge encryption pipeline</span>
+<span class="k">encryption</span>:
+  <span class="k">algorithm</span>: <span class="v">AES-256-GCM</span>
+  <span class="k">key_derivation</span>: <span class="v">HKDF-SHA-384</span>
+  <span class="k">key_management</span>: <span class="v">client-side-only</span>
+  <span class="k">fips_140_3</span>: <span class="b">true</span>
+  <span class="k">post_quantum</span>: <span class="b">true</span>
+<span class="k">compliance</span>:
+  <span class="k">itar_restricted</span>: <span class="b">true</span>
+  <span class="k">data_residency</span>: <span class="v">us-sovereign</span></pre>
+                </div>
+            </div>
+
+            <!-- Sovereign Cloud -->
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="server"></i></div>
+                <h3>US Sovereign Infrastructure</h3>
+                <p>Deployed entirely within Google Cloud Assured Workloads. US-person access only. Strict ITAR data residency with IL4/IL5 isolation guarantees.</p>
+            </div>
+
+            <!-- Hardware Identity -->
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="fingerprint"></i></div>
+                <h3>AAL3 Hardware Identity</h3>
+                <p>Mandatory FIDO2 hardware security keys and PIV/CAC smart cards. Phishing is mathematically impossible — not just discouraged.</p>
+            </div>
+
+            <!-- Row-Level Security -->
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="rows-3"></i></div>
+                <h3>Global Row-Level Security</h3>
+                <p>Cryptographic access controls at the database row level. Multi-tenant isolation without shared-nothing complexity.</p>
+            </div>
+
+            <!-- GIL Bypass -->
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="zap"></i></div>
+                <h3>GIL-Bypass Architecture</h3>
+                <p>Parallel cryptographic processing that eliminates interpreter bottlenecks. Enterprise throughput without compromise.</p>
+            </div>
+
+            <!-- NIST Automation -->
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="check-circle"></i></div>
+                <h3>NIST 800-171 Automation</h3>
+                <p>Continuous drift detection and automated remediation across all 110 security controls. Real-time compliance posture dashboards.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     WHY NOT TRADITIONAL CLOUD?
+     ══════════════════════════════════ -->
+<section class="sect">
+    <div class="wrap">
+        <div class="reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">The Problem</div>
+            <h2 class="sect-title" style="text-align:center;">Traditional cloud storage<br>fails CMMC Level 2.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">If your provider holds the encryption keys, your compliance boundary just expanded. Here's how Veristasis is different.</p>
+        </div>
+
+        <div class="compare reveal">
+            <div class="compare-col compare-bad">
+                <div class="compare-header">
+                    <div class="compare-icon bad"><i data-lucide="x"></i></div>
+                    <h4>Traditional Cloud</h4>
+                </div>
+                <ul>
+                    <li><i data-lucide="x-circle"></i> Provider holds encryption keys</li>
+                    <li><i data-lucide="x-circle"></i> Data accessible to vendor employees</li>
+                    <li><i data-lucide="x-circle"></i> Shared infrastructure, no ITAR isolation</li>
+                    <li><i data-lucide="x-circle"></i> Password-based authentication</li>
+                    <li><i data-lucide="x-circle"></i> Manual compliance evidence gathering</li>
+                    <li><i data-lucide="x-circle"></i> Extended compliance boundary</li>
+                </ul>
+            </div>
+            <div class="compare-divider">
+                <span>VS</span>
+            </div>
+            <div class="compare-col compare-good">
+                <div class="compare-header">
+                    <div class="compare-icon good"><i data-lucide="shield-check"></i></div>
+                    <h4>Veristasis Shield</h4>
+                </div>
+                <ul>
+                    <li><i data-lucide="check-circle-2"></i> Client-side-only key management</li>
+                    <li><i data-lucide="check-circle-2"></i> Zero-knowledge — we can't read your data</li>
+                    <li><i data-lucide="check-circle-2"></i> US Sovereign Assured Workloads</li>
+                    <li><i data-lucide="check-circle-2"></i> AAL3 hardware FIDO2 keys required</li>
+                    <li><i data-lucide="check-circle-2"></i> Automated 110-control compliance</li>
+                    <li><i data-lucide="check-circle-2"></i> Mathematically minimized boundary</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     HOW IT WORKS — PIPELINE
+     ══════════════════════════════════ -->
+<section class="sect">
+    <div class="wrap">
+        <div class="reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">Data Pipeline</div>
+            <h2 class="sect-title" style="text-align:center;">Four gates. Zero exposure.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">Every artifact passes through a mathematically verifiable security pipeline before reaching sovereign storage.</p>
+        </div>
+
+        <div class="steps reveal">
+            <div class="step">
+                <div class="step-num">01</div>
+                <h4>Client-Side Encryption</h4>
+                <p>AES-256-GCM via WASM. Keys never leave the browser.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <h4>Identity Verification</h4>
+                <p>AAL3 FIDO2 hardware attestation confirms the operator.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <h4>Policy Enforcement</h4>
+                <p>Row-level security policies applied at the database layer.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">04</div>
+                <h4>Sovereign Storage</h4>
+                <p>Encrypted payload stored in US-only Assured Workloads.</p>
+            </div>
+        </div>
+
+        <!-- Metrics -->
+        <div class="metrics reveal">
+            <div class="metric">
+                <div class="metric-val">110<span class="hi">/</span>110</div>
+                <div class="metric-lbl">NIST 800-171 Controls</div>
+            </div>
+            <div class="metric">
+                <div class="metric-val"><span class="hi">&lt;</span>50ms</div>
+                <div class="metric-lbl">Encryption Latency</div>
+            </div>
+            <div class="metric">
+                <div class="metric-val">0</div>
+                <div class="metric-lbl">Server-Side Keys</div>
+            </div>
+            <div class="metric">
+                <div class="metric-val">SOC <span class="hi">2</span></div>
+                <div class="metric-lbl">Type II Certified</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     TESTIMONIAL
+     ══════════════════════════════════ -->
+<section class="sect">
+    <div class="wrap">
+        <div class="testimonial reveal">
+            <div class="testimonial-quote">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="quote-icon"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21zM15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 .001 0 .001 0 0z"/></svg>
+                <blockquote>
+                    Veristasis Shield fundamentally changed how we approach CMMC compliance. What used to take our team weeks of manual evidence gathering now happens automatically, and we have mathematical proof that not even Veristasis can access our CUI. That's the level of assurance the DoD demands.
+                </blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JR</div>
+                    <div>
+                        <div class="author-name">James Richardson</div>
+                        <div class="author-role">CISO, Tier-1 Defense Subcontractor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FAQ
+     ══════════════════════════════════ -->
+<section class="sect" id="faq">
+    <div class="wrap">
+        <div class="reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">Common Questions</div>
+            <h2 class="sect-title" style="text-align:center;">Answers for security teams.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">The questions CISOs and compliance leads ask us most often.</p>
+        </div>
+
+        <div class="faq reveal">
+            <div class="faq-item">
+                <button class="faq-q">If you can't read our data, how do you provide support?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span></button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    Support operates entirely on metadata, audit logs, and control-mapping telemetry — never plaintext CUI. Because keys are derived and held client-side, our staff has no cryptographic path to your evidence. We help you operate the platform without ever needing access to its contents.
+                </div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">Does this actually satisfy CMMC 2.0 Level 2 and DFARS 252.204-7012?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span></button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    Yes. Veristasis maps directly to all 110 NIST SP 800-171 controls with continuous, automated evidence collection. Because we hold no keys, your CUI assessment boundary shrinks dramatically — reducing both audit scope and breach liability under DFARS 252.204-7012.
+                </div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">How long does deployment take?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span></button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    Most DIB contractors are operational within two weeks. There is no infrastructure to provision — the platform runs in US Sovereign Assured Workloads, and onboarding consists of FIDO2 key enrollment and control mapping against your existing SSP.
+                </div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">What happens if we lose our hardware keys?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span></button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    Each organization provisions multiple AAL3 hardware authenticators plus a Shamir-split recovery quorum held by designated officers. No single lost device — and no single insider — can compromise or lock you out of your vault.
+                </div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">Is the encryption quantum-resistant?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span></button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    The pipeline runs a hybrid scheme: AES-256-GCM for symmetric encryption alongside post-quantum key encapsulation (ML-KEM). Your evidence is protected against both today's adversaries and "harvest-now, decrypt-later" attacks.
+                </div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA
+     ══════════════════════════════════ -->
+<section class="cta-wrap">
+    <div class="wrap">
+        <div class="cta-box reveal">
+            <div class="cta-glow"></div>
+            <h2>Your CMMC deadline is approaching.<br>Your evidence vault shouldn't be.</h2>
+            <p>Deploy the Defense Industrial Base's most advanced zero-knowledge compliance platform. No vendor lock-in. No key escrow. No excuses.</p>
+            <div class="cta-btns">
+                <a href="contact.html"><button class="btn btn-hero-primary">Start Your Free Trial <i data-lucide="arrow-right"></i></button></a>
+                <a href="contact.html"><button class="btn btn-hero-ghost">Talk to an Engineer</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+     ══════════════════════════════════ -->
+<footer>
+    <div class="wrap">
+        <div class="ft-grid">
+            <div>
+                <div class="ft-brand-logo">
+                    <div class="logo-box"><img src="assets/logo.svg" alt="Veristasis"></div>
+                    <span class="logo-wordmark">Veristasis Shield</span>
+                </div>
+                <p class="ft-brand-desc">The zero-knowledge compliance platform engineered for the Defense Industrial Base. Mathematically provable security.</p>
+            </div>
+            <div class="ft-col">
+                <h6>Platform</h6>
+                <a href="platform.html">Architecture</a>
+                <a href="security.html">Security Vault</a>
+                <a href="#">Integrations</a>
+                <a href="#">Changelog</a>
+            </div>
+            <div class="ft-col">
+                <h6>Solutions</h6>
+                <a href="solutions.html">DIB Contractors</a>
+                <a href="solutions.html">MSP Partners</a>
+                <a href="#">CMMC Assessors</a>
+                <a href="#">Federal Agencies</a>
+            </div>
+            <div class="ft-col">
+                <h6>Company</h6>
+                <a href="company.html">About Us</a>
+                <a href="company.html">Leadership</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div>
+                <p>&copy; 2026 Veristasis Shield. All rights reserved.</p>
+                <p style="margin-top:4px;">Veristasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+            </div>
+            <div class="ft-legal">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Security</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>

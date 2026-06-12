@@ -1,0 +1,18 @@
+<svg width="44" height="48" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Veristasis Shield">
+  <defs>
+    <linearGradient id="favBrand" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="favFill" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1120"/>
+      <stop offset="1" stop-color="#05070d"/>
+    </linearGradient>
+  </defs>
+  <path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z"
+        fill="url(#favFill)" stroke="url(#favBrand)" stroke-width="2.6" stroke-linejoin="round"/>
+  <circle cx="22" cy="15.2" r="2.9" fill="url(#favBrand)"/>
+  <path d="M13.4 19.6 L22 34 L30.6 19.6"
+        fill="none" stroke="url(#favBrand)" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

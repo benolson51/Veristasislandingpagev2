@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In — Veristasis Shield</title>
+    <meta name="description" content="Access the Veristasis secure enclave. AAL3 hardware authentication required.">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="auth-wrap">
+    <div class="auth-card reveal vis">
+        <a href="index.html" class="auth-logo logo-mark">
+            <div class="logo-box" style="width:36px;height:36px;"><img src="assets/logo.svg" alt="Veristasis"></div>
+            <span class="logo-wordmark" style="font-size:18px;">Veristasis</span>
+        </a>
+        <h1>Access Secure Enclave</h1>
+        <p class="sub">AAL3 Authentication Required</p>
+
+        <button class="sso-btn" onclick="alert('Initiating FIDO2 / WebAuthn protocol…')">
+            <i data-lucide="fingerprint"></i> Continue with Hardware Key (PIV/CAC)
+        </button>
+        <button class="sso-btn" onclick="alert('Redirecting to your identity provider…')">
+            <i data-lucide="building"></i> Continue with Enterprise SSO
+        </button>
+
+        <div class="divider">Or</div>
+
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Please use hardware authentication for AAL3 access.');">
+            <div class="field">
+                <label>Email Address</label>
+                <input type="email" class="input" required placeholder="admin@veristasis.gov">
+            </div>
+            <div class="field">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                    <label style="margin-bottom:0;">Password</label>
+                    <a href="#" class="forgot">Forgot?</a>
+                </div>
+                <input type="password" class="input" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-hero-primary">Sign In</button>
+        </form>
+
+        <div class="auth-foot">
+            <i data-lucide="shield-check"></i> DoD Impact Level 5 (IL5) Boundary
+        </div>
+    </div>
+</div>
+
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>
