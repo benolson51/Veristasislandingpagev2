@@ -68,7 +68,16 @@
             </div>
 
             <div class="form-card reveal d3">
-                <form action="#" method="POST" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').style.display='flex';">
+                <!-- To go live: paste your form-service endpoint into data-endpoint below.
+                     • Formspree:  data-endpoint="https://formspree.io/f/YOUR_FORM_ID"
+                     • Web3Forms:  data-endpoint="https://api.web3forms.com/submit"  + uncomment the access_key field
+                     Until an endpoint is set, the form shows a "not yet connected" notice instead of sending. -->
+                <form id="contactForm" data-endpoint="" action="#" method="POST">
+                    <!-- honeypot (bots fill it; humans don't) -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+                    <!-- For Web3Forms, uncomment and set your key:
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"> -->
+                    <input type="hidden" name="_subject" value="New VeriStasis demo request">
                     <div class="field-row">
                         <div class="field">
                             <label for="contact-first-name">First name</label>
@@ -107,9 +116,13 @@
                         </select>
                     </div>
                     <button type="submit" class="btn btn-hero-primary">Book a demo <i data-lucide="send"></i></button>
-                    <div id="formOk" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.18);">
-                        <i data-lucide="check-circle-2" style="width:16px;height:16px;color:var(--emerald);"></i>
+                    <div id="formOk" role="status" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.18);">
+                        <i data-lucide="check-circle-2" style="width:16px;height:16px;color:var(--emerald);flex-shrink:0;"></i>
                         <span style="font-size:12px;color:var(--text-2);">Thanks — we'll reach out within one business day.</span>
+                    </div>
+                    <div id="formErr" role="alert" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.18);">
+                        <i data-lucide="alert-triangle" style="width:16px;height:16px;color:#f87171;flex-shrink:0;"></i>
+                        <span style="font-size:12px;color:var(--text-2);">Something went wrong — please email us directly or try again.</span>
                     </div>
                     <p class="form-note">By submitting, you agree to our <a href="terms.html" style="color:var(--cyan);">Terms of Service</a> and <a href="privacy.html" style="color:var(--cyan);">Privacy Policy</a>. We will never sell or share your information.</p>
                 </form>

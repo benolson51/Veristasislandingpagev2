@@ -130,4 +130,56 @@ document.addEventListener('DOMContentLoaded', () => {
             q.setAttribute('aria-expanded', String(!isOpen));
         });
     });
+
+    // ── Contact form (AJAX submit to a form service) ──
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        const endpoint = (contactForm.dataset.endpoint || '').trim();
+        const ok = document.getElementById('formOk');
+        const err = document.getElementById('formErr');
+        const errText = err ? err.querySelector('span') : null;
+
+        const show = (el) => { if (el) el.style.display = 'flex'; };
+        const hide = (el) => { if (el) el.style.display = 'none'; };
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            hide(ok); hide(err);
+
+            // Not connected yet: tell the user instead of silently doing nothing.
+            if (!endpoint) {
+                if (errText) errText.textContent = 'Form isn’t connected yet — set data-endpoint in contact.html.';
+                show(err);
+                return;
+            }
+
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const original = btn ? btn.innerHTML : '';
+            if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+            try {
+                const res = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(contactForm)
+                });
+                if (res.ok) {
+                    contactForm.reset();
+                    show(ok);
+                } else {
+                    if (errText) errText.textContent = 'Something went wrong — please email us directly or try again.';
+                    show(err);
+                }
+            } catch (_) {
+                if (errText) errText.textContent = 'Network error — please email us directly or try again.';
+                show(err);
+            } finally {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = original;
+                    if (window.lucide) lucide.createIcons();
+                }
+            }
+        });
+    }
 });
