@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In — VeriStasis</title>
-    <meta name="description" content="Access the VeriStasis secure enclave. Zero-trust, MFA-enforced sign-in.">
+    <meta name="description" content="Sign in to your VeriStasis account.">
     <!-- Social sharing (set og:url + absolute og:image once deployed) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="VeriStasis">
     <meta property="og:title" content="Sign In — VeriStasis">
-    <meta property="og:description" content="Access the VeriStasis secure enclave. Zero-trust, MFA-enforced sign-in.">
+    <meta property="og:description" content="Sign in to your VeriStasis account.">
     <meta property="og:image" content="assets/og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sign In — VeriStasis">
-    <meta name="twitter:description" content="Access the VeriStasis secure enclave. Zero-trust, MFA-enforced sign-in.">
+    <meta name="twitter:description" content="Sign in to your VeriStasis account.">
     <meta name="twitter:image" content="assets/og.png">
     <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,22 +36,13 @@
             <div class="logo-box" style="width:36px;height:36px;"><img src="assets/logo.svg" alt="VeriStasis"></div>
             <span class="logo-wordmark" style="font-size:18px;">VeriStasis</span>
         </a>
-        <h1>Access Secure Enclave</h1>
-        <p class="sub">Zero-Trust · MFA Enforced</p>
+        <h1>Sign in</h1>
+        <p class="sub">VeriStasis account access</p>
 
-        <button class="sso-btn" onclick="alert('You will be prompted for your TOTP code after password verification.')">
-            <i data-lucide="smartphone"></i> Sign in with Authenticator (TOTP)
-        </button>
-        <button class="sso-btn" onclick="alert('Redirecting to your identity provider…')">
-            <i data-lucide="building"></i> Continue with Enterprise SSO
-        </button>
-
-        <div class="divider">Or</div>
-
-        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Password verified? You\'ll be prompted for your TOTP code next — MFA is enforced on every sign-in.');">
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('This is a demo sign-in screen.');">
             <div class="field">
-                <label for="signin-email">Email Address</label>
-                <input type="email" class="input" id="signin-email" name="email" autocomplete="email" required placeholder="admin@veristasis.gov">
+                <label for="signin-email">Email address</label>
+                <input type="email" class="input" id="signin-email" name="email" autocomplete="email" required placeholder="you@company.com">
             </div>
             <div class="field">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
@@ -60,11 +51,11 @@
                 </div>
                 <input type="password" class="input" id="signin-password" name="password" autocomplete="current-password" required placeholder="••••••••">
             </div>
-            <button type="submit" class="btn btn-hero-primary">Sign In</button>
+            <button type="submit" class="btn btn-hero-primary">Sign in</button>
         </form>
 
         <div class="auth-foot">
-            <i data-lucide="shield-check"></i> Zero-Trust Boundary · Unauthorized Access Blocked (401-Verified)
+            <i data-lucide="lock"></i> Need an account? <a href="contact.html" style="color:var(--cyan);">Request access</a>
         </div>
     </div>
 </div>

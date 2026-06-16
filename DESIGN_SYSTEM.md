@@ -4,7 +4,7 @@ Portable design kit extracted from the marketing site (`style.css`). Use this to
 
 ## Brand
 
-- **Name:** VeriStasis (camelCase S, never "Veristasis Shield")
+- **Name:** VeriStasis (camelCase S, never "VeriStasis")
 - **Logo:** `assets/logo.svg` — gradient shield + keyhole + V, transparent background. Favicon variant: `public/favicon.svg` (dark-filled for visibility in tabs).
 - **Voice:** decisive, technical, proof-driven ("proof, not promises"). No hedging.
 

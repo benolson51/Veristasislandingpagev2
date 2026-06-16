@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Local databases / scratch artifacts
+*.db
+*.sqlite
+*.sqlite3
+
 # Local tooling (Claude Code preview config)
 .claude/
 

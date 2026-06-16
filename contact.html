@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Demo — VeriStasis</title>
-    <meta name="description" content="Schedule a technical deep-dive with the VeriStasis engineering team and see how the all-in-one CMMC Level 2 platform upgrades your posture in days.">
+    <title>Book a Demo — VeriStasis</title>
+    <meta name="description" content="Book a demo or request access. See VeriStasis generate a real CMMC Level 2 evidence set — SSP, POA&M, policies, and a SPRS score with a ScorePath roadmap — from your answers.">
     <!-- Social sharing (set og:url + absolute og:image once deployed) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="VeriStasis">
-    <meta property="og:title" content="Request a Demo — VeriStasis">
-    <meta property="og:description" content="Schedule a technical deep-dive with the VeriStasis engineering team and see how the all-in-one CMMC Level 2 platform upgrades your posture in days.">
+    <meta property="og:title" content="Book a Demo — VeriStasis">
+    <meta property="og:description" content="See VeriStasis generate a real CMMC Level 2 evidence set — SSP, POA&M, policies, and a SPRS score with a ScorePath roadmap — from your answers.">
     <meta property="og:image" content="assets/og.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Request a Demo — VeriStasis">
-    <meta name="twitter:description" content="Schedule a technical deep-dive with the VeriStasis engineering team and see how the all-in-one CMMC Level 2 platform upgrades your posture in days.">
+    <meta name="twitter:title" content="Book a Demo — VeriStasis">
+    <meta name="twitter:description" content="See VeriStasis generate a real CMMC Level 2 evidence set — SSP, POA&M, policies, and a SPRS score with a ScorePath roadmap — from your answers.">
     <meta name="twitter:image" content="assets/og.png">
     <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
         </nav>
         <div class="nav-end">
             <a href="signin.html" class="signin">Sign in</a>
-            <a href="contact.html" class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-solid">Book a demo <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </header>
@@ -57,13 +57,13 @@
     <div class="wrap">
         <div class="hero-inner">
             <div class="hero-copy">
-                <div class="reveal"><div class="hero-eyebrow"><span class="eyebrow-dot"></span> Get Started</div></div>
-                <h1 class="reveal d1">Secure your supply chain <span class="gradient-text">today.</span></h1>
-                <p class="hero-desc reveal d2">Schedule a technical deep-dive with our engineers to see how VeriStasis can instantly upgrade your compliance posture.</p>
-                <ul class="feature-list reveal d3" style="max-width:420px;">
-                    <li><i data-lucide="check-circle-2"></i> 14-day zero-risk tenant deployment</li>
-                    <li><i data-lucide="check-circle-2"></i> Custom control mapping to your CUI</li>
-                    <li><i data-lucide="check-circle-2"></i> Dedicated federal solutions architect</li>
+                <div class="reveal"><div class="hero-eyebrow"><span class="eyebrow-dot"></span> Get started</div></div>
+                <h1 class="reveal d1">Book a demo or <span class="gradient-text">request access.</span></h1>
+                <p class="hero-desc reveal d2">Bring your stack and your scope. We'll show you VeriStasis generate a real evidence set from your answers — SSP, POA&amp;M, policies, and a SPRS score with a ScorePath&trade; roadmap.</p>
+                <ul class="feature-list reveal d3" style="max-width:440px;">
+                    <li><i data-lucide="check-circle-2"></i> See the SSP, POA&amp;M, and policy set generated live</li>
+                    <li><i data-lucide="check-circle-2"></i> Your real SPRS score and the path to raise it</li>
+                    <li><i data-lucide="check-circle-2"></i> Direct answers from the people who built it</li>
                 </ul>
             </div>
 
@@ -71,39 +71,47 @@
                 <form action="#" method="POST" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').style.display='flex';">
                     <div class="field-row">
                         <div class="field">
-                            <label for="contact-first-name">First Name</label>
+                            <label for="contact-first-name">First name</label>
                             <input type="text" class="input" id="contact-first-name" name="first_name" autocomplete="given-name" required placeholder="Jane">
                         </div>
                         <div class="field">
-                            <label for="contact-last-name">Last Name</label>
+                            <label for="contact-last-name">Last name</label>
                             <input type="text" class="input" id="contact-last-name" name="last_name" autocomplete="family-name" required placeholder="Doe">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="contact-email">Work Email</label>
+                        <label for="contact-email">Work email</label>
                         <input type="email" class="input" id="contact-email" name="email" autocomplete="email" required placeholder="jane@company.com">
                     </div>
                     <div class="field">
-                        <label for="contact-company">Company Name</label>
+                        <label for="contact-company">Company name</label>
                         <input type="text" class="input" id="contact-company" name="company" autocomplete="organization" required placeholder="Acme Defense Corp">
                     </div>
                     <div class="field">
-                        <label for="contact-framework">Primary Compliance Framework</label>
-                        <select class="input" id="contact-framework" name="framework" required>
+                        <label for="contact-role">I'm a…</label>
+                        <select class="input" id="contact-role" name="role" required>
                             <option value="" disabled selected>Select an option…</option>
-                            <option value="cmmc">CMMC Level 2/3</option>
-                            <option value="nist">NIST 800-171</option>
-                            <option value="fedramp">FedRAMP</option>
-                            <option value="itar">ITAR / EAR</option>
+                            <option value="contractor">Defense contractor (need CMMC L2)</option>
+                            <option value="rpo-msp">RPO / MSP / consultant (reseller)</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-hero-primary">Request Deep-Dive <i data-lucide="send"></i></button>
-                    <div id="formOk" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.18);">
-                        <i data-lucide="shield-check" style="width:16px;height:16px;color:var(--emerald);"></i>
-                        <span style="font-size:12px;color:var(--text-2);">Request submitted securely. We'll reach out within one business day.</span>
+                    <div class="field">
+                        <label for="contact-stage">Where are you with CMMC?</label>
+                        <select class="input" id="contact-stage" name="stage" required>
+                            <option value="" disabled selected>Select an option…</option>
+                            <option value="deadline">Deadline / flow-down in hand</option>
+                            <option value="planning">Planning ahead</option>
+                            <option value="nist-only">NIST 800-171, no CMMC date yet</option>
+                            <option value="not-sure">Not sure yet</option>
+                        </select>
                     </div>
-                    <p class="form-note">By submitting, you agree to our <a href="terms.html" style="color:var(--cyan);">Terms of Service</a> and <a href="privacy.html" style="color:var(--cyan);">Privacy Policy</a>. We will never share your information.</p>
+                    <button type="submit" class="btn btn-hero-primary">Book a demo <i data-lucide="send"></i></button>
+                    <div id="formOk" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.18);">
+                        <i data-lucide="check-circle-2" style="width:16px;height:16px;color:var(--emerald);"></i>
+                        <span style="font-size:12px;color:var(--text-2);">Thanks — we'll reach out within one business day.</span>
+                    </div>
+                    <p class="form-note">By submitting, you agree to our <a href="terms.html" style="color:var(--cyan);">Terms of Service</a> and <a href="privacy.html" style="color:var(--cyan);">Privacy Policy</a>. We will never sell or share your information.</p>
                 </form>
             </div>
         </div>
@@ -119,34 +127,34 @@
                     <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
                     <span class="logo-wordmark">VeriStasis</span>
                 </div>
-                <p class="ft-brand-desc">The all-in-one CMMC Level 2 compliance platform engineered for the Defense Industrial Base. Proof, not promises.</p>
+                <p class="ft-brand-desc">The done-for-you CMMC Level 2 documentation engine for small defense contractors. Deterministic, auditable, assessment-ready.</p>
             </div>
             <div class="ft-col">
-                <h3>Platform</h3>
-                <a href="platform.html">Architecture</a>
-                <a href="security.html">Security Vault</a>
-                <a href="platform.html">Integrations</a>
-                <a href="platform.html">Changelog</a>
+                <h3>Product</h3>
+                <a href="platform.html">Overview</a>
+                <a href="platform.html#smartscope">SmartScope&trade;</a>
+                <a href="platform.html#scorepath">ScorePath&trade;</a>
+                <a href="platform.html#livedoc">LiveDoc&trade;</a>
             </div>
             <div class="ft-col">
                 <h3>Solutions</h3>
-                <a href="solutions.html">Prime Contractors</a>
-                <a href="solutions.html">Subcontractors</a>
-                <a href="solutions.html">MSP Partners</a>
-                <a href="solutions.html">Pricing &amp; Tiers</a>
+                <a href="solutions.html">Defense Contractors</a>
+                <a href="solutions.html">RPO &amp; MSP Partners</a>
+                <a href="platform.html#bundle">What you get</a>
+                <a href="solutions.html#pricing">Pricing</a>
             </div>
             <div class="ft-col">
                 <h3>Company</h3>
-                <a href="company.html">About Us</a>
-                <a href="company.html">Leadership</a>
+                <a href="company.html">About</a>
+                <a href="security.html">Security</a>
                 <a href="contact.html">Contact</a>
-                <a href="company.html">Careers</a>
+                <a href="signin.html">Sign in</a>
             </div>
         </div>
         <div class="ft-bottom">
             <div>
                 <p>&copy; 2026 VeriStasis. All rights reserved.</p>
-                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Kingsburg, CA</p>
             </div>
             <div class="ft-legal">
                 <a href="privacy.html">Privacy</a>

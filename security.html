@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust Center — VeriStasis</title>
-    <meta name="description" content="An empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced TOTP MFA, Wazuh SIEM monitoring, and strict tenant isolation.">
+    <title>Security &amp; Data Handling — VeriStasis</title>
+    <meta name="description" content="How VeriStasis handles your data: evidence encrypted in your browser (AES-256-GCM) before upload, no connection to your live systems, data minimization by design, and SHA-256-checksummed, version-controlled artifacts.">
     <!-- Social sharing (set og:url + absolute og:image once deployed) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="VeriStasis">
-    <meta property="og:title" content="Trust Center — VeriStasis">
-    <meta property="og:description" content="An empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced TOTP MFA, Wazuh SIEM monitoring, and strict tenant isolation.">
+    <meta property="og:title" content="Security &amp; Data Handling — VeriStasis">
+    <meta property="og:description" content="Evidence encrypted in your browser before upload, no connection to your live systems, data minimization by design, and SHA-256-checksummed, version-controlled artifacts.">
     <meta property="og:image" content="assets/og.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Trust Center — VeriStasis">
-    <meta name="twitter:description" content="An empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced TOTP MFA, Wazuh SIEM monitoring, and strict tenant isolation.">
+    <meta name="twitter:title" content="Security &amp; Data Handling — VeriStasis">
+    <meta name="twitter:description" content="Evidence encrypted in your browser before upload, no connection to your live systems, data minimization by design, and SHA-256-checksummed, version-controlled artifacts.">
     <meta name="twitter:image" content="assets/og.png">
     <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
         </nav>
         <div class="nav-end">
             <a href="signin.html" class="signin">Sign in</a>
-            <a href="contact.html" class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-solid">Book a demo <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </header>
@@ -55,11 +55,11 @@
 <!-- HERO -->
 <section class="page-hero" id="main">
     <div class="wrap">
-        <div class="reveal"><div class="sect-eyebrow">Trust Center</div></div>
-        <h1 class="reveal d1">Secured by mathematics,<br><span class="gradient-text">not promises.</span></h1>
-        <p class="lead reveal d2">VeriStasis runs an empirically tested zero-trust architecture: AES-256-GCM streaming encryption, enforced MFA, and strict tenant isolation — proven by autonomous penetration testing, not promised in a brochure.</p>
+        <div class="reveal"><div class="sect-eyebrow">Security &amp; data handling</div></div>
+        <h1 class="reveal d1">Honest about <span class="gradient-text">what we hold.</span></h1>
+        <p class="lead reveal d2">We'd rather tell you exactly what the product does than dress it up. Here is how VeriStasis handles your data — including the parts the platform <em>can</em> read, stated plainly.</p>
         <div class="hero-buttons reveal d3">
-            <a href="contact.html" class="btn btn-hero-primary">Request the Security Whitepaper <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-hero-primary">Talk it through with us <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -70,55 +70,104 @@
         <div class="grid reveal">
             <div class="cell big">
                 <div class="cell-icon"><i data-lucide="lock"></i></div>
-                <h3>Streaming Encryption at Scale</h3>
-                <p>All CUI and audit evidence is sealed with AES-256-GCM chunked streaming encryption — gigabytes encrypted on-the-fly in constant memory, immune to memory-exhaustion attacks — and TOTP secrets are encrypted at rest.</p>
+                <h3>Evidence encrypted in your browser</h3>
+                <p>The sensitive proof you upload to the vault is encrypted in your browser with AES-256-GCM <em>before</em> it reaches us. The server stores only ciphertext it cannot decrypt. It's recoverable with your vault passphrase — and we hold no recovery key, so if you lose the passphrase, we cannot restore the file for you. That's the trade-off of a zero-access design, and we make it on purpose.</p>
                 <div class="codeblock">
                     <div class="codeblock-bar">
                         <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-                        <span class="codeblock-name">crypto_profile.yml</span>
+                        <span class="codeblock-name">evidence_vault.facts</span>
                     </div>
-<pre><span class="k">symmetric</span>: <span class="v">AES-256-GCM</span>
-<span class="k">mode</span>: <span class="v">chunked-streaming</span>
-<span class="k">memory_profile</span>: <span class="v">constant</span>
-<span class="k">totp_secrets</span>: <span class="v">encrypted-at-rest</span>
-<span class="k">unauthorized_requests</span>: <span class="v">401-verified</span></pre>
+<pre><span class="k">client_side_encryption</span>: <span class="v">AES-256-GCM</span>
+<span class="k">encrypted_before_upload</span>: <span class="v">true</span>
+<span class="k">server_stores</span>: <span class="v">ciphertext-only</span>
+<span class="k">recovery_key_held_by_us</span>: <span class="b">none</span>
+<span class="k">recoverable_with</span>: <span class="v">your-passphrase</span></pre>
                 </div>
             </div>
             <div class="cell">
-                <div class="cell-icon"><i data-lucide="key"></i></div>
-                <h3>Zero-Trust Identity</h3>
-                <p>Robust passwords plus TOTP multi-factor authentication, enforced on every access attempt. Empirical tests prove unauthorized access is actively blocked — verified 401 responses.</p>
+                <div class="cell-icon"><i data-lucide="plug-zap"></i></div>
+                <h3>No connection to your systems</h3>
+                <p>We generate your documentation from the answers you provide. We do not connect to or ingest data from your live systems, and we are not a CUI hosting environment, a SIEM, or a monitoring platform.</p>
             </div>
             <div class="cell">
-                <div class="cell-icon"><i data-lucide="eye"></i></div>
-                <h3>Continuous Wazuh SIEM Monitoring</h3>
-                <p>Integrated Wazuh SIEM watches threats, suspicious logins, and vulnerabilities around the clock. Containerized network tiers contain breaches and stop lateral movement.</p>
+                <div class="cell-icon"><i data-lucide="minimize-2"></i></div>
+                <h3>Data minimization by design</h3>
+                <p>We hold as little of your data as possible. SmartScope&trade; narrows intake to the decisions an assessment actually turns on, so we're not collecting more than the work requires.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- POSTURE METRICS -->
+<!-- WHAT WE CAN / CAN'T READ -->
 <section class="sect" style="padding-top:0;">
     <div class="wrap">
         <div class="sect-header reveal" style="text-align:center;">
-            <div class="sect-eyebrow" style="justify-content:center;">Continuous Posture</div>
-            <h2 class="sect-title" style="text-align:center;">Audited, attested, always-on.</h2>
-            <p class="sect-desc" style="margin:0 auto;text-align:center;">Live control coverage and empirically tested security — not a point-in-time snapshot.</p>
+            <div class="sect-eyebrow" style="justify-content:center;">No fine print</div>
+            <h2 class="sect-title" style="text-align:center;">What we can &amp; can't read.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">A "we never see your data" line would be false, so we won't write it. Here is the real boundary.</p>
         </div>
-        <div class="metrics reveal">
-            <div class="metric"><div class="metric-val">110<span class="hi">/</span>110</div><div class="metric-lbl">NIST 800-171 Controls</div></div>
-            <div class="metric"><div class="metric-val">0</div><div class="metric-lbl">Cross-Tenant Data Leaks</div></div>
-            <div class="metric"><div class="metric-val">24<span class="hi">/</span>7</div><div class="metric-lbl">Wazuh SIEM Monitoring</div></div>
-            <div class="metric"><div class="metric-val">401</div><div class="metric-lbl">Unauthorized Access: Blocked</div></div>
+        <div class="compare reveal">
+            <div class="compare-col compare-good">
+                <div class="compare-header">
+                    <div class="compare-icon good"><i data-lucide="eye-off"></i></div>
+                    <h4>We can't read</h4>
+                </div>
+                <ul>
+                    <li><i data-lucide="check-circle-2"></i> Your uploaded evidence files — encrypted in your browser, stored as ciphertext only</li>
+                    <li><i data-lucide="check-circle-2"></i> Anything protected by your vault passphrase, which we never receive</li>
+                </ul>
+            </div>
+            <div class="compare-divider">
+                <span>VS</span>
+            </div>
+            <div class="compare-col compare-bad">
+                <div class="compare-header">
+                    <div class="compare-icon bad"><i data-lucide="eye"></i></div>
+                    <h4>We can read (to run the service)</h4>
+                </div>
+                <ul>
+                    <li><i data-lucide="x-circle"></i> Your control-status answers and computed SPRS scores</li>
+                    <li><i data-lucide="x-circle"></i> The documents we generate for you — SSP, POA&amp;M, policies</li>
+                    <li><i data-lucide="x-circle"></i> Account and security metadata needed to operate your tenant</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INTEGRITY + POSTURE -->
+<section class="sect" style="padding-top:0;">
+    <div class="wrap">
+        <div class="split reveal">
+            <div>
+                <div class="sect-eyebrow">Integrity</div>
+                <h2>Checksummed &amp; version-controlled.</h2>
+                <p class="muted">Every artifact is SHA-256 checksummed and version-controlled. The export bundle ships per-file and whole-bundle checksums plus a README with verification instructions, so you — and your assessor — can confirm exactly what was produced and that it hasn't changed since.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check"></i> Per-file and whole-bundle SHA-256 checksums</li>
+                    <li><i data-lucide="check"></i> Versioned, control-linked system of record</li>
+                    <li><i data-lucide="check"></i> Application-level separation between organizations</li>
+                </ul>
+            </div>
+            <div class="matrix">
+                <div class="matrix-head">Regulatory posture</div>
+                <div class="matrix-row" style="display:block;">
+                    <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin:0;">VeriStasis is designed for an <strong style="color:var(--text-1);">SPD-only posture</strong> — a Security Protection Asset handling Security Protection Data. That classification is <strong style="color:var(--text-1);">pending review by qualified counsel</strong>.</p>
+                </div>
+                <div class="matrix-row" style="display:block;">
+                    <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin:0;">We do <strong style="color:var(--text-1);">not</strong> claim FedRAMP authorization or equivalency, and we make no statement that we are exempt from or out of FedRAMP scope.</p>
+                </div>
+            </div>
         </div>
         <div class="framework-tags reveal">
             <span class="framework-tag">CMMC Level 2</span>
             <span class="framework-tag">NIST 800-171 Rev 2</span>
             <span class="framework-tag">DFARS 252.204-7012</span>
-            <span class="framework-tag">Zero-Trust</span>
             <span class="framework-tag">AES-256-GCM</span>
+            <span class="framework-tag">SHA-256</span>
+            <span class="framework-tag">OSCAL</span>
         </div>
+        <p class="note reveal">Authentication today is email and password. Additional multi-factor options are on our roadmap; we'll describe them here only once they ship.</p>
     </div>
 </section>
 
@@ -127,10 +176,10 @@
     <div class="wrap">
         <div class="cta-box reveal">
             <div class="cta-glow"></div>
-            <h2>Verify it for yourself.</h2>
-            <p>Request our architecture whitepaper and penetration-test summary, or book a session with our security engineers.</p>
+            <h2>Ask us the hard questions.</h2>
+            <p>Bring your security and compliance leads. We'll walk through exactly what we store, what we can't read, and where the boundary sits.</p>
             <div class="cta-btns">
-                <a href="contact.html" class="btn btn-hero-primary">Talk to a Security Engineer <i data-lucide="arrow-right"></i></a>
+                <a href="contact.html" class="btn btn-hero-primary">Talk to us <i data-lucide="arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -145,34 +194,34 @@
                     <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
                     <span class="logo-wordmark">VeriStasis</span>
                 </div>
-                <p class="ft-brand-desc">The all-in-one CMMC Level 2 compliance platform engineered for the Defense Industrial Base. Proof, not promises.</p>
+                <p class="ft-brand-desc">The done-for-you CMMC Level 2 documentation engine for small defense contractors. Deterministic, auditable, assessment-ready.</p>
             </div>
             <div class="ft-col">
-                <h3>Platform</h3>
-                <a href="platform.html">Architecture</a>
-                <a href="security.html">Security Vault</a>
-                <a href="platform.html">Integrations</a>
-                <a href="platform.html">Changelog</a>
+                <h3>Product</h3>
+                <a href="platform.html">Overview</a>
+                <a href="platform.html#smartscope">SmartScope&trade;</a>
+                <a href="platform.html#scorepath">ScorePath&trade;</a>
+                <a href="platform.html#livedoc">LiveDoc&trade;</a>
             </div>
             <div class="ft-col">
                 <h3>Solutions</h3>
-                <a href="solutions.html">Prime Contractors</a>
-                <a href="solutions.html">Subcontractors</a>
-                <a href="solutions.html">MSP Partners</a>
-                <a href="solutions.html">Pricing &amp; Tiers</a>
+                <a href="solutions.html">Defense Contractors</a>
+                <a href="solutions.html">RPO &amp; MSP Partners</a>
+                <a href="platform.html#bundle">What you get</a>
+                <a href="solutions.html#pricing">Pricing</a>
             </div>
             <div class="ft-col">
                 <h3>Company</h3>
-                <a href="company.html">About Us</a>
-                <a href="company.html">Leadership</a>
+                <a href="company.html">About</a>
+                <a href="security.html">Security</a>
                 <a href="contact.html">Contact</a>
-                <a href="company.html">Careers</a>
+                <a href="signin.html">Sign in</a>
             </div>
         </div>
         <div class="ft-bottom">
             <div>
                 <p>&copy; 2026 VeriStasis. All rights reserved.</p>
-                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Kingsburg, CA</p>
             </div>
             <div class="ft-legal">
                 <a href="privacy.html">Privacy</a>

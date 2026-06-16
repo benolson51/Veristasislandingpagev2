@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VeriStasis — CMMC Level 2 Compliance for the Defense Industrial Base</title>
-    <meta name="description" content="CMMC Phase 2 enforcement begins November 10, 2026. VeriStasis is the all-in-one CMMC Level 2 platform for the DIB — evidence vault, Wazuh SIEM, zero-trust MFA, and a live 110-control compliance score.">
+    <title>VeriStasis — Done-for-you CMMC Level 2 documentation for defense contractors</title>
+    <meta name="description" content="VeriStasis turns your attested answers into the three mandatory CMMC Level 2 / NIST SP 800-171 artifacts — System Security Plan, POA&M, and the full policy set — computes your real SPRS score, and shows the fastest legitimate path to a passing score. Deterministic, not an AI black box.">
     <!-- Social sharing (set og:url + absolute og:image once deployed) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="VeriStasis">
-    <meta property="og:title" content="VeriStasis — CMMC Level 2 Compliance for the Defense Industrial Base">
-    <meta property="og:description" content="CMMC Phase 2 enforcement begins November 10, 2026. VeriStasis is the all-in-one CMMC Level 2 platform for the DIB — evidence vault, Wazuh SIEM, zero-trust MFA, and a live 110-control compliance score.">
+    <meta property="og:title" content="VeriStasis — Done-for-you CMMC Level 2 documentation">
+    <meta property="og:description" content="Turn your attested answers into the SSP, POA&M, and full policy set, with a real SPRS score and the fastest legitimate path to raise it. Version-controlled and assessment-ready.">
     <meta property="og:image" content="assets/og.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VeriStasis — CMMC Level 2 Compliance for the Defense Industrial Base">
-    <meta name="twitter:description" content="CMMC Phase 2 enforcement begins November 10, 2026. VeriStasis is the all-in-one CMMC Level 2 platform for the DIB — evidence vault, Wazuh SIEM, zero-trust MFA, and a live 110-control compliance score.">
+    <meta name="twitter:title" content="VeriStasis — Done-for-you CMMC Level 2 documentation">
+    <meta name="twitter:description" content="Turn your attested answers into the SSP, POA&M, and full policy set, with a real SPRS score and the fastest legitimate path to raise it. Version-controlled and assessment-ready.">
     <meta name="twitter:image" content="assets/og.png">
     <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +53,7 @@
         </nav>
         <div class="nav-end">
             <a href="signin.html" class="signin">Sign in</a>
-            <a href="contact.html" class="btn btn-solid">Request Demo <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-solid">Book a demo <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </header>
@@ -69,59 +69,63 @@
                 <div class="reveal">
                     <div class="hero-eyebrow">
                         <span class="eyebrow-dot"></span>
-                        CMMC Phase 2 enforcement: <span id="phase2Days">November 10, 2026</span>
+                        For small defense contractors facing a CMMC Level 2 deadline
                     </div>
                 </div>
 
                 <h1 class="reveal d1">
-                    Secure your DoD contracts.<br>
-                    <span class="gradient-text">Mathematically prove CMMC 2.0.</span>
+                    Done-for-you CMMC Level 2 documentation.<br>
+                    <span class="gradient-text">Assessment-ready in weeks, not months.</span>
                 </h1>
 
                 <p class="hero-desc reveal d2">
-                    On November 10, 2026, self-attestation ends and mandatory C3PAO certification begins.
-                    VeriStasis is the all-in-one CMMC Level 2 platform for the Defense Industrial Base —
-                    evidence vault, SIEM, and zero-trust identity in one suite. Not fifteen tools.
+                    VeriStasis turns your attested answers into the three mandatory CMMC Level 2 /
+                    NIST SP 800-171 artifacts — System Security Plan, POA&amp;M, and the full policy set —
+                    computes your real SPRS score, and shows the fastest legitimate path to raise it.
+                    Version-controlled and ready for your annual affirmation.
                 </p>
 
                 <div class="hero-buttons reveal d3">
-                    <a href="contact.html" class="btn btn-hero-primary">Deploy Your Evidence Vault
-                            <i data-lucide="shield-check"></i></a>
-                    <a href="contact.html" class="btn btn-hero-ghost">Schedule a Readiness Assessment</a>
+                    <a href="contact.html" class="btn btn-hero-primary">Book a demo
+                            <i data-lucide="arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-hero-ghost">Request access</a>
                 </div>
 
                 <div class="tags reveal d4">
                     <span class="tag">CMMC Level 2</span>
                     <span class="tag">NIST 800-171 Rev 2</span>
-                    <span class="tag">DFARS 252.204-7012</span>
-                    <span class="tag">CUI Storage</span>
-                    <span class="tag">TOTP MFA</span>
-                    <span class="tag">Zero-Trust</span>
+                    <span class="tag">SSP + POA&amp;M</span>
+                    <span class="tag">Real SPRS Score</span>
+                    <span class="tag">OSCAL Export</span>
+                    <span class="tag">C3PAO-Ready</span>
                 </div>
             </div>
 
-            <!-- Right: live evidence vault demo -->
-            <div class="zk-demo reveal d3" id="zkDemo">
+            <!-- Right: ScorePath projection panel -->
+            <div class="zk-demo reveal d3">
                 <div class="zk-head">
-                    <div class="zk-title"><i data-lucide="lock"></i> Live Evidence Vault</div>
-                    <span class="zk-live">Encrypting</span>
+                    <div class="zk-title"><i data-lucide="route"></i> ScorePath&trade; projection</div>
+                    <span class="tag">Sample</span>
                 </div>
 
-                <div class="zk-label"><i data-lucide="file-text"></i> Your audit evidence — before upload</div>
-                <textarea class="zk-input" id="zkInput" rows="2" spellcheck="false" aria-label="Sample evidence text — type here to see it encrypted live">Access control policy — NIST 3.1.1 evidence</textarea>
-
-                <div class="zk-arrow">
-                    <span class="line"></span>
-                    <i data-lucide="arrow-down"></i> AES-256-GCM · chunked streaming
-                    <span class="line"></span>
+                <div class="zk-label"><i data-lucide="gauge"></i> Your SPRS score today &rarr; target</div>
+                <div class="sp-scoreline">
+                    <span class="sp-score" style="font-size:44px;">62</span>
+                    <i data-lucide="arrow-right"></i>
+                    <span class="sp-score gradient-text" style="font-size:44px;">88</span>
+                    <span class="sp-max">110 max</span>
                 </div>
 
-                <div class="zk-label"><i data-lucide="server"></i> What lands in the vault</div>
-                <div class="zk-cipher" id="zkCipher" aria-hidden="true"></div>
+                <div class="zk-label"><i data-lucide="list-checks"></i> Highest-impact next steps</div>
+                <div class="sp-list">
+                    <div class="sp-row"><span class="sp-tag gate">Gating</span> Close 1 must-meet control <span class="sp-pts">+5</span></div>
+                    <div class="sp-row"><span class="sp-tag quick">Quick win</span> Protect system backups <span class="sp-pts">+1</span></div>
+                    <div class="sp-row"><span class="sp-tag quick">Quick win</span> Limit external system use <span class="sp-pts">+1</span></div>
+                </div>
 
                 <div class="zk-foot">
-                    <i data-lucide="shield-check"></i>
-                    <span><b>Cryptographically locked.</b> Chunked streaming encryption handles gigabytes of evidence without buckling.</span>
+                    <i data-lucide="route"></i>
+                    <span><b>Deterministic roadmap.</b> Gating controls and quick-wins, ranked by points-per-effort &mdash; never an AI guess.</span>
                 </div>
             </div>
         </div>
@@ -132,39 +136,39 @@
 <div class="marquee-wrap reveal">
     <div class="marquee">
         <div class="marquee-track">
-            <span>CMMC Level 2 Focused</span>
+            <span>CMMC Level 2</span>
             <span class="marquee-dot"></span>
-            <span>NIST 800-171 Mapped</span>
+            <span>NIST 800-171 Rev 2 Mapped</span>
             <span class="marquee-dot"></span>
-            <span>110 Controls Tracked</span>
+            <span>110 Controls</span>
             <span class="marquee-dot"></span>
-            <span>AES-256-GCM Encrypted</span>
+            <span>SSP · POA&amp;M · Policies</span>
             <span class="marquee-dot"></span>
-            <span>Zero-Trust Architecture</span>
+            <span>Real SPRS Score</span>
             <span class="marquee-dot"></span>
-            <span>Wazuh SIEM Monitored</span>
+            <span>OSCAL Export</span>
             <span class="marquee-dot"></span>
-            <span>Empirically Pen-Tested</span>
+            <span>C3PAO-Ready Bundle</span>
             <span class="marquee-dot"></span>
-            <span>Multi-Tenant Isolation</span>
+            <span>Deterministic, Not AI</span>
             <span class="marquee-dot"></span>
             <!-- Duplicate for seamless loop (hidden from assistive tech) -->
             <div aria-hidden="true" style="display:contents;">
-                <span>CMMC Level 2 Focused</span>
+                <span>CMMC Level 2</span>
                 <span class="marquee-dot"></span>
-                <span>NIST 800-171 Mapped</span>
+                <span>NIST 800-171 Rev 2 Mapped</span>
                 <span class="marquee-dot"></span>
-                <span>110 Controls Tracked</span>
+                <span>110 Controls</span>
                 <span class="marquee-dot"></span>
-                <span>AES-256-GCM Encrypted</span>
+                <span>SSP · POA&amp;M · Policies</span>
                 <span class="marquee-dot"></span>
-                <span>Zero-Trust Architecture</span>
+                <span>Real SPRS Score</span>
                 <span class="marquee-dot"></span>
-                <span>Wazuh SIEM Monitored</span>
+                <span>OSCAL Export</span>
                 <span class="marquee-dot"></span>
-                <span>Empirically Pen-Tested</span>
+                <span>C3PAO-Ready Bundle</span>
                 <span class="marquee-dot"></span>
-                <span>Multi-Tenant Isolation</span>
+                <span>Deterministic, Not AI</span>
                 <span class="marquee-dot"></span>
             </div>
         </div>
@@ -174,13 +178,13 @@
 <!-- ── Trust Bar ── -->
 <div class="logos-strip reveal">
     <div class="wrap">
-        <p class="logos-label">Built for every tier of the defense supply chain</p>
+        <p class="logos-label">Built for small defense contractors and the partners who serve them</p>
         <div class="logos-row">
             <span>Aerospace Suppliers</span>
             <span>Precision Manufacturers</span>
-            <span>Defense IT MSPs</span>
             <span>Engineering Firms</span>
-            <span>Component Fabricators</span>
+            <span>RPOs &amp; MSPs</span>
+            <span>Compliance Consultants</span>
         </div>
     </div>
 </div>
@@ -191,99 +195,96 @@
 <section class="sect" id="features">
     <div class="wrap">
         <div class="sect-header reveal">
-            <div class="sect-eyebrow">System Capabilities</div>
-            <h2 class="sect-title">Uncompromising architecture.<br>Zero compromises.</h2>
-            <p class="sect-desc">Every layer is purpose-built to exceed the strictest federal compliance standards while remaining effortless to deploy.</p>
+            <div class="sect-eyebrow">What it does</div>
+            <h2 class="sect-title">Your answers in.<br>An assessment-ready evidence set out.</h2>
+            <p class="sect-desc">VeriStasis is a software-assisted documentation and document-control service — you attest, it generates, controls, and keeps everything current. It does not connect to or monitor your live systems.</p>
         </div>
 
         <div class="grid reveal">
-            <!-- Featured: Evidence Vault -->
+            <!-- Featured: ScorePath -->
             <div class="cell big">
-                <div class="cell-icon"><i data-lucide="lock"></i></div>
-                <h3>The Evidence Vault</h3>
-                <p>Upload, manage, and map evidence directly to NIST 800-171 controls. Everything is sealed with AES-256-GCM chunked streaming encryption — gigabytes encrypted on-the-fly in constant memory, immune to memory-exhaustion attacks, with TOTP secrets encrypted at rest. Cryptographically locked, mathematically verifiable.</p>
+                <div class="cell-icon"><i data-lucide="route"></i></div>
+                <h3>ScorePath&trade; — the fastest legitimate path to a passing score</h3>
+                <p>Most tools hand you a number. ScorePath ranks the work by points-per-effort, separates the <strong style="color:var(--text-1);">must-meet gating controls</strong> from the quick-wins, and projects "from SPRS X to Y, do these N things." Your real DoD Assessment Methodology score, with a roadmap — never a false promise.</p>
                 <div class="codeblock">
                     <div class="codeblock-bar">
                         <span class="dot dot-r"></span>
                         <span class="dot dot-y"></span>
                         <span class="dot dot-g"></span>
-                        <span class="codeblock-name">vault_config.yml</span>
+                        <span class="codeblock-name">scorepath.sample.yml</span>
                     </div>
-<pre><span class="c"># Evidence vault encryption pipeline</span>
-<span class="k">encryption</span>:
-  <span class="k">algorithm</span>: <span class="v">AES-256-GCM</span>
-  <span class="k">mode</span>: <span class="v">chunked-streaming</span>
-  <span class="k">memory_profile</span>: <span class="v">constant</span>
-  <span class="k">totp_secrets</span>: <span class="v">encrypted-at-rest</span>
-<span class="k">isolation</span>:
-  <span class="k">cross_tenant</span>: <span class="v">strict-rbac</span>
-  <span class="k">network_tiers</span>: <span class="v">containerized</span>
-  <span class="k">controls_mapped</span>: <span class="v">110/110</span></pre>
+<pre><span class="c"># sample roadmap — illustrative</span>
+<span class="k">current_sprs</span>: <span class="b">62</span>
+<span class="k">target_sprs</span>: <span class="b">88</span>
+<span class="k">must_meet_gating</span>: <span class="b">1</span>
+<span class="k">quick_wins</span>: <span class="b">9</span>
+<span class="k">ranked_by</span>: <span class="v">points-per-effort</span>
+<span class="k">deterministic</span>: <span class="v">true</span></pre>
                 </div>
             </div>
 
-            <!-- Sovereign Cloud -->
+            <!-- SmartScope -->
             <div class="cell">
-                <div class="cell-icon"><i data-lucide="activity"></i></div>
-                <h3>Continuous Monitoring &amp; SIEM</h3>
-                <p>Integrated Wazuh SIEM surfaces active threats, suspicious logins, and vulnerabilities in real time. Containerized network tiers isolate frontend, backend, and database to stop lateral movement.</p>
+                <div class="cell-icon"><i data-lucide="filter"></i></div>
+                <h3>SmartScope&trade;</h3>
+                <p>Adaptive intake collapses the 110-control interrogation to roughly 30–40 real decisions using scope-pruning and stack inheritance (M365 GCC High, Google Workspace, AWS GovCloud). Every N/A is logged with an assessor-credible rationale.</p>
             </div>
 
-            <!-- Hardware Identity -->
+            <!-- LiveDoc -->
             <div class="cell">
-                <div class="cell-icon"><i data-lucide="fingerprint"></i></div>
-                <h3>Zero-Trust Identity</h3>
-                <p>Robust password policy plus TOTP multi-factor authentication, natively enforced on every access attempt. Unauthorized requests are actively blocked — empirically verified, not assumed.</p>
+                <div class="cell-icon"><i data-lucide="git-branch"></i></div>
+                <h3>LiveDoc&trade;</h3>
+                <p>A living, version-controlled, control-linked system of record — not a one-time deliverable that goes stale in SharePoint. One click shows you any control, with stale-policy tracking built in.</p>
             </div>
 
-            <!-- Row-Level Security -->
+            <!-- Mandatory artifacts -->
             <div class="cell">
-                <div class="cell-icon"><i data-lucide="rows-3"></i></div>
-                <h3>Multi-Tenant Command Center</h3>
-                <p>Strict cross-tenant isolation and RBAC keep every organization's data completely siloed. MSPs manage compliance for their entire defense portfolio from a single pane of glass.</p>
+                <div class="cell-icon"><i data-lucide="file-text"></i></div>
+                <h3>The three mandatory artifacts</h3>
+                <p>A complete System Security Plan (Word <em>and</em> OSCAL JSON), a POA&amp;M with one remediation record per unmet control, and a ~20-document policy set — one policy per NIST family, control-linked.</p>
             </div>
 
-            <!-- Physical Security Kiosk -->
+            <!-- C3PAO bundle -->
             <div class="cell">
-                <div class="cell-icon"><i data-lucide="door-closed"></i></div>
-                <h3>Physical Security Kiosk</h3>
-                <p>Log visitors and capture facility evidence — locked server rooms, badge access — mapped directly to NIST domains 3.9 and 3.10. Digital and physical compliance in one vault.</p>
+                <div class="cell-icon"><i data-lucide="package-check"></i></div>
+                <h3>C3PAO-ready bundle</h3>
+                <p>One zip an RPO or C3PAO consumes directly: SSP, POA&amp;M, policies, SPRS worksheet, a per-control assessor index, and a plain-language README — with per-file and whole-bundle SHA-256 checksums.</p>
             </div>
 
-            <!-- NIST Automation -->
+            <!-- Encrypted evidence vault -->
             <div class="cell">
-                <div class="cell-icon"><i data-lucide="check-circle"></i></div>
-                <h3>Automated Audit Readiness</h3>
-                <p>A real-time compliance score across all 110 NIST 800-171 controls, with evidence mapped to each one. Walk into your C3PAO audit with proof, not promises.</p>
+                <div class="cell-icon"><i data-lucide="lock"></i></div>
+                <h3>Client-side encrypted evidence</h3>
+                <p>Evidence is encrypted in your browser with AES-256-GCM before it reaches us — the server stores only ciphertext it cannot decrypt. Recoverable with your vault passphrase; we hold no recovery key.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ══════════════════════════════════
-     WHY NOT TRADITIONAL CLOUD?
+     COMPARISON
      ══════════════════════════════════ -->
 <section class="sect">
     <div class="wrap">
         <div class="reveal" style="text-align:center;">
-            <div class="sect-eyebrow" style="justify-content:center;">The Problem</div>
-            <h2 class="sect-title" style="text-align:center;">Patchwork compliance<br>fails CMMC Level 2.</h2>
-            <p class="sect-desc" style="margin:0 auto;text-align:center;">Generic GRC checklists and a stack of fifteen disconnected security tools weren't built for the 110 controls — and C3PAO assessors can tell. Here's how VeriStasis is different.</p>
+            <div class="sect-eyebrow" style="justify-content:center;">The difference</div>
+            <h2 class="sect-title" style="text-align:center;">A controlled corpus,<br>not a one-time deliverable.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">A binder of generated documents goes stale the day it's finished. Here's how VeriStasis is built to survive the assessment — and the annual affirmation after it.</p>
         </div>
 
         <div class="compare reveal">
             <div class="compare-col compare-bad">
                 <div class="compare-header">
                     <div class="compare-icon bad"><i data-lucide="x"></i></div>
-                    <h4>The Patchwork Approach</h4>
+                    <h4>The usual approach</h4>
                 </div>
                 <ul>
-                    <li><i data-lucide="x-circle"></i> Fifteen tools to license, integrate &amp; maintain</li>
-                    <li><i data-lucide="x-circle"></i> Generic GRC checklists — nothing enforced</li>
-                    <li><i data-lucide="x-circle"></i> Evidence scattered across drives &amp; email</li>
-                    <li><i data-lucide="x-circle"></i> Compliance scored by spreadsheet</li>
-                    <li><i data-lucide="x-circle"></i> Security claims never actually tested</li>
-                    <li><i data-lucide="x-circle"></i> Physical security logged on paper</li>
+                    <li><i data-lucide="x-circle"></i> A one-time SSP that goes stale in SharePoint</li>
+                    <li><i data-lucide="x-circle"></i> Black-box AI output that's hard to explain to an assessor</li>
+                    <li><i data-lucide="x-circle"></i> A score with no path to raise it</li>
+                    <li><i data-lucide="x-circle"></i> Assemble the C3PAO package yourself</li>
+                    <li><i data-lucide="x-circle"></i> No ready ESP / responsibility artifact for your assessor</li>
+                    <li><i data-lucide="x-circle"></i> Findings chased over email after the fact</li>
                 </ul>
             </div>
             <div class="compare-divider">
@@ -295,12 +296,12 @@
                     <h4>VeriStasis</h4>
                 </div>
                 <ul>
-                    <li><i data-lucide="check-circle-2"></i> One suite: vault, SIEM, MFA &amp; RBAC</li>
-                    <li><i data-lucide="check-circle-2"></i> Purpose-built for the 110 NIST controls</li>
-                    <li><i data-lucide="check-circle-2"></i> Evidence mapped control-by-control</li>
-                    <li><i data-lucide="check-circle-2"></i> Real-time 0–110 compliance score</li>
-                    <li><i data-lucide="check-circle-2"></i> Empirically pen-tested in production</li>
-                    <li><i data-lucide="check-circle-2"></i> Kiosk-captured physical evidence (3.9/3.10)</li>
+                    <li><i data-lucide="check-circle-2"></i> LiveDoc&trade; — version-controlled, control-linked corpus</li>
+                    <li><i data-lucide="check-circle-2"></i> Deterministic generation — consistent, explainable output</li>
+                    <li><i data-lucide="check-circle-2"></i> ScorePath&trade; — a ranked, legitimate path to a higher SPRS</li>
+                    <li><i data-lucide="check-circle-2"></i> C3PAO-ready bundle with a per-control assessor index</li>
+                    <li><i data-lucide="check-circle-2"></i> Auto-generated CRM + ESP service description</li>
+                    <li><i data-lucide="check-circle-2"></i> Rejection&rarr;remediation loop built in</li>
                 </ul>
             </div>
         </div>
@@ -313,74 +314,123 @@
 <section class="sect">
     <div class="wrap">
         <div class="reveal" style="text-align:center;">
-            <div class="sect-eyebrow" style="justify-content:center;">Data Pipeline</div>
-            <h2 class="sect-title" style="text-align:center;">Four gates. Zero exposure.</h2>
-            <p class="sect-desc" style="margin:0 auto;text-align:center;">Every artifact passes through a verifiable security pipeline before it lands in the vault — and stays monitored after it does.</p>
+            <div class="sect-eyebrow" style="justify-content:center;">How it works</div>
+            <h2 class="sect-title" style="text-align:center;">Four steps to assessment-ready.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">You attest. The engine generates. You maintain. Everything stays version-controlled and ready for the annual affirmation.</p>
         </div>
 
         <div class="steps reveal">
             <div class="step">
                 <div class="step-num">01</div>
-                <h4>Zero-Trust Login</h4>
-                <p>Password + TOTP MFA. Unauthorized requests get a verified 401.</p>
+                <h4>Adaptive intake</h4>
+                <p>SmartScope&trade; prunes 110 controls to the ~30–40 decisions that actually apply to you.</p>
             </div>
             <div class="step">
                 <div class="step-num">02</div>
-                <h4>Streaming Encryption</h4>
-                <p>AES-256-GCM chunks evidence on the fly — constant memory at any size.</p>
+                <h4>Deterministic generation</h4>
+                <p>Your SSP, POA&amp;M, and policy set, produced from your answers by a rules engine.</p>
             </div>
             <div class="step">
                 <div class="step-num">03</div>
-                <h4>Control Mapping</h4>
-                <p>Every artifact binds directly to its NIST 800-171 control.</p>
+                <h4>Score + ScorePath</h4>
+                <p>Your real SPRS score, plus the ranked path that separates gating from quick-wins.</p>
             </div>
             <div class="step">
                 <div class="step-num">04</div>
-                <h4>Continuous Monitoring</h4>
-                <p>Wazuh SIEM watches threats and suspicious logins in real time.</p>
+                <h4>Maintain &amp; affirm</h4>
+                <p>Version control, 180-day closeout tracking, and affirmation-readiness with blockers.</p>
             </div>
         </div>
 
         <!-- Metrics -->
         <div class="metrics reveal">
             <div class="metric">
-                <div class="metric-val">110<span class="hi">/</span>110</div>
-                <div class="metric-lbl">NIST 800-171 Controls</div>
+                <div class="metric-val">110</div>
+                <div class="metric-lbl">NIST 800-171 Rev 2 controls</div>
             </div>
             <div class="metric">
-                <div class="metric-val">401</div>
-                <div class="metric-lbl">Unauthorized Access: Blocked &amp; Verified</div>
+                <div class="metric-val">3</div>
+                <div class="metric-lbl">Mandatory artifacts, generated</div>
             </div>
             <div class="metric">
-                <div class="metric-val">0</div>
-                <div class="metric-lbl">Cross-Tenant Data Leaks</div>
+                <div class="metric-val">14</div>
+                <div class="metric-lbl">Policy families, control-linked</div>
             </div>
             <div class="metric">
-                <div class="metric-val">24<span class="hi">/</span>7</div>
-                <div class="metric-lbl">Wazuh SIEM Monitoring</div>
+                <div class="metric-val">180</div>
+                <div class="metric-lbl">Day POA&amp;M closeout, tracked</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ══════════════════════════════════
-     TESTIMONIAL
+     SECURITY BAND (honest, §6 verbatim)
      ══════════════════════════════════ -->
-<section class="sect">
+<section class="sect" id="security">
     <div class="wrap">
-        <div class="testimonial reveal">
-            <div class="testimonial-quote">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="quote-icon"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21zM15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 .001 0 .001 0 0z"/></svg>
-                <blockquote>
-                    VeriStasis replaced the patchwork of tools we could barely afford. Evidence mapping that used to take weeks now happens automatically, and our 110-control score is live on one dashboard. We walked into our assessment with proof, not promises.
-                </blockquote>
-                <div class="testimonial-author">
-                    <div class="author-avatar">DC</div>
-                    <div>
-                        <div class="author-name">Director of Compliance</div>
-                        <div class="author-role">SMB aerospace supplier · pilot program</div>
-                    </div>
+        <div class="reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">How we handle your data</div>
+            <h2 class="sect-title" style="text-align:center;">Honest about what we hold.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">We say exactly what the product does. Data minimization is the design, not a tagline.</p>
+        </div>
+
+        <div class="grid reveal" style="grid-template-columns:repeat(2,1fr);">
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="lock"></i></div>
+                <h3>Encrypted in your browser</h3>
+                <p>Your evidence is encrypted in your browser (AES-256-GCM) before it reaches us — the server stores only ciphertext it cannot decrypt. Recoverable with your vault passphrase; we hold no recovery key.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="plug-zap"></i></div>
+                <h3>We don't touch your live systems</h3>
+                <p>We generate your documentation from the answers you provide — we do not connect to or ingest data from your live systems, and we are not a CUI hosting environment.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="minimize-2"></i></div>
+                <h3>Data minimization by design</h3>
+                <p>We hold as little of your data as possible. The intake is scoped to the decisions an assessor actually needs to see — nothing more.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="file-check-2"></i></div>
+                <h3>Checksummed &amp; version-controlled</h3>
+                <p>Every artifact is SHA-256 checksummed and version-controlled, so you — and your assessor — can verify exactly what was produced and when.</p>
+            </div>
+        </div>
+
+        <p class="note reveal">
+            <strong>Plainly:</strong> your control-status data, scores, and the generated documents are stored on our servers and are readable by the platform so we can produce and maintain them. The "we can't read it" guarantee applies specifically to your uploaded evidence files. We don't claim FedRAMP authorization or equivalency; the platform is designed for a Security Protection Data (SPD-only) posture, with classification pending review by qualified counsel.
+        </p>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CHANNEL BAND (RPO / MSP)
+     ══════════════════════════════════ -->
+<section class="sect" style="padding-top:0;">
+    <div class="wrap">
+        <div class="split wide-left reveal">
+            <div>
+                <div class="sect-eyebrow">For RPOs, MSPs &amp; consultants</div>
+                <h2>Arm your book.</h2>
+                <p class="muted">Resell VeriStasis to your contractor clients as margin expansion — and stop hand-building SSPs one Word file at a time. Each client organization is separated so an org only ever sees its own assessments.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check"></i> Generate the ESP service description &amp; Customer Responsibility Matrix your clients' assessors ask for</li>
+                    <li><i data-lucide="check"></i> Deterministic output you can stand behind in front of a C3PAO</li>
+                    <li><i data-lucide="check"></i> A controlled corpus you maintain across the annual affirmation cycle</li>
+                </ul>
+                <div class="hero-buttons" style="margin-top:28px;margin-bottom:0;">
+                    <a href="solutions.html" class="btn btn-hero-primary">Partner with us <i data-lucide="arrow-right"></i></a>
                 </div>
+            </div>
+            <div class="matrix">
+                <div class="matrix-head">Per-client deliverables</div>
+                <div class="matrix-row"><span>System Security Plan (Word + OSCAL)</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>POA&amp;M with 180-day closeout</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>~20-document policy set</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>SPRS worksheet + ScorePath roadmap</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>CRM + ESP service description</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>C3PAO package + checksums</span><i data-lucide="check"></i></div>
             </div>
         </div>
     </div>
@@ -392,52 +442,45 @@
 <section class="sect" id="faq">
     <div class="wrap">
         <div class="reveal" style="text-align:center;">
-            <div class="sect-eyebrow" style="justify-content:center;">Common Questions</div>
-            <h2 class="sect-title" style="text-align:center;">Answers for security teams.</h2>
-            <p class="sect-desc" style="margin:0 auto;text-align:center;">The questions CISOs and compliance leads ask us most often.</p>
+            <div class="sect-eyebrow" style="justify-content:center;">Common questions</div>
+            <h2 class="sect-title" style="text-align:center;">Straight answers.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">The questions owners and compliance leads ask us most.</p>
         </div>
 
         <div class="faq reveal">
             <div class="faq-item">
-                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">What actually changes on November 10, 2026?
-                    <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span></button>
-                <div class="faq-a" id="faq-a-6" role="region"><div class="faq-a-inner">
-                    CMMC Phase 2 begins. For new DoD solicitations involving CUI, Level 2 self-assessment is no longer sufficient — certification by an authorized C3PAO becomes mandatory. Assessor capacity is already a bottleneck and audit readiness typically takes 6–12 months, so contractors bidding in 2027 need their evidence pipeline running today.
-                </div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">How is our CUI actually protected?
+                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">Do you store our CUI?
                     <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span></button>
                 <div class="faq-a" id="faq-a-1" role="region"><div class="faq-a-inner">
-                    Evidence is encrypted with AES-256-GCM chunked streaming — gigabytes encrypted on-the-fly in constant memory, immune to memory-exhaustion attacks — and TOTP secrets are encrypted at rest. Strict role-based access control and cross-tenant isolation keep every organization's data siloed, while containerized network tiers stop lateral movement.
+                    No. VeriStasis is a documentation and document-control service, not a CUI hosting environment. We generate your artifacts from the answers you provide, and we do not connect to or ingest data from your live systems. Any evidence you do upload is encrypted in your browser before it reaches us, and the server stores only ciphertext it cannot decrypt.
                 </div></div>
             </div>
             <div class="faq-item">
-                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">Does this actually satisfy CMMC 2.0 Level 2 and DFARS 252.204-7012?
+                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">Is this FedRAMP authorized?
                     <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span></button>
                 <div class="faq-a" id="faq-a-2" role="region"><div class="faq-a-inner">
-                    Yes. The platform natively enforces and tracks all 110 NIST SP 800-171 Rev 2 controls, maps your evidence to each one, and generates the empirical proof C3PAO assessors ask for. Continuous evidence also backs the annual executive affirmation in SPRS and keeps POA&amp;M items closed inside the mandatory 180-day window.
+                    We don't claim FedRAMP authorization or equivalency. The platform is designed for an SPD-only posture — a Security Protection Asset handling Security Protection Data — and that classification is pending review by qualified counsel. We'd rather state this precisely than overclaim.
                 </div></div>
             </div>
             <div class="faq-item">
-                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">How long does deployment take?
+                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">Is the documentation AI-generated?
                     <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span></button>
                 <div class="faq-a" id="faq-a-3" role="region"><div class="faq-a-inner">
-                    Most contractors are operational within two weeks. VeriStasis is SaaS — there is no infrastructure to provision. Onboarding is account setup, TOTP MFA enrollment, and mapping your existing evidence against the 110 controls.
+                    No. Your documents are produced by a deterministic rules-and-template engine from the answers you give it, against a real NIST SP 800-171 Rev 2 control table. The output is consistent and explainable to an assessor — not a black-box guess. We treat that determinism as a feature, not a limitation.
                 </div></div>
             </div>
             <div class="faq-item">
-                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">We're an MSP — can we manage every client from one place?
+                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">Do you connect to our systems?
                     <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span></button>
                 <div class="faq-a" id="faq-a-4" role="region"><div class="faq-a-inner">
-                    Yes. The multi-tenant dashboard gives you a real-time 0–110 compliance score for every client organization from a single pane of glass, with strict cross-tenant isolation and RBAC guaranteeing data never bleeds between tenants. MSP partner licensing is billed per managed organization, with white-labeling available.
+                    No. VeriStasis generates everything from the information you attest to. Nothing reads, scans, or monitors your live environment — it is not a SIEM or a continuous-monitoring platform. Those controls remain your responsibility, and the generated documentation reflects what you attest about them.
                 </div></div>
             </div>
             <div class="faq-item">
-                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">Has the security actually been tested?
+                <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">What do we actually get?
                     <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span></button>
                 <div class="faq-a" id="faq-a-5" role="region"><div class="faq-a-inner">
-                    Yes — and not just on paper. The platform undergoes rigorous autonomous dynamic penetration testing in production: unauthorized access attempts are blocked with verified 401 responses, cross-tenant isolation holds under attack, and the encryption pipeline is exercised end-to-end. Proof, not promises.
+                    One export bundle: your System Security Plan (Word + OSCAL), a POA&amp;M, a ~20-document policy set, a SPRS worksheet (PDF), a Customer Responsibility Matrix plus an ESP service description, and a C3PAO package — a per-control assessor index and a plain-language README. Every file, and the whole bundle, carries a SHA-256 checksum.
                 </div></div>
             </div>
         </div>
@@ -451,11 +494,11 @@
     <div class="wrap">
         <div class="cta-box reveal">
             <div class="cta-glow"></div>
-            <h2>Self-attestation ends November 10, 2026.<br>Your contracts depend on what comes next.</h2>
-            <p>Phase 2 brings mandatory C3PAO certification — and assessor capacity is already a bottleneck. Audit readiness takes 6–12 months. Deploy the DIB's all-in-one CMMC Level 2 platform now, while the window is still open.</p>
+            <h2>Assessment-ready documentation,<br>done for you.</h2>
+            <p>Turn your answers into a complete CMMC Level 2 evidence set — SSP, POA&amp;M, policies, and a real SPRS score with the fastest legitimate path to raise it.</p>
             <div class="cta-btns">
-                <a href="contact.html" class="btn btn-hero-primary">Deploy Your Evidence Vault <i data-lucide="arrow-right"></i></a>
-                <a href="contact.html" class="btn btn-hero-ghost">Talk to an Engineer</a>
+                <a href="contact.html" class="btn btn-hero-primary">Book a demo <i data-lucide="arrow-right"></i></a>
+                <a href="contact.html" class="btn btn-hero-ghost">Request access</a>
             </div>
         </div>
     </div>
@@ -472,34 +515,34 @@
                     <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
                     <span class="logo-wordmark">VeriStasis</span>
                 </div>
-                <p class="ft-brand-desc">The all-in-one CMMC Level 2 compliance platform engineered for the Defense Industrial Base. Proof, not promises.</p>
+                <p class="ft-brand-desc">The done-for-you CMMC Level 2 documentation engine for small defense contractors. Deterministic, auditable, assessment-ready.</p>
             </div>
             <div class="ft-col">
-                <h3>Platform</h3>
-                <a href="platform.html">Architecture</a>
-                <a href="security.html">Security Vault</a>
-                <a href="platform.html">Integrations</a>
-                <a href="platform.html">Changelog</a>
+                <h3>Product</h3>
+                <a href="platform.html">Overview</a>
+                <a href="platform.html#smartscope">SmartScope&trade;</a>
+                <a href="platform.html#scorepath">ScorePath&trade;</a>
+                <a href="platform.html#livedoc">LiveDoc&trade;</a>
             </div>
             <div class="ft-col">
                 <h3>Solutions</h3>
-                <a href="solutions.html">Prime Contractors</a>
-                <a href="solutions.html">Subcontractors</a>
-                <a href="solutions.html">MSP Partners</a>
-                <a href="solutions.html">Pricing &amp; Tiers</a>
+                <a href="solutions.html">Defense Contractors</a>
+                <a href="solutions.html">RPO &amp; MSP Partners</a>
+                <a href="platform.html#bundle">What you get</a>
+                <a href="solutions.html#pricing">Pricing</a>
             </div>
             <div class="ft-col">
                 <h3>Company</h3>
-                <a href="company.html">About Us</a>
-                <a href="company.html">Leadership</a>
+                <a href="company.html">About</a>
+                <a href="security.html">Security</a>
                 <a href="contact.html">Contact</a>
-                <a href="company.html">Careers</a>
+                <a href="signin.html">Sign in</a>
             </div>
         </div>
         <div class="ft-bottom">
             <div>
                 <p>&copy; 2026 VeriStasis. All rights reserved.</p>
-                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Headquartered in Kingsburg, CA &middot; Co-founded by Brian &amp; Benjamin Olson</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Kingsburg, CA</p>
             </div>
             <div class="ft-legal">
                 <a href="privacy.html">Privacy</a>

@@ -16,13 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ── CMMC Phase 2 deadline countdown ──
-    const phase2 = document.getElementById('phase2Days');
-    if (phase2) {
-        const days = Math.ceil((new Date('2026-11-10T00:00:00') - Date.now()) / 86400000);
-        phase2.textContent = days > 0 ? days + ' days away' : 'now in effect';
-    }
-
     // ── Navbar scroll effect + scroll progress bar ──
     const topbar = document.getElementById('topbar');
     const progress = document.getElementById('scrollProgress');
@@ -111,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.metric-val').forEach(el => metricIO.observe(el));
 
     // ── FAQ accordion ──
+    // (Hero panels are static markup; no client-side crypto runs here.)
     document.querySelectorAll('.faq-item .faq-q').forEach(q => {
         q.addEventListener('click', () => {
             const item = q.closest('.faq-item');
@@ -136,52 +130,4 @@ document.addEventListener('DOMContentLoaded', () => {
             q.setAttribute('aria-expanded', String(!isOpen));
         });
     });
-
-    // ── Live Zero-Knowledge encryption demo ──
-    const zkInput = document.getElementById('zkInput');
-    const zkCipher = document.getElementById('zkCipher');
-    if (zkInput && zkCipher) {
-        const HEX = '0123456789abcdef';
-        const rand = n => Array.from({ length: n }, () => HEX[(Math.random() * 16) | 0]).join('');
-
-        // Derive a stable-length ciphertext from the input, then continuously
-        // re-scramble a slice of it so the "vault" feels alive.
-        let bytes = [];
-        function rebuild() {
-            const text = zkInput.value || ' ';
-            // 2 hex chars per logical byte; pad to a tidy block, cap the size
-            const len = Math.min(Math.max(text.length, 12), 96);
-            bytes = Array.from({ length: len }, () => (Math.random() * 256) | 0);
-        }
-
-        function render() {
-            // group into bytes of 2 hex chars, space every 2 bytes, newline-ish via wrap
-            let out = '';
-            for (let i = 0; i < bytes.length; i++) {
-                const h = bytes[i].toString(16).padStart(2, '0');
-                out += `<span class="${i % 7 === 0 ? 'b' : ''}">${h}</span>`;
-                if (i % 2 === 1) out += ' ';
-            }
-            zkCipher.innerHTML = out + '<span class="d">▍</span>';
-        }
-
-        function scramble() {
-            // mutate a handful of bytes each frame — looks like live AEAD churn
-            const muts = Math.max(2, (bytes.length * 0.12) | 0);
-            for (let i = 0; i < muts; i++) {
-                bytes[(Math.random() * bytes.length) | 0] = (Math.random() * 256) | 0;
-            }
-            render();
-        }
-
-        rebuild();
-        render();
-        zkInput.addEventListener('input', rebuild);
-
-        let last = 0;
-        (function loop(t) {
-            if (t - last > 90) { scramble(); last = t; }
-            requestAnimationFrame(loop);
-        })(0);
-    }
 });
