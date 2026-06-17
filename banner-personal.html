@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VeriStasis — Personal profile banner export</title>
+<style>
+  body { margin:0; background:#1a1a1f; color:#e5e5e5; font-family:'Segoe UI',system-ui,Arial,sans-serif; padding:24px; }
+  .wrap { max-width:900px; margin:0 auto; }
+  canvas { width:100%; height:auto; display:block; border-radius:10px; }
+  .row { display:flex; gap:12px; align-items:center; margin-top:16px; flex-wrap:wrap; }
+  button { font:600 14px 'Segoe UI',sans-serif; padding:10px 18px; border-radius:8px; border:1px solid #3b82f6;
+           background:#3b82f6; color:#fff; cursor:pointer; }
+  button:hover { background:#2563eb; }
+  p { color:#a1a1aa; font-size:13px; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <canvas id="c" width="1584" height="396"></canvas>
+  <div class="row">
+    <button id="dl">Download PNG (1584 × 396)</button>
+    <span id="status" style="font-size:13px;color:#a1a1aa;"></span>
+  </div>
+  <p>Your LinkedIn <b>personal profile</b> banner at the exact size LinkedIn wants. The lower-left is kept
+  clear because your profile photo sits there. Click to download, then upload it to your profile.</p>
+</div>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = 1584, H = 396;
+
+const shieldSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="44" height="48" viewBox="0 0 44 48">
+<defs>
+<linearGradient id="b" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/>
+</linearGradient>
+<linearGradient id="f" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/>
+</linearGradient></defs>
+<path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#f)" stroke="url(#b)" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="22" cy="15.2" r="2.7" fill="url(#b)"/>
+<path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function topo(){
+  ctx.save();
+  ctx.strokeStyle = 'rgba(125,211,252,0.05)';
+  ctx.lineWidth = 1;
+  for (let i=0;i<14;i++){
+    const baseY = 20 + i*28;
+    const amp = 10 + (i%4)*6;
+    const phase = i*0.7;
+    ctx.beginPath();
+    for (let x=0;x<=W;x+=10){
+      const y = baseY + amp*Math.sin(x/150 + phase) + amp*0.4*Math.sin(x/57 + phase*1.7);
+      if (x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function draw(shieldImg){
+  const bg = ctx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0,'#08080c'); bg.addColorStop(1,'#050507');
+  ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
+  topo();
+  const g = ctx.createRadialGradient(1360,20,0, 1360,20,640);
+  g.addColorStop(0,'rgba(59,130,246,0.40)');
+  g.addColorStop(0.45,'rgba(167,139,250,0.16)');
+  g.addColorStop(1,'rgba(5,5,7,0)');
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+  // accent bar
+  ctx.fillStyle = '#38bdf8'; ctx.fillRect(300,116,52,4);
+  // headline
+  ctx.fillStyle = '#f4f4f5';
+  ctx.font = "800 56px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('Done-for-you CMMC', 300, 184);
+  ctx.fillText('Level 2 documentation', 300, 250);
+  // subline
+  ctx.fillStyle = '#a1a1aa';
+  if ('letterSpacing' in ctx) ctx.letterSpacing = '2px';
+  ctx.font = "600 19px Consolas, 'Courier New', monospace";
+  ctx.fillText('SSP · POA&M · POLICIES · REAL SPRS SCORE · FIXED-PRICE', 300, 296);
+  if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+  // logo lockup (right), vertically centered
+  ctx.drawImage(shieldImg, 1140, 118, 146, 160);
+  ctx.fillStyle = '#f4f4f5';
+  ctx.font = "800 44px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('VeriStasis', 1300, 214);
+}
+
+const img = new Image();
+img.onload = function(){
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(()=>{
+    draw(img);
+    document.getElementById('status').textContent = 'Rendered. Ready to download.';
+  });
+};
+img.onerror = function(){ draw(new Image()); };
+img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(shieldSVG);
+
+document.getElementById('dl').addEventListener('click', function(){
+  canvas.toBlob(function(blob){
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'veristasis-profile-banner-1584x396.png';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }, 'image/png');
+});
+</script>
+</body>
+</html>

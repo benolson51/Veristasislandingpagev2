@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VeriStasis — Launch post graphic</title>
+<style>
+  body { margin:0; background:#1a1a1f; color:#e5e5e5; font-family:'Segoe UI',system-ui,Arial,sans-serif; padding:24px; }
+  .wrap { max-width:520px; margin:0 auto; text-align:center; }
+  canvas { width:100%; max-width:480px; height:auto; display:block; margin:0 auto; border-radius:12px; }
+  .row { display:flex; gap:12px; align-items:center; justify-content:center; margin-top:16px; flex-wrap:wrap; }
+  button { font:600 14px 'Segoe UI',sans-serif; padding:10px 18px; border-radius:8px; border:1px solid #3b82f6;
+           background:#3b82f6; color:#fff; cursor:pointer; }
+  button:hover { background:#2563eb; }
+  p { color:#a1a1aa; font-size:13px; line-height:1.6; text-align:left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <canvas id="c" width="1200" height="1200"></canvas>
+  <div class="row">
+    <button id="dl">Download PNG (1200 × 1200)</button>
+    <span id="status" style="font-size:13px;color:#a1a1aa;"></span>
+  </div>
+  <p>Square graphic to attach to your founding-cohort launch post. Click to download, then add it to the
+  LinkedIn post.</p>
+</div>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = 1200, H = 1200;
+
+const shieldSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="44" height="48" viewBox="0 0 44 48">
+<defs>
+<linearGradient id="b" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/>
+</linearGradient>
+<linearGradient id="f" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/>
+</linearGradient></defs>
+<path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#f)" stroke="url(#b)" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="22" cy="15.2" r="2.7" fill="url(#b)"/>
+<path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function topo(){
+  ctx.save();
+  ctx.strokeStyle = 'rgba(125,211,252,0.04)';
+  ctx.lineWidth = 1.2;
+  for (let i=0;i<26;i++){
+    const baseY = 10 + i*46;
+    const amp = 14 + (i%4)*10;
+    const phase = i*0.6;
+    ctx.beginPath();
+    for (let x=0;x<=W;x+=12){
+      const y = baseY + amp*Math.sin(x/210 + phase);
+      if (x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function draw(shieldImg){
+  const bg = ctx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0,'#0a0a0f'); bg.addColorStop(1,'#050507');
+  ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
+  topo();
+  const g = ctx.createRadialGradient(W/2,140,0, W/2,140,820);
+  g.addColorStop(0,'rgba(59,130,246,0.30)');
+  g.addColorStop(0.5,'rgba(167,139,250,0.12)');
+  g.addColorStop(1,'rgba(5,5,7,0)');
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+
+  // logo lockup centered (top)
+  const shieldW = 66, shieldH = 72, gap = 16;
+  ctx.font = "800 40px 'Segoe UI', system-ui, Arial, sans-serif";
+  const wordW = ctx.measureText('VeriStasis').width;
+  const total = shieldW + gap + wordW;
+  const sx = (W - total)/2, cy = 130;
+  ctx.drawImage(shieldImg, sx, cy-36, shieldW, shieldH);
+  ctx.textAlign = 'left'; ctx.fillStyle = '#f4f4f5';
+  ctx.fillText('VeriStasis', sx + shieldW + gap, cy + 14);
+
+  ctx.textAlign = 'center';
+  // eyebrow
+  ctx.fillStyle = '#38bdf8';
+  if ('letterSpacing' in ctx) ctx.letterSpacing = '3px';
+  ctx.font = "600 24px Consolas, 'Courier New', monospace";
+  ctx.fillText('CMMC PHASE 2 · NOVEMBER 10, 2026', W/2, 300);
+  if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+
+  // headline
+  ctx.fillStyle = '#f4f4f5';
+  ctx.font = "800 66px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('Done-for-you CMMC', W/2, 432);
+  ctx.fillText('Level 2 documentation', W/2, 514);
+
+  // sublines
+  ctx.fillStyle = '#c8c8cf';
+  ctx.font = "400 28px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('SSP · POA&M · policies + your real SPRS score', W/2, 600);
+  ctx.fillStyle = '#a1a1aa';
+  ctx.font = "400 24px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('Deterministic · expert-reviewed · fixed-price', W/2, 644);
+
+  // accent bar
+  ctx.fillStyle = '#38bdf8'; ctx.fillRect(W/2-32, 712, 64, 4);
+
+  // scarcity box
+  ctx.beginPath();
+  ctx.roundRect(W/2-310, 766, 620, 116, 16);
+  ctx.fillStyle = 'rgba(56,189,248,0.08)'; ctx.fill();
+  ctx.lineWidth = 1.5; ctx.strokeStyle = 'rgba(56,189,248,0.45)'; ctx.stroke();
+  ctx.fillStyle = '#f4f4f5';
+  ctx.font = "800 40px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('Founding cohort — 5 spots', W/2, 838);
+
+  // CTA
+  ctx.fillStyle = '#e5e5ea';
+  ctx.font = "600 30px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('Comment "CMMC" or DM us', W/2, 960);
+
+  // footer
+  ctx.fillStyle = '#71717a';
+  ctx.font = "600 24px 'Segoe UI', system-ui, Arial, sans-serif";
+  ctx.fillText('veristasis.com', W/2, 1090);
+  ctx.textAlign = 'left';
+}
+
+const img = new Image();
+img.onload = function(){ (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(()=>{ draw(img); document.getElementById('status').textContent='Ready to download.'; }); };
+img.onerror = function(){ draw(new Image()); };
+img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(shieldSVG);
+
+document.getElementById('dl').addEventListener('click', function(){
+  canvas.toBlob(function(blob){
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'veristasis-launch-post-1200.png';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }, 'image/png');
+});
+</script>
+</body>
+</html>

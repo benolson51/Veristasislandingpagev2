@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VeriStasis — Square logo export</title>
+<style>
+  body { margin:0; background:#1a1a1f; color:#e5e5e5; font-family:'Segoe UI',system-ui,Arial,sans-serif; padding:24px; }
+  .wrap { max-width:420px; margin:0 auto; text-align:center; }
+  canvas { width:280px; height:280px; display:block; margin:0 auto; border-radius:12px; }
+  .row { display:flex; gap:12px; align-items:center; justify-content:center; margin-top:16px; flex-wrap:wrap; }
+  button { font:600 14px 'Segoe UI',sans-serif; padding:10px 18px; border-radius:8px; border:1px solid #3b82f6;
+           background:#3b82f6; color:#fff; cursor:pointer; }
+  button:hover { background:#2563eb; }
+  p { color:#a1a1aa; font-size:13px; line-height:1.6; text-align:left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <canvas id="c" width="400" height="400"></canvas>
+  <div class="row">
+    <button id="dl">Download logo PNG (400 × 400)</button>
+    <span id="status" style="font-size:13px;color:#a1a1aa;"></span>
+  </div>
+  <p>Shield-only company logo — no wordmark (it gets cut in the small square; LinkedIn shows your name next
+  to it anyway). Square, padded, brand-dark. Click to download, then upload as your <b>company logo</b>.</p>
+</div>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const S = 400;
+
+const shieldSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="44" height="48" viewBox="0 0 44 48">
+<defs>
+<linearGradient id="b" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/>
+</linearGradient>
+<linearGradient id="f" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/>
+</linearGradient></defs>
+<path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#f)" stroke="url(#b)" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="22" cy="15.2" r="2.7" fill="url(#b)"/>
+<path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function draw(shieldImg){
+  const bg = ctx.createLinearGradient(0,0,S,S);
+  bg.addColorStop(0,'#0c0c12'); bg.addColorStop(1,'#050507');
+  ctx.fillStyle = bg; ctx.fillRect(0,0,S,S);
+  const g = ctx.createRadialGradient(S/2,S*0.32,0, S/2,S*0.32,S*0.6);
+  g.addColorStop(0,'rgba(59,130,246,0.22)');
+  g.addColorStop(1,'rgba(5,5,7,0)');
+  ctx.fillStyle = g; ctx.fillRect(0,0,S,S);
+  const h = 270, w = h*(44/48);
+  ctx.drawImage(shieldImg, (S-w)/2, (S-h)/2, w, h);
+}
+
+const img = new Image();
+img.onload = function(){ draw(img); document.getElementById('status').textContent='Ready to download.'; };
+img.onerror = function(){ draw(new Image()); };
+img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(shieldSVG);
+
+document.getElementById('dl').addEventListener('click', function(){
+  canvas.toBlob(function(blob){
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'veristasis-logo-400.png';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }, 'image/png');
+});
+</script>
+</body>
+</html>
