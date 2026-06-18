@@ -20,6 +20,12 @@ churns ~25–40%/yr without it). Always present Managed as the default "and then
 | Starter | ~$8k | ~$300/mo | Entry; upgrade path to Complete |
 | Complete | ~$12k | ~$600/mo | Most common land for assessment-bound shops |
 | Managed | ~$15k | ~$1,000/mo | Retention tier; lead here on renewal |
+| Guided | ~$18–25k | ~$1,500–2,500/mo | Managed + direct CMMC-RP advisory; founding-cohort flagship — see [17-advisory-ladder.md](17-advisory-ladder.md) |
+
+**À la carte advisory add-ons** (scoping workshop, SPRS gap session, readiness review, C3PAO hand-off,
+affirmation advisory, advisor retainer) are fixed-scope/fixed-price — full menu + draft pricing in
+[17-advisory-ladder.md](17-advisory-ladder.md). Rule: **advisory, never implementation** (we don't touch
+systems); an RP advises, a C3PAO assesses.
 
 - **Anchor 1 (the closer):** a consultant SSP engagement is commonly **~$40k and 4–8 weeks**. VeriStasis is a
   **fraction of that, fixed-price, in weeks** — with an expert review before you certify.

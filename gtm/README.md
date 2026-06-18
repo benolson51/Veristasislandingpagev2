@@ -39,6 +39,7 @@ engine. Built **2026-06-16**. Motion: **direct founder-led outbound** (primary) 
 | [outreach_brian_rosenberger.md](outreach_brian_rosenberger.md) | Warm-first outreach for VPE's CEO (2nd-degree); cold fallback included |
 | [cmmc_readiness_checklist.html](cmmc_readiness_checklist.html) | Printable, branded checklist → open & "Save as PDF" |
 | [16-six-hour-sprint.md](16-six-hour-sprint.md) | The 6-hour go-hard prospecting block |
+| [17-advisory-ladder.md](17-advisory-ladder.md) | Consulting/advisory ladder + the Guided tier (RP-advisory; advisory-not-implementation) |
 | [14-clay-prospecting.md](14-clay-prospecting.md) | Clay finish steps + the ICP search recipe to recreate it |
 
 ## Standing reminders
