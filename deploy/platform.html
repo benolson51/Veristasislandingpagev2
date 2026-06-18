@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform — VeriStasis</title>
+    <meta name="description" content="The VeriStasis documentation engine: adaptive intake, a real NIST 800-171 Rev 2 control table, deterministic SSP / POA&M / policy generation, a real SPRS score with ScorePath, version-controlled LiveDoc control, and a C3PAO-ready export bundle.">
+    <!-- Social sharing (set og:url + absolute og:image once deployed) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VeriStasis">
+    <meta property="og:title" content="Platform — VeriStasis">
+    <meta property="og:description" content="Adaptive intake, deterministic SSP / POA&M / policy generation, a real SPRS score with ScorePath, version-controlled LiveDoc control, and a C3PAO-ready export bundle.">
+    <meta property="og:image" content="assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Platform — VeriStasis">
+    <meta name="twitter:description" content="Adaptive intake, deterministic SSP / POA&M / policy generation, a real SPRS score with ScorePath, version-controlled LiveDoc control, and a C3PAO-ready export bundle.">
+    <meta name="twitter:image" content="assets/og.png">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+    <div class="glow-orb-3"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="topbar" id="topbar">
+    <div class="topbar-inner">
+        <a href="index.html" class="logo-mark">
+            <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+            <span class="logo-wordmark">VeriStasis</span>
+        </a>
+        <nav class="nav-center">
+            <a href="platform.html" class="active">Platform</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="security.html">Security</a>
+            <a href="company.html">Company</a>
+        </nav>
+        <div class="nav-end">
+            <a href="signin.html" class="signin">Sign in</a>
+            <a href="contact.html" class="btn btn-solid">Book a demo <i data-lucide="arrow-right"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero" id="main">
+    <div class="wrap">
+        <div class="reveal"><div class="sect-eyebrow">The VeriStasis engine</div></div>
+        <h1 class="reveal d1">A documentation engine, <span class="gradient-text">not a black box.</span></h1>
+        <p class="lead reveal d2">You attest to how your organization works. A deterministic rules-and-template engine turns those answers into a complete, control-linked, assessment-ready CMMC Level 2 evidence set — and keeps it current.</p>
+        <div class="hero-buttons reveal d3">
+            <a href="contact.html" class="btn btn-hero-primary">Book a demo <i data-lucide="arrow-right"></i></a>
+            <a href="security.html" class="btn btn-hero-ghost">How we handle your data</a>
+        </div>
+    </div>
+</section>
+
+<!-- SMARTSCOPE SPLIT -->
+<section class="sect" id="smartscope" style="padding-top:40px;">
+    <div class="wrap">
+        <div class="split reveal">
+            <div>
+                <div class="sect-eyebrow">SmartScope&trade;</div>
+                <h2>From 110 controls to ~30–40 real decisions.</h2>
+                <p class="muted">A full 110-control interrogation is where most projects stall. SmartScope prunes scope and applies stack inheritance — if you're on M365 GCC High, Google Workspace, or AWS GovCloud, the controls those stacks satisfy collapse out of your queue. Every "not applicable" is logged with an assessor-credible rationale, so the reduction holds up under review.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check"></i> Scope-pruning down to the decisions that actually apply</li>
+                    <li><i data-lucide="check"></i> Stack inheritance for common GovCloud / GCC High setups</li>
+                    <li><i data-lucide="check"></i> Every N/A logged with a documented rationale</li>
+                </ul>
+            </div>
+            <div class="codeblock">
+                <div class="codeblock-bar">
+                    <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                    <span class="codeblock-name">smartscope.sample.yml</span>
+                </div>
+<pre><span class="c"># sample intake reduction</span>
+<span class="k">controls_total</span>: <span class="b">110</span>
+<span class="k">inherited_stack</span>: <span class="v">m365-gcc-high</span>
+<span class="k">pruned_not_applicable</span>: <span class="b">71</span>
+<span class="k">decisions_remaining</span>: <span class="b">39</span>
+<span class="k">na_rationale</span>: <span class="v">logged-per-control</span></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SCOREPATH SPLIT -->
+<section class="sect" id="scorepath" style="padding-top:0;">
+    <div class="wrap">
+        <div class="split reveal">
+            <div class="codeblock">
+                <div class="codeblock-bar">
+                    <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                    <span class="codeblock-name">scorepath.sample.yml</span>
+                </div>
+<pre><span class="c"># sample roadmap — illustrative</span>
+<span class="k">current_sprs</span>: <span class="b">62</span>
+<span class="k">target_sprs</span>: <span class="b">88</span>
+<span class="k">score_range</span>: <span class="v">-203 .. 110</span>
+<span class="k">must_meet_gating</span>: <span class="b">1</span>
+<span class="k">quick_wins</span>: <span class="b">9</span>
+<span class="k">ranked_by</span>: <span class="v">points-per-effort</span></pre>
+            </div>
+            <div>
+                <div class="sect-eyebrow">SPRS score + ScorePath&trade;</div>
+                <h2>Your real score, with a path to raise it.</h2>
+                <p class="muted">VeriStasis computes the DoD Assessment Methodology score (110 maximum, down to a −203 floor) from your control status. ScorePath then ranks the remaining work by points-per-effort, separating the must-meet gating controls from the quick-wins, and projects "from SPRS X to Y, do these N things." A number alone is a false promise; a number with a legitimate roadmap is a plan.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check"></i> Real DoD Assessment Methodology score</li>
+                    <li><i data-lucide="check"></i> Gating controls separated from quick-wins</li>
+                    <li><i data-lucide="check"></i> "SPRS X &rarr; Y, do these N things" projection</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ARTIFACTS BENTO -->
+<section class="sect" id="bundle" style="padding-top:0;">
+    <div class="wrap">
+        <div class="sect-header reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">What gets generated</div>
+            <h2 class="sect-title" style="text-align:center;">The artifacts an assessment needs.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">Generated from your answers against a real NIST SP 800-171 Rev 2 control table — narratives, point values, gating flags, and POA&amp;M scaffolds all built in.</p>
+        </div>
+        <div class="grid reveal">
+            <div class="cell big">
+                <div class="cell-icon"><i data-lucide="file-text"></i></div>
+                <h3>System Security Plan</h3>
+                <p>The full SSP — 14-family narratives, system description, boundary, CUI data flows, and asset categorization — generated as Microsoft Word <em>and</em> OSCAL JSON, so it's readable by humans and machine-consumable by tooling alike.</p>
+                <div class="codeblock">
+                    <div class="codeblock-bar">
+                        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                        <span class="codeblock-name">ssp_export.manifest</span>
+                    </div>
+<pre><span class="k">ssp_docx</span>: <span class="v">generated</span>
+<span class="k">ssp_oscal_json</span>: <span class="v">generated</span>
+<span class="k">families</span>: <span class="b">14</span>
+<span class="k">boundary</span>: <span class="v">described</span>
+<span class="k">cui_data_flows</span>: <span class="v">documented</span>
+<span class="k">checksum</span>: <span class="v">sha-256</span></pre>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="list-todo"></i></div>
+                <h3>POA&amp;M</h3>
+                <p>One remediation record per unmet or partial control: the weakness, the remediation, an owner, milestones, a 180-day closeout, and lifecycle status.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="files"></i></div>
+                <h3>Policy set</h3>
+                <p>Roughly 20 documents — one policy per NIST family plus key procedures — each linked to the controls it satisfies.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="package-check"></i></div>
+                <h3>Export bundle</h3>
+                <p>One zip an RPO or C3PAO consumes directly: SSP (docx + OSCAL), POA&amp;M, policies, SPRS worksheet (PDF), and an evidence index — with per-file and whole-bundle SHA-256 checksums.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="clipboard-check"></i></div>
+                <h3>C3PAO package</h3>
+                <p>A per-control assessor index — status, the documents that cover it, evidence count, POA&amp;M status — and a plain-language ASSESSOR_README with checksum-verification instructions.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="table-2"></i></div>
+                <h3>CRM + ESP service description</h3>
+                <p>An auto-generated, per-practice Customer Responsibility Matrix and an ESP service description — the artifact your assessor needs when listing VeriStasis as an External Service Provider in your SSP.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIVEDOC SPLIT -->
+<section class="sect" id="livedoc" style="padding-top:0;">
+    <div class="wrap">
+        <div class="split reveal">
+            <div>
+                <div class="sect-eyebrow">LiveDoc&trade; &amp; maintenance</div>
+                <h2>A controlled corpus that stays current.</h2>
+                <p class="muted">Your documentation is a versioned, control-linked, checksummed system of record — not a one-time deliverable. Show any control on demand, track stale policies, recompute after a change, and walk into the annual affirmation with blockers surfaced ahead of time. When a C3PAO finding lands, the rejection&rarr;remediation loop flips the control to Not Met, tracks it, and lets you resolve and re-attest.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check"></i> Versioned, control-linked, checksummed record</li>
+                    <li><i data-lucide="check"></i> One-click "show me this control" + stale-policy tracking</li>
+                    <li><i data-lucide="check"></i> Recompute, 180-day closeout, annual affirmation-readiness</li>
+                    <li><i data-lucide="check"></i> Rejection&rarr;remediation loop for C3PAO findings</li>
+                </ul>
+            </div>
+            <div class="matrix">
+                <div class="matrix-head">Document control</div>
+                <div class="matrix-row"><span>Versioned system of record</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>Control-linked &amp; checksummed</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>Stale-policy tracking</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>Affirmation-readiness with blockers</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>Rejection&rarr;remediation loop</span><i data-lucide="check"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ACCOUNTS NOTE -->
+<section class="sect" style="padding-top:0;">
+    <div class="wrap">
+        <div class="reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">Accounts</div>
+            <h2 class="sect-title" style="text-align:center;">Multi-tenant, plainly stated.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">Sign in with email and password. Each organization is separated at the application level, so an org sees only its own assessments. We describe this exactly as it is built — no more.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap">
+    <div class="wrap">
+        <div class="cta-box reveal">
+            <div class="cta-glow"></div>
+            <h2>See it generate a real evidence set.</h2>
+            <p>Bring your stack and your scope. We'll show you the SSP, POA&amp;M, policies, and a SPRS score with a ScorePath roadmap — generated from your answers.</p>
+            <div class="cta-btns">
+                <a href="contact.html" class="btn btn-hero-primary">Book a demo <i data-lucide="arrow-right"></i></a>
+                <a href="contact.html" class="btn btn-hero-ghost">Request access</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="ft-grid">
+            <div>
+                <div class="ft-brand-logo">
+                    <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+                    <span class="logo-wordmark">VeriStasis</span>
+                </div>
+                <p class="ft-brand-desc">The done-for-you CMMC Level 2 documentation engine for small defense contractors. Deterministic, auditable, assessment-ready.</p>
+            </div>
+            <div class="ft-col">
+                <h3>Product</h3>
+                <a href="platform.html">Overview</a>
+                <a href="platform.html#smartscope">SmartScope&trade;</a>
+                <a href="platform.html#scorepath">ScorePath&trade;</a>
+                <a href="platform.html#livedoc">LiveDoc&trade;</a>
+            </div>
+            <div class="ft-col">
+                <h3>Solutions</h3>
+                <a href="solutions.html">Defense Contractors</a>
+                <a href="solutions.html">RPO &amp; MSP Partners</a>
+                <a href="platform.html#bundle">What you get</a>
+                <a href="solutions.html#pricing">Pricing</a>
+            </div>
+            <div class="ft-col">
+                <h3>Company</h3>
+                <a href="company.html">About</a>
+                <a href="security.html">Security</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign in</a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div>
+                <p>&copy; 2026 VeriStasis. All rights reserved.</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Kingsburg, CA</p>
+            </div>
+            <div class="ft-legal">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="security.html">Security</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>

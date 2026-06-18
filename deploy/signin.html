@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In — VeriStasis</title>
+    <meta name="description" content="Sign in to your VeriStasis account.">
+    <!-- Social sharing (set og:url + absolute og:image once deployed) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VeriStasis">
+    <meta property="og:title" content="Sign In — VeriStasis">
+    <meta property="og:description" content="Sign in to your VeriStasis account.">
+    <meta property="og:image" content="assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sign In — VeriStasis">
+    <meta name="twitter:description" content="Sign in to your VeriStasis account.">
+    <meta name="twitter:image" content="assets/og.png">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="auth-wrap">
+    <div class="auth-card reveal vis">
+        <a href="index.html" class="auth-logo logo-mark">
+            <div class="logo-box" style="width:36px;height:36px;"><img src="assets/logo.svg" alt="VeriStasis"></div>
+            <span class="logo-wordmark" style="font-size:18px;">VeriStasis</span>
+        </a>
+        <h1>Sign in</h1>
+        <p class="sub">VeriStasis account access</p>
+
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('This is a demo sign-in screen.');">
+            <div class="field">
+                <label for="signin-email">Email address</label>
+                <input type="email" class="input" id="signin-email" name="email" autocomplete="email" required placeholder="you@company.com">
+            </div>
+            <div class="field">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                    <label for="signin-password" style="margin-bottom:0;">Password</label>
+                    <a href="contact.html" class="forgot">Forgot?</a>
+                </div>
+                <input type="password" class="input" id="signin-password" name="password" autocomplete="current-password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-hero-primary">Sign in</button>
+        </form>
+
+        <div class="auth-foot">
+            <i data-lucide="lock"></i> Need an account? <a href="contact.html" style="color:var(--cyan);">Request access</a>
+        </div>
+    </div>
+</div>
+
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>

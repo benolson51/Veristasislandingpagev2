@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Demo — VeriStasis</title>
+    <meta name="description" content="Book a demo or request access. See VeriStasis generate a real CMMC Level 2 evidence set — SSP, POA&M, policies, and a SPRS score with a ScorePath roadmap — from your answers.">
+    <!-- Social sharing (set og:url + absolute og:image once deployed) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VeriStasis">
+    <meta property="og:title" content="Book a Demo — VeriStasis">
+    <meta property="og:description" content="See VeriStasis generate a real CMMC Level 2 evidence set — SSP, POA&M, policies, and a SPRS score with a ScorePath roadmap — from your answers.">
+    <meta property="og:image" content="assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book a Demo — VeriStasis">
+    <meta name="twitter:description" content="See VeriStasis generate a real CMMC Level 2 evidence set — SSP, POA&M, policies, and a SPRS score with a ScorePath roadmap — from your answers.">
+    <meta name="twitter:image" content="assets/og.png">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+    <div class="glow-orb-3"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="topbar" id="topbar">
+    <div class="topbar-inner">
+        <a href="index.html" class="logo-mark">
+            <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+            <span class="logo-wordmark">VeriStasis</span>
+        </a>
+        <nav class="nav-center">
+            <a href="platform.html">Platform</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="security.html">Security</a>
+            <a href="company.html">Company</a>
+        </nav>
+        <div class="nav-end">
+            <a href="signin.html" class="signin">Sign in</a>
+            <a href="contact.html" class="btn btn-solid">Book a demo <i data-lucide="arrow-right"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO + FORM -->
+<section class="hero" id="main">
+    <div class="wrap">
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <div class="reveal"><div class="hero-eyebrow"><span class="eyebrow-dot"></span> Get started</div></div>
+                <h1 class="reveal d1">Book a demo or <span class="gradient-text">request access.</span></h1>
+                <p class="hero-desc reveal d2">Bring your stack and your scope. We'll show you VeriStasis generate a real evidence set from your answers — SSP, POA&amp;M, policies, and a SPRS score with a ScorePath&trade; roadmap.</p>
+                <ul class="feature-list reveal d3" style="max-width:440px;">
+                    <li><i data-lucide="check-circle-2"></i> See the SSP, POA&amp;M, and policy set generated live</li>
+                    <li><i data-lucide="check-circle-2"></i> Your real SPRS score and the path to raise it</li>
+                    <li><i data-lucide="check-circle-2"></i> Direct answers from the people who built it</li>
+                </ul>
+            </div>
+
+            <div class="form-card reveal d3">
+                <!-- To go live: paste your form-service endpoint into data-endpoint below.
+                     • Formspree:  data-endpoint="https://formspree.io/f/YOUR_FORM_ID"
+                     • Web3Forms:  data-endpoint="https://api.web3forms.com/submit"  + uncomment the access_key field
+                     Until an endpoint is set, the form shows a "not yet connected" notice instead of sending. -->
+                <form id="contactForm" data-endpoint="" action="#" method="POST">
+                    <!-- honeypot (bots fill it; humans don't) -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+                    <!-- For Web3Forms, uncomment and set your key:
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"> -->
+                    <input type="hidden" name="_subject" value="New VeriStasis demo request">
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="contact-first-name">First name</label>
+                            <input type="text" class="input" id="contact-first-name" name="first_name" autocomplete="given-name" required placeholder="Jane">
+                        </div>
+                        <div class="field">
+                            <label for="contact-last-name">Last name</label>
+                            <input type="text" class="input" id="contact-last-name" name="last_name" autocomplete="family-name" required placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="contact-email">Work email</label>
+                        <input type="email" class="input" id="contact-email" name="email" autocomplete="email" required placeholder="jane@company.com">
+                    </div>
+                    <div class="field">
+                        <label for="contact-company">Company name</label>
+                        <input type="text" class="input" id="contact-company" name="company" autocomplete="organization" required placeholder="Acme Defense Corp">
+                    </div>
+                    <div class="field">
+                        <label for="contact-role">I'm a…</label>
+                        <select class="input" id="contact-role" name="role" required>
+                            <option value="" disabled selected>Select an option…</option>
+                            <option value="contractor">Defense contractor (need CMMC L2)</option>
+                            <option value="rpo-msp">RPO / MSP / consultant (reseller)</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="contact-stage">Where are you with CMMC?</label>
+                        <select class="input" id="contact-stage" name="stage" required>
+                            <option value="" disabled selected>Select an option…</option>
+                            <option value="deadline">Deadline / flow-down in hand</option>
+                            <option value="planning">Planning ahead</option>
+                            <option value="nist-only">NIST 800-171, no CMMC date yet</option>
+                            <option value="not-sure">Not sure yet</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-hero-primary">Book a demo <i data-lucide="send"></i></button>
+                    <div id="formOk" role="status" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.18);">
+                        <i data-lucide="check-circle-2" style="width:16px;height:16px;color:var(--emerald);flex-shrink:0;"></i>
+                        <span style="font-size:12px;color:var(--text-2);">Thanks — we'll reach out within one business day.</span>
+                    </div>
+                    <div id="formErr" role="alert" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.18);">
+                        <i data-lucide="alert-triangle" style="width:16px;height:16px;color:#f87171;flex-shrink:0;"></i>
+                        <span style="font-size:12px;color:var(--text-2);">Something went wrong — please email us directly or try again.</span>
+                    </div>
+                    <p class="form-note">By submitting, you agree to our <a href="terms.html" style="color:var(--cyan);">Terms of Service</a> and <a href="privacy.html" style="color:var(--cyan);">Privacy Policy</a>. We will never sell or share your information.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="ft-grid">
+            <div>
+                <div class="ft-brand-logo">
+                    <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+                    <span class="logo-wordmark">VeriStasis</span>
+                </div>
+                <p class="ft-brand-desc">The done-for-you CMMC Level 2 documentation engine for small defense contractors. Deterministic, auditable, assessment-ready.</p>
+            </div>
+            <div class="ft-col">
+                <h3>Product</h3>
+                <a href="platform.html">Overview</a>
+                <a href="platform.html#smartscope">SmartScope&trade;</a>
+                <a href="platform.html#scorepath">ScorePath&trade;</a>
+                <a href="platform.html#livedoc">LiveDoc&trade;</a>
+            </div>
+            <div class="ft-col">
+                <h3>Solutions</h3>
+                <a href="solutions.html">Defense Contractors</a>
+                <a href="solutions.html">RPO &amp; MSP Partners</a>
+                <a href="platform.html#bundle">What you get</a>
+                <a href="solutions.html#pricing">Pricing</a>
+            </div>
+            <div class="ft-col">
+                <h3>Company</h3>
+                <a href="company.html">About</a>
+                <a href="security.html">Security</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign in</a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div>
+                <p>&copy; 2026 VeriStasis. All rights reserved.</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Kingsburg, CA</p>
+            </div>
+            <div class="ft-legal">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="security.html">Security</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+<script src="script.js"></script>
+</body>
+</html>
