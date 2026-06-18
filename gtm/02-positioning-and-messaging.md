@@ -1,64 +1,70 @@
 # 02 — Positioning & Messaging
 
 _The messaging house. Every line here is §12-clean and ready to drop into emails, the demo, and the launch.
-If you change a line, re-check it against §12 of the breakdown first._
+If you change a line, re-check it against §12 first. **Lead with the human — Brian, a CMMC RP — it's our most
+honest form of authority.**_
 
 ## One-liner
 **The done-for-you CMMC Level 2 documentation engine for small defense contractors.**
 Your attested answers in → an assessment-ready, version-controlled SSP, POA&M, and policy set, plus a real
-SPRS score and the fastest legitimate path to raise it, out.
+SPRS score and the fastest legitimate path to raise it, out — **and a CMMC Registered Practitioner reviews it
+before you certify.**
 
 ## Positioning statement
 For a 20–200-person defense contractor facing a CMMC Level 2 deadline and no internal GRC team, VeriStasis is
-the documentation engine that generates every mandatory artifact deterministically and ships a C3PAO-ready,
-checksummed bundle — unlike a $40k/2-month consultant (too slow, too expensive) or a horizontal GRC tool
-(too abstract, not CMMC-shaped). We keep it current for the annual affirmation, and an expert reviews it
-before you certify.
+the documentation engine that generates every mandatory artifact deterministically, ships a C3PAO-ready,
+checksummed bundle, and has **a CMMC Registered Practitioner review it before you certify** — unlike a
+$40k/2-month consultant (too slow, too expensive), a horizontal GRC tool (too abstract, no human check), or a
+managed/RPO firm (runs your environment, six figures). We keep it current for the annual affirmation.
 
-## Three core value props (mapped to the buyer's real pain)
-1. **"Get to a credible SSP + SPRS score in weeks, fixed-price — not a $40k, two-month consultant slog."**
-   Pain: the deadline is close and the consultant quote is brutal. → SmartScope™ collapses 110 controls to
-   ~30–40 decisions; we generate the SSP, POA&M, and ~20 policies; an expert reviews before you certify.
-2. **"Know your real SPRS score — and the shortest legitimate path to raise it."**
-   Pain: a number with no plan is useless and a false promise is dangerous. → ScorePath™ separates the
-   **must-meet gating controls** from **quick-wins ranked by points-per-effort**: "from X → Y, do these N things."
-3. **"Walk into the assessment with a C3PAO-ready package — and keep it current for the annual affirmation."**
-   Pain: a one-time SSP goes stale; the affirmation recurs with personal liability. → A checksummed bundle
-   with a per-control assessor index + README, plus LiveDoc™ versioning, 180-day POA&M tracking, and
-   affirmation-readiness.
+## Four core value props (mapped to the buyer's real pain)
+1. **"A credentialed CMMC expert reviews your package before you sign."**
+   Pain: you personally sign the SPRS affirmation under FCA exposure and can't tell if the docs hold up. →
+   Co-founder **Brian Olson, a CMMC Registered Practitioner (RP) with 30 years in cybersecurity & GRC** (CISSP,
+   CISA, CISM, CCSP, CDPSE), reviews your narratives, scope, N/A justifications, and score before you certify.
+   Software speed; a real expert's eyes. *(He prepares/advises; a C3PAO assesses — we never claim otherwise.)*
+2. **"A credible SSP + your real SPRS score in weeks, fixed-price — not a $40k, two-month consultant slog."**
+   → SmartScope™ collapses 110 controls to ~30–40 decisions; we generate the SSP, POA&M, and ~20 policies.
+3. **"Know your real SPRS score — and the shortest legitimate path to raise it."**
+   → ScorePath™ separates the must-meet gating controls from quick-wins, ranked by points-per-effort.
+4. **"Walk in with a C3PAO-ready package — and keep it current for the annual affirmation."**
+   → Checksummed bundle + per-control assessor index, LiveDoc™ versioning, 180-day POA&M tracking.
 
-## The wedge to lead with: deterministic, not an AI black box
-Your answers run through a rules/template engine against a transparent 110-control table — **same inputs,
-same explainable output, no AI anywhere**. To a buyer who must personally defend the document to an assessor
-and sign an affirmation under FCA exposure, "explainable and consistent" beats "magic." Pair it with
-**honesty-as-a-feature**: we publish what we *don't* do.
+## The wedge to lead with: a deterministic engine + a CMMC RP's judgment
+Two things no competitor pairs. (1) **Deterministic, not an AI black box** — same inputs, same explainable
+output, no AI anywhere; to a buyer who must defend the document to an assessor, "explainable and consistent"
+beats "magic." (2) **A human CMMC RP reviews every package before you certify** — the SaaS tools (Vanta, Drata,
+FutureFeed, Totem) hand you a framework and *no* human; solo consultants have no engine. We're the only one
+with both. Pair it with **honesty-as-a-feature**: we publish what we *don't* do — we're not a C3PAO, we don't
+touch your systems, and the SPRS score is **your** self-assessment, never "our independent measurement."
 
 ## Differentiation (compete on what we do — don't knock, don't imply affiliation)
 | Alternative | Their strength | Where we win (substantiated) |
 |---|---|---|
-| **SMPL-C** (incumbent) | ~5-yr head start, Rackspace distribution, RPO channel | Under-served workflow: rejection→remediation, import-existing-docs, C3PAO-ready export, productized CRM/ESP; deterministic+explainable; fixed-price-as-closer. **Do not copy their name/site/taglines/logo/layout.** |
-| **PreVeil** | Certified end-to-end encryption for CUI, large DIB base | Different problem. We're documentation+score+package, not a CUI transport. Don't try to out-crypto them — our evidence encryption is a feature, not the wedge. |
-| **Vanta / Drata** | Broad GRC automation, polished | Horizontal and not CMMC-native / not C3PAO-package-shaped. We're deliverable-complete for CMMC L2 specifically. |
-| **A solo consultant** | Hands-on, trusted | Too slow and too expensive for a 20-person shop; output isn't version-controlled or reusable for the annual affirmation. We're consultant-light + software-fast + recurring. |
+| **SaaS GRC tools** (Vanta / Drata / FutureFeed / Totem) | Polished software, broad frameworks | They hand you a framework and make *you* do the work — **no human expert review, no C3PAO-ready checksummed bundle**. We're done-for-you, RP-reviewed, fixed-price. |
+| **Managed / RPO firms** (Summit 7, C3/Steel Root, Quzara) | Hands-on, many certified clients | They **run your environment** (~$265k–$504k all-in) → the conflict + the cost. We don't touch systems; fixed-price. |
+| **PreVeil** | Certified end-to-end encryption for CUI | Different problem — we're documentation + score + package, not a CUI transport. Don't out-crypto them. |
+| **A solo consultant** | Hands-on, trusted | Slow/expensive (~$15–40k, 6–9 mo), variable output, no reusable corpus. We're software-fast + RP-reviewed + recurring. |
 
 ## Proof to show, not tell (in the demo / on a call)
-The exported **`assessment_bundle.zip`** with real, checksummed files (SSP .docx + OSCAL, POA&M, ~20
-policies, CRM/ESP, SPRS worksheet PDF, assessor index, README, MANIFEST) and a **re-verifiable whole-bundle
-SHA-256**. The close: _"Here's your assessment package — and here's the checksum your assessor can verify."_
+The exported **`assessment_bundle.zip`** with real, checksummed files (SSP .docx + OSCAL, POA&M, ~20 policies,
+CRM/ESP, SPRS worksheet PDF, assessor index, README, MANIFEST) and a re-verifiable whole-bundle SHA-256.
+The close: _"Here's your assessment package, here's the checksum your assessor can verify — and Brian reviewed it."_
 
 ## Objection-handling table (all §12-clean)
 | Objection | Response |
 |---|---|
-| "We'll just use a consultant." | "Plenty do — and pay ~$40k and wait two months. We get you to a credible SSP and SPRS score faster, fixed-price, and the documents stay version-controlled so the annual affirmation isn't a from-scratch project. A CMMC expert still reviews your narratives and scope before you certify — you get the software speed and the human check." |
-| "Is this AI? I can't defend a black box to an assessor." | "No AI anywhere. It's a deterministic rules-and-template engine over a transparent 110-control table — same inputs, same output, fully explainable. That's exactly why it holds up in an assessment." |
-| "Do you store our CUI?" | "No. We're a documentation product, not a CUI hosting environment, and we don't connect to or ingest data from your live systems — we generate from the answers you provide. Any evidence files you upload are encrypted in your browser before they reach us; we store only ciphertext we can't decrypt." |
-| "Is this FedRAMP?" | "VeriStasis is not a FedRAMP-authorized service and does not host CUI. It's designed for a Security-Protection-Data (SPD-only) posture; that classification is pending qualified-counsel review, and we'd rather state that precisely than overclaim." |
-| "Why not SMPL-C / PreVeil?" | "Both are good at what they do. We focus on the workflow they under-serve for small shops: a C3PAO-ready bundle out of the box, the rejection→remediation loop after a finding, importing your existing docs, and a generated CRM/ESP package — at a fixed price. Happy to compare on specifics." |
-| "We don't have budget." | "It's a fraction of a consultant engagement, and it's fixed-price so there's no meter running. The setup gets you assessment-ready; the recurring keeps you affirmation-ready so you're not re-paying for a new SSP every year." |
-| "We'll wait." | "Understandable — but Phase 2 (C3PAO certification) starts Nov 10, 2026, and assessor slots are scarce. Readiness takes months. Most of the cost of waiting is showing up to bid without a credible SPRS score. Want the free readiness checklist so you can see where you stand first?" |
-| "Does a real expert actually review it, or is it just software?" | "Both, on purpose. The software does the heavy lifting — intake, generation, scoring — and a CMMC expert reviews your narratives, validates your scope and N/A justifications, and sanity-checks the score before you certify. We sell on the deadline and stay on for the affirmation." |
-| "How do I know you won't overclaim like other tools?" | "Our product literally blocks overclaims in its own build, and we'll show you what we *don't* do. For someone signing an affirmation under FCA exposure, that restraint is the point." |
+| "Why trust a startup with my liability?" | "You're not trusting a startup — you're trusting **Brian Olson, a CMMC RP with 30 years and CISSP/CISA/CISM**, who reviews your bundle personally. The software does the heavy lifting; the human makes sure it holds up. Every number traces to a NIST control, in a checksummed bundle you can defend." |
+| "We'll just use a consultant." | "Plenty do — and pay ~$40k and wait two months. We get you there faster, fixed-price; the docs stay version-controlled for the annual affirmation, and a CMMC RP reviews before you certify." |
+| "Does a real expert actually review it, or is it just software?" | "Both, on purpose. The software does intake, generation, scoring; Brian — a CMMC RP — reviews your narratives, scope, N/A justifications, and score before you certify." |
+| "Is this AI? I can't defend a black box." | "No AI anywhere. Deterministic rules-and-templates over a transparent 110-control table — same inputs, same output. That's exactly why it holds up in an assessment." |
+| "Do you store our CUI?" | "No. We're a documentation product, not a CUI hosting environment, and we don't connect to your live systems. Any evidence you upload is encrypted in your browser; we store only ciphertext we can't read." |
+| "Is this FedRAMP?" | "Not FedRAMP-authorized, and we don't host CUI. Designed for an SPD-only posture; that classification is pending qualified-counsel review. We'd rather state it precisely than overclaim." |
+| "We don't have budget." | "It's a fraction of a consultant engagement, fixed-price — no meter. Setup gets you assessment-ready; the recurring keeps you affirmation-ready so you're not re-paying for a new SSP every year." |
+| "We'll wait." | "Understandable — but a prime can ask for your SPRS score today, and assessor slots are scarce. Want the free readiness checklist to see where you stand first?" |
 
 ## Voice
-Precise, credible, defense-serious, anti-hype. Short sentences. Specifics over adjectives. Never imply
-certification authority (a C3PAO certifies; we produce the package).
+Precise, credible, defense-serious, anti-hype. Short sentences, specifics over adjectives. **Lead with the
+human** (Brian, a CMMC RP — our most honest authority), then the deterministic engine. Never imply
+certification authority or "independent measurement" — a C3PAO certifies/assesses; we *produce and review* the
+package, and the SPRS score is the customer's self-assessment.

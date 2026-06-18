@@ -63,7 +63,7 @@ package:
 1. The customer's **SPRS score** computed from their attested answers,
 2. the **ScorePath™** prioritized gap-closure roadmap,
 3. a **C3PAO-ready, *checksummed* bundle** (no competitor surfaced advertises this),
-4. **mandatory human CMMC-expert review** before the customer certifies,
+4. **mandatory human review by a CMMC Registered Practitioner** (co-founder Brian Olson — RP, 30 yrs; CISSP/CISA/CISM) before the customer certifies,
 5. at a **fixed price**.
 
 - **SaaS/GRC tools** (Vanta, Drata, Cynomi, FutureFeed, Totem) hand you a framework and make *you* do the work —
@@ -159,11 +159,12 @@ now.
 ### 5.1 The one-liner & the give-first frame
 > **"The done-for-you CMMC Level 2 documentation engine for small defense contractors."** Your attested answers
 > in → an assessment-ready SSP, POA&M, and policy set, **your** real SPRS score, and the fastest legitimate path
-> to raise it, out — fixed-price, expert-reviewed before you certify.
+> to raise it, out — fixed-price, and **reviewed by a CMMC Registered Practitioner before you certify.**
 
-**Authority hook = revelation, not determination:** *"Most shops your size haven't computed their real SPRS
-number — and the median is closer to 60 than 110. Answer our intake honestly and you'll see **your** number and
-**your** must-meet gaps. The number is yours; we just make it visible, fast, and defensible."*
+**Authority hook = revelation + a credentialed human, not determination:** *"Most shops your size haven't
+computed their real SPRS number — and the median is closer to 60 than 110. Answer our intake honestly, you'll
+see **your** number and **your** must-meet gaps, and a CMMC Registered Practitioner reviews it before you sign.
+The number is yours; we make it visible, fast, defensible — and expert-checked."*
 
 **Give-first assets (lead with value, never a discount):**
 - The **CMMC L2 Readiness Checklist** (one-pager, owner-facing, no pitch). `gtm/cmmc_readiness_checklist.html` →
@@ -172,19 +173,25 @@ number — and the median is closer to 60 than 110. Answer our intake honestly a
   validation); say **"see your real SPRS score."** They answer the structured intake; the engine computes **their**
   number from **their** inputs; they leave knowing it. We assess nothing.
 
-### 5.2 The three value props (mapped to real pain, honesty-scoped)
-1. **"A credible SSP + your real SPRS score in weeks, fixed-price — not a $40k, two-month consultant slog."**
-2. **"Know YOUR real SPRS score — and the shortest legitimate path to raise it."** ScorePath™ separates the
+### 5.2 Four value props — the human pillar leads
+1. **"A credentialed CMMC expert reviews your package before you sign."** Co-founder **Brian Olson — a CMMC
+   Registered Practitioner (RP), 30 years in cybersecurity & GRC** (CISSP, CISA, CISM, CCSP, CDPSE) — reviews your
+   narratives, scope, N/A justifications, and score before you certify. The white space no competitor fills: SaaS
+   tools have no human; consultants have no engine. *(He prepares/advises; a C3PAO assesses.)*
+2. **"A credible SSP + your real SPRS score in weeks, fixed-price — not a $40k, two-month consultant slog."**
+3. **"Know YOUR real SPRS score — and the shortest legitimate path to raise it."** ScorePath™ separates the
    must-meet gating controls from quick-wins ranked by points-per-effort. *(We compute and document it; the
    customer, or their MSP, closes the gaps — we don't touch systems.)*
-3. **"Walk in with a C3PAO-ready package — and keep it current for the annual affirmation."** Checksummed bundle,
+4. **"Walk in with a C3PAO-ready package — and keep it current for the annual affirmation."** Checksummed bundle,
    per-control assessor index, LiveDoc™ versioning, 180-day POA&M tracking.
 
-### 5.3 The wedge to lead with: deterministic, not an AI black box
-Same inputs → same explainable output, **no AI anywhere.** To a buyer who must personally defend the document to
-an assessor and sign an affirmation under FCA exposure, *explainable and consistent* beats *magic* — and it's a
-direct, honest answer to "AI-generated compliance docs create FCA exposure." Pair with **honesty-as-a-feature:**
-we publish what we *don't* do.
+### 5.3 The wedge to lead with: a deterministic engine + a CMMC RP's judgment
+Two things no competitor pairs. **(1) A human CMMC RP reviews every package before you certify** — SaaS tools
+(Vanta/Drata/FutureFeed/Totem) hand you a framework and no human; consultants have no engine. **(2) Deterministic,
+not an AI black box** — same inputs, same explainable output, no AI anywhere; to a buyer who must defend the
+document to an assessor under FCA exposure, *explainable + expert-checked* beats *magic* (a direct answer to
+"AI-generated compliance docs create FCA exposure"). Pair with **honesty-as-a-feature:** we publish what we
+*don't* do (not a C3PAO, don't touch systems, the score is the customer's self-assessment).
 
 ### 5.4 Send-ready outreach (warm-first; controlled cold ≤15/day from a real inbox)
 **A — Warm direct (you know them):**
@@ -362,9 +369,11 @@ cite as such). NDIA Vital Signs 2026 (compliance burden top-3, 50%).
 
 > ⚠️ **Re-verify before any dated PUBLIC claim:** the live C3PAO count, the Phase-2 date, and the C3PAO fee range
 > (sources span $30k–$150k; DoD's $105k–$118k is a bundled model estimate, not a quoted fee — keep distinct).
-> Internal pricing tiers stay internal ([gtm/05-pricing-and-packaging.md](05-pricing-and-packaging.md)); the only
-> public price anchor is the **~$40k consultant baseline.** CyberSheath/PreVeil/Secureframe figures are
-> vendor-sourced — soften or attribute in customer-facing copy.
+> **Pricing is now PUBLIC on the site** (`solutions.html`): fixed-price tiers — Starter $7,200 / Complete $11,700
+> / Managed $13,500 / Guided $19,800, plus recurring (prior draft −10%; full sheet in
+> [gtm/05-pricing-and-packaging.md](05-pricing-and-packaging.md)). The **~$40k consultant** stays the value
+> anchor; confirm the final fixed number on a scope call, and never advertise the cut as a discount.
+> CyberSheath/PreVeil/Secureframe figures are vendor-sourced — soften or attribute in customer-facing copy.
 
 ---
 

@@ -11,16 +11,19 @@ consultant engagement to write a System Security Plan — but a prime has flowed
 the owner has to personally sign an SPRS affirmation that carries False Claims Act exposure. VeriStasis
 collapses the 110-control interrogation to ~30–40 real decisions, **deterministically generates** every
 mandatory artifact (SSP, POA&M, ~20 policies, CRM/ESP), computes the **real SPRS score** and the
-**fastest legitimate path to raise it (ScorePath™)**, and ships a **C3PAO-ready, checksummed bundle** — then
+**fastest legitimate path to raise it (ScorePath™)**, and ships a **C3PAO-ready, checksummed bundle** that a
+**CMMC Registered Practitioner (co-founder Brian Olson, 30 yrs) reviews before the customer certifies** — then
 keeps it current for the annual affirmation (the retention hook). Sold direct now; resold by RPOs/MSPs to
-scale.
+scale. **Lead the brand on the human/RP review + the deterministic engine** (the white space no competitor fills).
 
 ## Why now (verified, cited)
 - The CMMC Program rule (32 CFR Part 170) and the acquisition rule (48 CFR; DFARS 252.204-7021) both went
   **effective November 10, 2025**. CMMC requirements now appear in new DoD solicitations and option years.
 - We are in **Phase 1 (Nov 10, 2025 → Nov 10, 2026)**: L1/L2 **self-assessments** at the DoD's discretion.
-- **Phase 2 begins November 10, 2026 (~5 months from today)**: solicitations begin requiring **Level 2
-  certification by a C3PAO**, not just a self-assessment.
+- **Phase 2 begins November 10, 2026 (~5 months out)**: DoD **can begin requiring Level 2 certification by a
+  C3PAO** on new CUI solicitations — a phase-IN for new awards, **not** a universal cliff (universal arrives at
+  Phase 4, Nov 2028). Meanwhile a prime can demand your self-assessed SPRS score *today*. (Honesty leash: never
+  inflate the cert timeline — gate urgency on an actual prime ask.)
 - Implication for the pitch: a contractor that will need a C3PAO certificate when Phase 2 hits must have its
   SSP, SPRS score, POA&M, and policies **done and credible now** — assessor capacity is constrained and
   readiness work takes months. The deadline is the wedge; we sell on it.
@@ -52,8 +55,8 @@ with a real deadline. Every rate is an assumption to be replaced with real data 
 
 ### The hard capacity ceiling (don't ignore it)
 The honest offer is **software + a light expert pass**: ~60–90 min intake → a CMMC-expert review of
-narratives, scope, N/A justifications, and a score sanity-check → exported bundle. Brian (the CMMC reviewer,
-who also runs the build) can realistically run **~3–5 intakes/reviews per week** without quality slipping. So:
+narratives, scope, N/A justifications, and a score sanity-check → exported bundle. Brian (the CMMC reviewer — a
+**CMMC Registered Practitioner** — who also runs the build) can realistically run **~3–5 intakes/reviews per week** without quality slipping. So:
 - Demos can scale (cheap); **onboarding cannot** — first-paid target of 1–3 is throughput-realistic.
 - If demand exceeds review capacity, **stack a waitlist and book onboarding slots** rather than overpromise
   turnaround. Protecting review quality protects the affirmation — and the brand.
