@@ -5,22 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VeriStasis — Done-for-you CMMC Level 2 documentation for defense contractors</title>
     <meta name="description" content="VeriStasis turns your attested answers into the three mandatory CMMC Level 2 / NIST SP 800-171 artifacts — System Security Plan, POA&M, and the full policy set — computes your real SPRS score, and shows the fastest legitimate path to a passing score. Deterministic, not an AI black box.">
-    <!-- Social sharing (set og:url + absolute og:image once deployed) -->
+    <link rel="canonical" href="https://veristasis.com/">
+    <meta property="og:url" content="https://veristasis.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="VeriStasis">
     <meta property="og:title" content="VeriStasis — Done-for-you CMMC Level 2 documentation">
     <meta property="og:description" content="Turn your attested answers into the SSP, POA&M, and full policy set, with a real SPRS score and the fastest legitimate path to raise it. Version-controlled and assessment-ready.">
-    <meta property="og:image" content="assets/og.png">
+    <meta property="og:image" content="https://veristasis.com/assets/og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VeriStasis — Done-for-you CMMC Level 2 documentation">
     <meta name="twitter:description" content="Turn your attested answers into the SSP, POA&M, and full policy set, with a real SPRS score and the fastest legitimate path to raise it. Version-controlled and assessment-ready.">
-    <meta name="twitter:image" content="assets/og.png">
+    <meta name="twitter:image" content="https://veristasis.com/assets/og.png">
     <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
+    <!-- Analytics placeholder — drop in your tag to measure traffic + conversions.
+         Plausible (privacy-friendly): <script defer data-domain="veristasis.com" src="https://plausible.io/js/script.js"></script>
+         or GA4. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://veristasis.com/#org",
+          "name": "VeriStasis",
+          "url": "https://veristasis.com/",
+          "logo": "https://veristasis.com/assets/og.png",
+          "description": "The done-for-you CMMC Level 2 documentation engine for small defense contractors.",
+          "parentOrganization": { "@type": "Organization", "name": "Ensight LLC" },
+          "areaServed": "US"
+        },
+        {
+          "@type": "Service",
+          "name": "CMMC Level 2 documentation",
+          "serviceType": "CMMC Level 2 / NIST SP 800-171 documentation generation",
+          "provider": { "@id": "https://veristasis.com/#org" },
+          "areaServed": "US",
+          "description": "Generates the System Security Plan, POA&M, and policy set from a contractor's attested answers, computes the SPRS score, and packages a C3PAO-ready bundle — expert-reviewed before certification."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Do you store our CUI?", "acceptedAnswer": { "@type": "Answer", "text": "No. VeriStasis is a documentation and document-control service, not a CUI hosting environment. We generate your artifacts from the answers you provide, and we do not connect to or ingest data from your live systems. Any evidence you upload is encrypted in your browser before it reaches us, and the server stores only ciphertext it cannot decrypt." } },
+            { "@type": "Question", "name": "Is this FedRAMP authorized?", "acceptedAnswer": { "@type": "Answer", "text": "We do not claim FedRAMP authorization or equivalency. The platform is designed for an SPD-only posture (a Security Protection Asset handling Security Protection Data), and that classification is pending review by qualified counsel." } },
+            { "@type": "Question", "name": "Is the documentation AI-generated?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your documents are produced by a deterministic rules-and-template engine from the answers you give it, against a real NIST SP 800-171 Rev 2 control table. The output is consistent and explainable to an assessor, not a black-box guess." } },
+            { "@type": "Question", "name": "Do you connect to our systems?", "acceptedAnswer": { "@type": "Answer", "text": "No. VeriStasis generates everything from the information you attest to. Nothing reads, scans, or monitors your live environment; it is not a SIEM or a continuous-monitoring platform." } },
+            { "@type": "Question", "name": "What do we actually get?", "acceptedAnswer": { "@type": "Answer", "text": "One export bundle: your System Security Plan (Word and OSCAL), a POA&M, a policy set, a SPRS worksheet (PDF), a Customer Responsibility Matrix plus an ESP service description, and a C3PAO package. Every file, and the whole bundle, carries a SHA-256 checksum." } }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -88,7 +127,7 @@
                 <div class="hero-buttons reveal d3">
                     <a href="contact.html" class="btn btn-hero-primary">Book a demo
                             <i data-lucide="arrow-right"></i></a>
-                    <a href="contact.html" class="btn btn-hero-ghost">Request access</a>
+                    <a href="cmmc-readiness-checklist.html" class="btn btn-hero-ghost">Get the free checklist</a>
                 </div>
 
                 <div class="tags reveal d4">
@@ -190,6 +229,36 @@
 </div>
 
 <!-- ══════════════════════════════════
+     WHY NOW
+     ══════════════════════════════════ -->
+<section class="sect" id="why-now">
+    <div class="wrap">
+        <div class="reveal" style="text-align:center;">
+            <div class="sect-eyebrow" style="justify-content:center;">Why now</div>
+            <h2 class="sect-title" style="text-align:center;">The clock is real — and it's personal.</h2>
+            <p class="sect-desc" style="margin:0 auto;text-align:center;">CMMC Level 2 is phasing into DoD contracts now. The contractors who get ahead of it keep bidding; the ones who wait get caught flat.</p>
+        </div>
+        <div class="grid reveal" style="grid-template-columns:repeat(3,1fr);">
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="calendar-clock"></i></div>
+                <h3>The phase-in is underway</h3>
+                <p>Starting November 10, 2026, DoD can begin requiring a Level 2 C3PAO certificate on new contracts — and a prime can ask for your SPRS score today. If a flow-down letter has landed, your clock already started.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="hourglass"></i></div>
+                <h3>Readiness takes months</h3>
+                <p>Authorized assessor capacity is scarce relative to the tens of thousands of contractors in scope, and getting documentation assessment-ready isn't a weekend job. First-come fills the calendar.</p>
+            </div>
+            <div class="cell">
+                <div class="cell-icon"><i data-lucide="pen-line"></i></div>
+                <h3>You sign it personally</h3>
+                <p>A senior official signs the SPRS affirmation, and that signature carries personal False Claims Act exposure. A wrong number isn't just a lost bid — it's your name on it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
      FEATURES — BENTO GRID
      ══════════════════════════════════ -->
 <section class="sect" id="features">
@@ -256,6 +325,34 @@
                 <div class="cell-icon"><i data-lucide="lock"></i></div>
                 <h3>Client-side encrypted evidence</h3>
                 <p>Evidence is encrypted in your browser with AES-256-GCM before it reaches us — the server stores only ciphertext it cannot decrypt. Recoverable with your vault passphrase; we hold no recovery key.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     EXPERT REVIEW (the moat)
+     ══════════════════════════════════ -->
+<section class="sect" style="padding-top:0;">
+    <div class="wrap">
+        <div class="split reveal">
+            <div>
+                <div class="sect-eyebrow">Software speed + a human check</div>
+                <h2>A CMMC expert reviews it before you certify.</h2>
+                <p class="muted">Most GRC tools hand you a generated document and wish you luck. We don't. The engine does the heavy lifting — intake, generation, scoring — then a CMMC expert reviews your narratives, validates your scope and N/A justifications, and sanity-checks your SPRS number before you put your name on the affirmation.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check"></i> Software-fast, expert-checked — not pure self-serve</li>
+                    <li><i data-lucide="check"></i> Scope &amp; N/A justifications reviewed for assessor-credibility</li>
+                    <li><i data-lucide="check"></i> Your score sanity-checked before you sign</li>
+                </ul>
+            </div>
+            <div class="matrix">
+                <div class="matrix-head">What the human catches</div>
+                <div class="matrix-row"><span>Narratives an assessor would push back on</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>Over-broad or under-broad scope</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>N/A justifications that won't hold up</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>A SPRS number that doesn't add up</span><i data-lucide="check"></i></div>
+                <div class="matrix-row"><span>Must-meet gaps hiding on a POA&amp;M</span><i data-lucide="check"></i></div>
             </div>
         </div>
     </div>

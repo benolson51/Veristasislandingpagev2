@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CMMC Level 2 Readiness Checklist — VeriStasis</title>
+<style>
+  :root{ --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --cyan:#0ea5e9; --cyanbg:#ecfeff; --amber:#b45309; --amberbg:#fffbeb; }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:#f1f5f9; color:var(--ink); font-family:'Segoe UI',system-ui,Arial,sans-serif; line-height:1.5; }
+  .bar{ max-width:820px; margin:18px auto 0; display:flex; gap:12px; align-items:center; }
+  .btn{ font:600 14px 'Segoe UI',sans-serif; padding:10px 18px; border-radius:8px; border:1px solid var(--cyan); background:var(--cyan); color:#fff; cursor:pointer; }
+  .btn:hover{ background:#0284c7; }
+  .hint{ color:var(--muted); font-size:13px; }
+  .page{ max-width:820px; margin:14px auto 40px; background:#fff; padding:44px 52px; box-shadow:0 1px 8px rgba(0,0,0,.08); border-radius:6px; }
+  .head{ display:flex; align-items:center; gap:12px; border-bottom:2px solid var(--cyan); padding-bottom:14px; margin-bottom:8px; }
+  .wm{ font-weight:800; font-size:20px; letter-spacing:-0.01em; }
+  h1{ font-size:23px; margin:18px 0 4px; letter-spacing:-0.01em; }
+  .sub{ color:var(--muted); font-size:14px; margin:0 0 18px; }
+  h2{ font-size:15px; margin:22px 0 8px; color:var(--ink); }
+  .lead{ color:var(--muted); font-size:13.5px; border-left:3px solid var(--cyan); padding:8px 0 8px 12px; background:#f8fafc; margin:0 0 14px; }
+  ul.ck{ list-style:none; padding:0; margin:6px 0; }
+  ul.ck li{ position:relative; padding:5px 0 5px 30px; font-size:14px; }
+  ul.ck li:before{ content:""; position:absolute; left:0; top:6px; width:15px; height:15px; border:1.5px solid #94a3b8; border-radius:3px; }
+  .callout{ border-radius:8px; padding:12px 16px; margin:12px 0; font-size:13.5px; }
+  .c-cyan{ background:var(--cyanbg); border:1px solid #a5f3fc; }
+  .c-amber{ background:var(--amberbg); border:1px solid #fde68a; }
+  .callout b{ color:var(--ink); }
+  .score{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
+  .score div{ flex:1; min-width:200px; background:#f8fafc; border:1px solid var(--line); border-radius:8px; padding:10px 12px; font-size:13px; }
+  .foot{ border-top:1px solid var(--line); margin-top:24px; padding-top:14px; font-size:12.5px; color:var(--muted); }
+  .foot b{ color:var(--ink); }
+  .tiny{ font-size:11px; color:#94a3b8; margin-top:8px; }
+  @media print{
+    body{ background:#fff; } .bar{ display:none; } .page{ box-shadow:none; margin:0; max-width:none; padding:0 6px; }
+    @page{ margin:0.6in; }
+    h2{ page-break-after:avoid; } .callout, .score div, ul.ck li{ page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <button class="btn" onclick="window.print()">Save as PDF</button>
+  <span class="hint">Click → in the print dialog choose <b>“Save as PDF”</b>. (Or press Ctrl/Cmd-P.)</span>
+</div>
+
+<div class="page">
+  <div class="head">
+    <svg width="34" height="37" viewBox="0 0 44 48" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="b" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+        <linearGradient id="f" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/></linearGradient>
+      </defs>
+      <path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#f)" stroke="url(#b)" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="22" cy="15.2" r="2.7" fill="url(#b)"/>
+      <path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="wm">VeriStasis</span>
+  </div>
+
+  <h1>The CMMC Level 2 Readiness Checklist</h1>
+  <p class="sub">A plain-English reality check for the owner who signs the SPRS affirmation.</p>
+
+  <p class="lead">Why you, specifically: you're the senior official who signs the affirmation — and that
+  signature carries personal False Claims Act exposure. Ten minutes here is worth it. If you can't confidently
+  check these boxes, you're not assessment-ready yet.</p>
+
+  <h2>1. Do you actually have the three mandatory artifacts?</h2>
+  <ul class="ck">
+    <li>A <b>System Security Plan</b> addressing all <b>110</b> NIST SP 800-171 Rev. 2 controls — boundary, system description, status of each.</li>
+    <li>A <b>POA&amp;M</b> with a remediation plan, owner, and milestone for every gap.</li>
+    <li>A <b>policy set</b> (one per control family) plus core procedures, control-linked.</li>
+    <li>A <b>SPRS score posted</b> — and you know the number.</li>
+  </ul>
+
+  <h2>2. The SPRS score math (where owners get surprised)</h2>
+  <div class="callout c-cyan">You don't earn points up from zero — <b>you start at 110 and lose 5, 3, or 1
+  point for every unmet control, down to a −203 floor.</b> So "we're ~70% there" is <b>not</b> a score of 70.
+  If your gaps are the heavy controls, your real posted score can be <b>deeply negative</b> — we routinely see
+  shops shocked their starting number is below zero.</div>
+  <ul class="ck">
+    <li>You know your <b>actual</b> current SPRS score (not a guess).</li>
+    <li>You know which specific unmet controls are dragging it down most.</li>
+  </ul>
+
+  <h2>3. The gating-control trap (the one that fails assessments)</h2>
+  <div class="callout c-amber"><b>Not every gap can be deferred.</b> To use a POA&amp;M at all you must
+  already be at <b>≥ 80% (SPRS ≥ 88)</b> on assessment day. And <b>certain controls are "must-meet" — they
+  cannot go on a POA&amp;M.</b> If one of those is open, you <b>fail outright, regardless of score.</b> POA&amp;M
+  items must close within <b>180 days</b>. Most shops learn which controls are non-negotiable only when a
+  C3PAO tells them — the expensive way.</div>
+  <ul class="ck">
+    <li>You know the 80% / SPRS-88 threshold required to even use a POA&amp;M.</li>
+    <li>You know which of your open controls are "must-meet" (non-deferrable).</li>
+  </ul>
+
+  <h2>4. Scope &amp; the things that quietly sink shops</h2>
+  <ul class="ck">
+    <li>You've <b>defined your CUI boundary</b> — what systems/people actually touch CUI (smaller honest scope = fewer controls).</li>
+    <li>You've handled <b>3.13.11</b> — FIPS-validated cryptography for CUI (a requirement, and a common gap; "we use AES" isn't automatically enough).</li>
+    <li>You have a <b>Customer Responsibility Matrix + ESP service description</b> for providers in your boundary (cloud, MSP, tooling).</li>
+    <li>Inherited controls (M365 GCC High, Google Workspace, AWS GovCloud) are <b>documented</b>, not assumed.</li>
+  </ul>
+
+  <h2>5. The affirmation &amp; the clock</h2>
+  <ul class="ck">
+    <li>You know <b>who signs</b> (you) and that it <b>recurs annually</b>.</li>
+    <li>You know <b>Phase 2 — when Level 2 work needs a C3PAO certificate — begins November 10, 2026</b>, and assessor capacity is scarce.</li>
+    <li>You've accepted readiness typically takes <b>months</b>, not weeks — so the time to know your gap is now.</li>
+  </ul>
+
+  <h2>Score yourself</h2>
+  <div class="score">
+    <div><b>0–4 boxes:</b> exposed. A flow-down today would catch you flat.</div>
+    <div><b>5–9 boxes:</b> started — but the gating controls and SPRS math are where deals get lost.</div>
+    <div><b>10+ boxes:</b> in good shape. Keep it current for the annual affirmation.</div>
+  </div>
+
+  <div class="foot">
+    <b>VeriStasis</b> is the done-for-you CMMC Level 2 documentation engine for small defense contractors. From
+    your attested answers it generates your SSP, POA&amp;M, and policies, computes your real SPRS score, and
+    shows the fastest legitimate path to raise it — packaged C3PAO-ready, fixed-price, with a CMMC expert
+    reviewing before you certify. We generate from your answers; we don't host CUI or connect to your live
+    systems. &nbsp;<b>Want your real SPRS number? &middot; veristasis.com &middot; ben@veristasis.com</b>
+    <div class="tiny">Educational only — not legal advice or a certification. A C3PAO performs the assessment.</div>
+  </div>
+</div>
+</body>
+</html>

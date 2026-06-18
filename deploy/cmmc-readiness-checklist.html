@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free CMMC Level 2 Readiness Checklist — VeriStasis</title>
+    <meta name="description" content="A free, one-page CMMC Level 2 readiness checklist for the owner who signs the SPRS affirmation — the gating-control trap, the SPRS score math, and what 'assessment-ready' actually requires.">
+    <link rel="canonical" href="https://veristasis.com/cmmc-readiness-checklist.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VeriStasis">
+    <meta property="og:url" content="https://veristasis.com/cmmc-readiness-checklist.html">
+    <meta property="og:title" content="Free CMMC Level 2 Readiness Checklist">
+    <meta property="og:description" content="The gating-control trap, the SPRS score math, and what 'assessment-ready' really takes — a one-page checklist for the owner who signs.">
+    <meta property="og:image" content="https://veristasis.com/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free CMMC Level 2 Readiness Checklist">
+    <meta name="twitter:description" content="The gating-control trap, the SPRS score math, and what 'assessment-ready' really takes — for the owner who signs.">
+    <meta name="twitter:image" content="https://veristasis.com/assets/og.png">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@1.18.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="ambient">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+    <div class="glow-orb-3"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="topbar" id="topbar">
+    <div class="topbar-inner">
+        <a href="index.html" class="logo-mark">
+            <div class="logo-box"><img src="assets/logo.svg" alt="VeriStasis"></div>
+            <span class="logo-wordmark">VeriStasis</span>
+        </a>
+        <nav class="nav-center">
+            <a href="platform.html">Platform</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="security.html">Security</a>
+            <a href="company.html">Company</a>
+        </nav>
+        <div class="nav-end">
+            <a href="signin.html" class="signin">Sign in</a>
+            <a href="contact.html" class="btn btn-solid">Book a demo <i data-lucide="arrow-right"></i></a>
+        </div>
+    </div>
+</header>
+
+<section class="hero" id="main">
+    <div class="wrap">
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <div class="reveal"><div class="hero-eyebrow"><span class="eyebrow-dot"></span> Free resource — no sales call required</div></div>
+                <h1 class="reveal d1">The CMMC Level 2 <span class="gradient-text">Readiness Checklist.</span></h1>
+                <p class="hero-desc reveal d2">A one-page reality check for the owner who signs the SPRS affirmation. It lays out the two traps most shops miss — the <strong>gating controls you can't POA&amp;M</strong> and the <strong>SPRS score math</strong> — plus what "assessment-ready" actually requires.</p>
+                <ul class="feature-list reveal d3" style="max-width:460px;">
+                    <li><i data-lucide="check-circle-2"></i> Why "70% there" can still be a <em>negative</em> SPRS score</li>
+                    <li><i data-lucide="check-circle-2"></i> The must-meet controls that fail an assessment outright</li>
+                    <li><i data-lucide="check-circle-2"></i> A self-score so you know where you actually stand</li>
+                </ul>
+            </div>
+
+            <div class="form-card reveal d3">
+                <div id="checklistForm-wrap">
+                    <h3 style="margin:0 0 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;">Get the checklist</h3>
+                    <p style="font-size:13px;color:var(--text-2);margin:0 0 18px;">Tell us where to send it. Instant access — no pitch.</p>
+                    <form id="checklistForm" data-endpoint="https://api.web3forms.com/submit" action="#" method="POST">
+                        <input type="hidden" name="access_key" value="11ef2468-9e7a-4114-8343-78b216082a48">
+                        <input type="hidden" name="subject" value="CMMC Readiness Checklist download">
+                        <input type="hidden" name="from_name" value="VeriStasis website">
+                        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+                        <div class="field">
+                            <label for="cl-name">Name</label>
+                            <input type="text" class="input" id="cl-name" name="name" autocomplete="name" required placeholder="Jane Doe">
+                        </div>
+                        <div class="field">
+                            <label for="cl-email">Work email</label>
+                            <input type="email" class="input" id="cl-email" name="email" autocomplete="email" required placeholder="jane@company.com">
+                        </div>
+                        <button type="submit" class="btn btn-hero-primary" style="width:100%;justify-content:center;">Get the checklist <i data-lucide="arrow-right"></i></button>
+                        <div id="clErr" role="alert" style="display:none;align-items:center;gap:9px;margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.18);">
+                            <i data-lucide="alert-triangle" style="width:16px;height:16px;color:#f87171;flex-shrink:0;"></i>
+                            <span style="font-size:12px;color:var(--text-2);">Something went wrong — email ben@veristasis.com and we'll send it over.</span>
+                        </div>
+                        <p class="form-note">We'll only use this to send the checklist and the occasional CMMC update. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+                <div id="checklistReveal" style="display:none;text-align:center;">
+                    <i data-lucide="check-circle-2" style="width:40px;height:40px;color:var(--emerald);"></i>
+                    <h3 style="margin:12px 0 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;">You're in.</h3>
+                    <p style="font-size:13px;color:var(--text-2);margin:0 0 18px;">Open your checklist below, then use "Save as PDF" to keep a copy.</p>
+                    <a href="readiness-checklist-print.html" target="_blank" rel="noopener" class="btn btn-hero-primary" style="width:100%;justify-content:center;">Open the checklist <i data-lucide="external-link"></i></a>
+                    <a href="contact.html" class="btn btn-hero-ghost" style="width:100%;justify-content:center;margin-top:10px;">Or get your real SPRS score (20 min)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap">
+        <div class="ft-bottom" style="border-top:none;">
+            <div>
+                <p>&copy; 2026 VeriStasis. All rights reserved.</p>
+                <p style="margin-top:4px;">VeriStasis is a DBA of Ensight LLC &middot; Kingsburg, CA</p>
+            </div>
+            <div class="ft-legal">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+<script>
+(function(){
+  var f=document.getElementById('checklistForm');
+  if(!f) return;
+  var err=document.getElementById('clErr');
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    if(err) err.style.display='none';
+    var btn=f.querySelector('button[type=submit]'); var orig=btn?btn.innerHTML:'';
+    if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
+    try{
+      var res=await fetch(f.dataset.endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)});
+      if(res.ok){
+        document.getElementById('checklistForm-wrap').style.display='none';
+        document.getElementById('checklistReveal').style.display='block';
+        if(window.lucide) lucide.createIcons();
+      } else { if(err) err.style.display='flex'; }
+    }catch(_){ if(err) err.style.display='flex'; }
+    finally{ if(btn){ btn.disabled=false; btn.innerHTML=orig; if(window.lucide) lucide.createIcons(); } }
+  });
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
