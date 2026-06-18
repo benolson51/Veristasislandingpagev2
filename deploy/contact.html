@@ -68,16 +68,13 @@
             </div>
 
             <div class="form-card reveal d3">
-                <!-- To go live: paste your form-service endpoint into data-endpoint below.
-                     • Formspree:  data-endpoint="https://formspree.io/f/YOUR_FORM_ID"
-                     • Web3Forms:  data-endpoint="https://api.web3forms.com/submit"  + uncomment the access_key field
-                     Until an endpoint is set, the form shows a "not yet connected" notice instead of sending. -->
-                <form id="contactForm" data-endpoint="" action="#" method="POST">
-                    <!-- honeypot (bots fill it; humans don't) -->
-                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-                    <!-- For Web3Forms, uncomment and set your key:
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"> -->
-                    <input type="hidden" name="_subject" value="New VeriStasis demo request">
+                <!-- Wired to Web3Forms (access keys are public by design — safe in client HTML). -->
+                <form id="contactForm" data-endpoint="https://api.web3forms.com/submit" action="#" method="POST">
+                    <input type="hidden" name="access_key" value="11ef2468-9e7a-4114-8343-78b216082a48">
+                    <input type="hidden" name="subject" value="New VeriStasis demo request">
+                    <input type="hidden" name="from_name" value="VeriStasis website">
+                    <!-- honeypot: bots tick it, humans don't -->
+                    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
                     <div class="field-row">
                         <div class="field">
                             <label for="contact-first-name">First name</label>
