@@ -14,6 +14,14 @@ don't do remediation"), the **MSP channel** (you'd compete with the partners you
 your **capacity** (implementation is an unbounded hourly sink — the $40k/2-month slog you're positioned
 *against*). Stay advisory and all three stay intact.
 
+**Scope at a glance — IN vs OUT (the anti-creep firewall):**
+| ✅ IN (fixed-price advisory) | ❌ OUT (creep / "turning wrenches") |
+|---|---|
+| Review SSP/POA&M/policies for assessor-credibility (narratives, scope, N/A) | Configuring/implementing controls (MFA, M365, FIPS crypto) |
+| Sanity-check the SPRS score vs. the client's *attested* status | Network/system architecture; running their environment (SIEM/MDR) |
+| Flag must-meet gating gaps + POA&M-eligibility | Representing them to the C3PAO / "certifying" them |
+| Contextualize risk + prioritize the gap roadmap (ScorePath) | Legal opinions (→ counsel); unlimited hourly hand-holding (→ retainer/Guided) |
+
 **RP guardrail:** advise/prepare ≠ assess. Always: *"As a CMMC Registered Practitioner we prepare and advise;
 a C3PAO assesses."* Even a "readiness review" is **your package/readiness, reviewed** — never an official
 pre-assessment or a graded determination.

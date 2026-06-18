@@ -44,6 +44,11 @@ implementation (an RP advises; a C3PAO assesses; we never touch systems). Full m
 - **Anchor 2 (recurring sanity):** incumbent recurring is roughly **$4k/yr (L1) / $6k/yr (L2)** per org. Managed
   at $900/mo (~$10.8k/yr) sits above that on purpose — justified by the human layer (quarterly RP review +
   affirmation advisory + a maintained corpus). Lead on depth, not a price war.
+- **Anchor 3 (the human premium — why we're not SaaS-commodity priced):** the price isn't software access — it's
+  **a CMMC RP's judgment on the document that carries the buyer's personal liability.** $200/mo SaaS = blank
+  framework + their labor + their risk; we = a defensible, expert-reviewed deliverable. That's why we anchor at
+  **$11.7k+ setup**, not commodity SaaS pricing. Margin holds because the engine does ~80% of the work and the
+  review is bounded/capped (never open-ended hourly).
 - **Setup funds the business; recurring is the business.** Optimize for getting shops onto a recurring (ideally
   Managed or Guided) plan.
 

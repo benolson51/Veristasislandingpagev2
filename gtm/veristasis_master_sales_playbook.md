@@ -154,6 +154,50 @@ now.
 
 ---
 
+## 4b. The "Tech-Enabled Advisory" layer (what the human adds — and its limits)
+
+**Identity:** VeriStasis is a **product with an expert-review layer — not a consultancy with software.** The engine
+does the work fast; a CMMC RP makes the output *defensible*. Lead with the deliverable; the human is the
+rigor/trust layer, never an open-ended relationship.
+
+**Governance Advisory ≠ IT Remediation/MSP** (kills "I already have an MSP"):
+> *"Your MSP secures the network; we make the documentation defensible. MSP = implementation (turns the wrenches).
+> VeriStasis = governance documentation + expert review (the paper that holds up). We don't overlap — which is why
+> a good MSP refers you instead of fearing you. Your MSP makes you secure; we make you defensible."*
+
+**Advisory scope — fixed-price survives only if it's bounded:**
+| ✅ IN (fixed-price advisory) | ❌ OUT (creep / "turning wrenches") |
+|---|---|
+| Review SSP/POA&M/policies for assessor-credibility (narratives, scope, N/A) | Configuring/implementing controls (MFA, M365, FIPS crypto) |
+| Sanity-check the SPRS score vs. the client's *attested* status | Network/system architecture design |
+| Flag must-meet gating gaps + POA&M-eligibility | Operating/monitoring their environment (SIEM/MDR) |
+| Contextualize the risk for the affirming official | Representing them to the C3PAO / "certifying" them |
+| Prioritize the gap roadmap (ScorePath) | Legal opinions (→ qualified counsel) |
+| Bounded, time-boxed sessions (scoping / gap / readiness) | Unlimited hourly hand-holding (→ retainer or Guided) |
+
+> **Boundary line (memorize):** *"We review the documentation and advise on the gap; you (or your MSP) implement.
+> We never touch your systems, and we never verify your controls are in place — we work from what you attest."*
+
+**Why the human anchors $15k+ (not SaaS commodity):** you're not buying software access — you're buying *"a CMMC
+RP's judgment on the document that carries your personal liability."* vs. $200/mo SaaS (blank framework + your
+labor + your risk); vs. $40k consultant (same rigor, slower/pricier). Setup reflects engine + bounded review (depth
+scales by tier); recurring buys the annual RP re-review. Margin holds because the engine does ~80% of the work and
+review is **capped/productized + waitlisted** — never open-ended.
+
+**Leash 3 — the advisory/FCA firewall (the §12 + legal guardrail for the human layer):**
+- **Verbal:** *"We review your documentation and advise on the gap. We don't verify your controls are implemented —
+  we never touch your systems. You own the truth of what you attest. We're not a C3PAO; we don't certify, bless, or
+  guarantee compliance."* **Banned words: blessed · certified · guaranteed · validated your compliance · "we'll make
+  you pass" · independent assessment/measurement.**
+- **Written** (for counsel to finalize, into [13-close-kit.md](13-close-kit.md)/MSA): scope clause (no system access,
+  no control verification; inputs are Client attestations), no-certification clause, affirmation-is-Client's clause,
+  not-legal-advice + liability cap. **Carry E&O / professional-liability insurance.**
+- **Why it holds:** we review **documentation quality**, not **ground truth** (we can't — no system access). A false
+  score is false because the *attestation* was false, not our computation. That's the honesty position *and* the
+  liability defense — and it only survives if we never imply we verified reality or "blessed" anything.
+
+---
+
 ## 5. Messaging Architecture
 
 ### 5.1 The one-liner & the give-first frame
@@ -219,11 +263,21 @@ document to an assessor under FCA exposure, *explainable + expert-checked* beats
 > package; Brian reviews. We never touch systems and we don't remediate — zero channel conflict. Send us the doc
 > work; keep the relationship.
 
+**E — Direct-to-signer (liability + speed + the human):**
+> [First name] — you personally sign your SPRS affirmation, under False Claims Act exposure. Our engine builds your
+> SSP, POA&M, and real score in weeks (not a $40k/2-month consultant), and a CMMC Registered Practitioner reviews
+> every line before you sign — so what you affirm has had an expert's eyes on it. We don't touch your systems; we
+> make the paper defensible. Want to see your real number? [calendar link]
+
+**F — The one-two (tightest):**
+> Software gets you a draft; a CMMC RP gets you something you can sign. We do both — generated in weeks,
+> expert-reviewed before you certify, fixed-price. Worth 20 minutes on your real number? [calendar link]
+
 ---
 
-## 6. The two honesty leashes (verbatim — put these in front of every rep)
+## 6. The honesty leashes (verbatim — put these in front of every rep)
 
-The red-team proved these are the **only two things** that turn our pitch into our own liability. Memorize them.
+The two below **+ the advisory/FCA leash in §4b** are what turn our pitch into our own liability. Memorize them.
 
 ### Leash 1 — Never inflate the cert timeline.
 Two clocks; never mix them. *"C3PAO certification required"* (phased, slow) ≠ *"prime demands a self-assessed
@@ -268,6 +322,7 @@ we don't touch your systems."*
 | **"Is this AI? I can't defend a black box."** | "No AI anywhere. Deterministic rules-and-templates over a transparent 110-control table — same inputs, same output, fully explainable. That's exactly why it holds up in an assessment, and why a CMMC expert still reviews it before you certify." |
 | **"Startup, no track record, on something with legal liability."** | "You'd carry that liability with a $40k consultant too — the affirmation is non-delegable, no vendor absorbs it. What lowers the risk: the computation is deterministic and traceable to specific NIST controls, every number has a documented source you can defend, and Brian reviews before you certify. You're not trusting a black box — you get a checksummed, auditable bundle where you can see why every control scored the way it did." |
 | **"Do you store our CUI? / Is this FedRAMP?"** | "No. We're a documentation product, not a CUI-hosting environment, and we don't connect to your live systems. We're not FedRAMP-authorized and don't host CUI; we're designed for a Security-Protection-Data-only posture, stated precisely rather than overclaimed. Any evidence files you upload are encrypted in your browser — we store only ciphertext we can't read." |
+| **"If you're just reviewing software output, why does it cost so much?"** | "Fair — the software's the cheap part; it drafts in hours. The expensive part is what protects you: a CMMC RP with 30 years checking that your scope is defensible, your narratives survive an assessor, and your score matches what you actually attested — before a prime or the DOJ reads it, and before your name goes on the affirmation. A $200/mo tool hands you a blank framework and your own risk; a $40k consultant does this same review, slower and pricier. You're paying for the RP's judgment on the one document that carries your personal liability — fixed-price, a fraction of the consultant. The software doesn't sign the affirmation; you do." |
 
 ⭐ = the three the playbook is explicitly required to cover.
 
