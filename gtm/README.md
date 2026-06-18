@@ -32,6 +32,11 @@ engine. Built **2026-06-16**. Motion: **direct founder-led outbound** (primary) 
 | [12-first-paid-deal-14-day-sprint.md](12-first-paid-deal-14-day-sprint.md) | **Warm-led plan to a first PAID deal in 14 days** (start here for the fast win) |
 | [13-close-kit.md](13-close-kit.md) | Quote/proposal, order form, payment setup, onboarding handoff |
 | [QA-readiness-report.md](QA-readiness-report.md) | Double-check results + the Go/No-Go readiness gate |
+| [15-prospect-list.md](15-prospect-list.md) | ~100 ranked CA DIB prospects (28 verified + 72 from USASpending API) |
+| [clay_import_batch.csv](clay_import_batch.csv) | 72 DoD-contracted CA manufacturers, ready to import + enrich in Clay |
+| [cmmc_readiness_checklist.md](cmmc_readiness_checklist.md) | Give-first lead magnet — the CMMC L2 readiness checklist for owners |
+| [outreach_george_cruz.md](outreach_george_cruz.md) | Value-first cold email sequence for GC Machining (no discounts) |
+| [outreach_brian_rosenberger.md](outreach_brian_rosenberger.md) | Warm-first outreach for VPE's CEO (2nd-degree); cold fallback included |
 | [14-clay-prospecting.md](14-clay-prospecting.md) | Clay finish steps + the ICP search recipe to recreate it |
 
 ## Standing reminders
