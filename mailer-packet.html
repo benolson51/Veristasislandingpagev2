@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VeriStasis — CMMC Level 2 Briefing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cyan:#38bdf8; --blue:#3b82f6; --blue-d:#2563eb; --violet:#a78bfa;
+    --ink:#0b1220; --body:#283447; --muted:#5b6b82; --soft:#8a98ad;
+    --line:#e6eaf0; --line2:#d4dae3; --tint:#f3f6fb;
+    --grad: linear-gradient(100deg, #38bdf8 0%, #3b82f6 48%, #a78bfa 100%);
+    --navy:#0a1322;
+    --rad:14px;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ margin:0; background:#dfe4ec; color:var(--body); font-family:'Inter',-apple-system,system-ui,sans-serif; line-height:1.6; }
+  h1,h2,h3,h4,.wm,.eyebrow{ font-family:'Plus Jakarta Sans','Inter',sans-serif; }
+
+  .bar{ max-width:840px; margin:18px auto 0; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  .pbtn{ font:600 14px 'Inter',sans-serif; padding:10px 18px; border-radius:9px; border:none; background:var(--blue-d); color:#fff; cursor:pointer; }
+  .pbtn:hover{ background:#1d4ed8; }
+  .hint{ color:var(--muted); font-size:13px; }
+  .mark{ background:#fff3bf; padding:0 3px; border-radius:3px; }
+
+  .grad-txt{ background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:var(--blue); }
+  .rule{ height:3px; border-radius:3px; background:var(--grad); margin:14px 0 0; }
+
+  .page{ max-width:840px; margin:18px auto; background:#fff; padding:52px 60px 64px; box-shadow:0 6px 30px rgba(11,18,32,.13); border-radius:8px; position:relative; }
+
+  .mast{ display:flex; align-items:center; gap:13px; }
+  .wm{ font-weight:800; font-size:22px; letter-spacing:-0.02em; color:var(--ink); } .wm .s{ color:var(--blue); }
+  .who{ margin-left:auto; text-align:right; font-size:10.5px; color:var(--soft); line-height:1.6; }
+  .who b{ color:var(--ink); font-weight:700; }
+
+  .eyebrow{ font-size:11px; text-transform:uppercase; letter-spacing:.16em; color:var(--blue-d); font-weight:700; margin:30px 0 8px; }
+  h1{ font-size:30px; line-height:1.14; margin:0 0 10px; letter-spacing:-0.025em; color:var(--ink); font-weight:800; }
+  h2{ font-size:17px; margin:26px 0 8px; letter-spacing:-0.015em; color:var(--ink); font-weight:700; }
+  p{ font-size:14px; margin:0 0 13px; color:var(--body); }
+  .lead{ font-size:15px; color:var(--muted); }
+  .small{ font-size:12px; color:var(--soft); line-height:1.6; }
+
+  /* letter */
+  .date{ margin:26px 0 18px; color:var(--soft); font-size:13.5px; }
+  .addr{ font-size:14px; line-height:1.55; margin-bottom:22px; color:var(--ink); }
+  .sig{ margin-top:24px; font-size:14px; } .sig b{ display:block; margin-top:16px; font-family:'Plus Jakarta Sans',sans-serif; font-size:15px; color:var(--ink); }
+  .ps{ margin-top:22px; padding-top:14px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); }
+
+  .callout{ border-radius:var(--rad); padding:15px 19px; margin:15px 0; font-size:13.5px; line-height:1.6; }
+  .c-dark{ background:var(--navy); color:#cdd6e4; } .c-dark b{ color:#fff; }
+  .c-tint{ background:var(--tint); border:1px solid var(--line); } .c-tint b{ color:var(--ink); }
+  .c-amber{ background:#fffaf0; border:1px solid #fde9c8; } .c-amber b{ color:#92400e; }
+
+  .stat{ display:flex; gap:13px; margin:16px 0; }
+  .stat div{ flex:1; border:1px solid var(--line); border-radius:var(--rad); padding:14px 16px; background:#fff; }
+  .stat .n{ font-family:'Plus Jakarta Sans',sans-serif; font-size:27px; font-weight:800; letter-spacing:-0.03em; }
+  .stat .l{ font-size:11.5px; color:var(--soft); line-height:1.45; margin-top:3px; }
+
+  ul.clean{ margin:6px 0; padding-left:18px; } ul.clean li{ font-size:13.5px; margin:4px 0; }
+
+  .two{ display:flex; gap:15px; margin:16px 0; }
+  .pill{ flex:1; border:1px solid var(--line); border-radius:var(--rad); padding:18px 19px; background:#fff; position:relative; overflow:hidden; }
+  .pill::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--grad); }
+  .pill .k{ font-size:10.5px; text-transform:uppercase; letter-spacing:.13em; color:var(--blue-d); font-weight:700; }
+  .pill h3{ margin:4px 0 7px; font-size:16px; color:var(--ink); }
+  .pill p{ margin:0; font-size:12.8px; color:var(--muted); line-height:1.6; }
+
+  table{ width:100%; border-collapse:collapse; margin:14px 0; font-size:12.5px; }
+  th,td{ border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; }
+  th{ background:var(--tint); font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--soft); font-weight:700; }
+  th:nth-child(2){ color:var(--blue-d); }
+  td.us{ background:#eef4ff; font-weight:600; color:var(--ink); }
+  td:first-child{ color:var(--muted); }
+
+  .steps{ display:flex; gap:13px; margin:14px 0; }
+  .step{ flex:1; }
+  .step .num{ width:30px; height:30px; border-radius:9px; background:var(--grad); color:#fff; font-weight:800; font-size:14px; font-family:'Plus Jakarta Sans',sans-serif; display:flex; align-items:center; justify-content:center; }
+  .step h4{ margin:9px 0 3px; font-size:13.5px; color:var(--ink); } .step p{ font-size:11.8px; color:var(--muted); margin:0; line-height:1.5; }
+
+  .creds{ display:flex; gap:15px; align-items:flex-start; background:var(--tint); border:1px solid var(--line); border-radius:var(--rad); padding:17px 19px; margin:16px 0; }
+  .creds .av{ width:54px; height:54px; border-radius:13px; background:var(--navy); color:#fff; font-weight:800; font-family:'Plus Jakarta Sans',sans-serif; display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0; }
+  .creds h4{ margin:0 0 2px; font-size:15px; color:var(--ink); } .creds .role{ font-size:12px; color:var(--blue-d); font-weight:700; margin-bottom:6px; }
+  .creds p{ font-size:12.5px; color:var(--muted); margin:0; line-height:1.55; }
+  .chips{ display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+  .chip{ font-size:10.5px; background:#fff; border:1px solid var(--line2); border-radius:20px; padding:2px 10px; color:var(--muted); font-weight:500; }
+
+  .offer{ margin-top:20px; background:var(--navy); color:#fff; border-radius:18px; padding:22px 24px; position:relative; overflow:hidden; }
+  .offer::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--grad); }
+  .offer .big{ font-family:'Plus Jakarta Sans',sans-serif; font-size:18px; font-weight:800; letter-spacing:-0.01em; }
+  .offer .sm{ font-size:12.5px; color:#aab8cc; margin-top:4px; }
+  .contacts{ display:flex; gap:14px; margin-top:15px; }
+  .ct{ flex:1; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.13); border-radius:11px; padding:12px 15px; }
+  .ct .nm{ font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:14px; } .ct .rl{ font-size:11px; color:#7dd3fc; margin:2px 0 6px; font-weight:600; }
+  .ct .li{ font-size:12px; color:#dbe4f0; line-height:1.7; }
+
+  .foot{ border-top:1px solid var(--line); margin-top:20px; padding-top:12px; font-size:10.5px; color:var(--soft); line-height:1.65; }
+  .pgnum{ position:absolute; bottom:22px; right:26px; font-size:10px; color:var(--line2); font-weight:600; letter-spacing:.05em; }
+
+  @media print{
+    body{ background:#fff; } .bar{ display:none; }
+    .grad-txt{ -webkit-text-fill-color:initial; color:var(--blue-d); background:none; }  /* solid blue prints reliably */
+    .page{ box-shadow:none; margin:0; max-width:none; border-radius:0; padding:0; page-break-after:always; }
+    .page:last-child{ page-break-after:auto; }
+    .mark{ background:transparent; }
+    @page{ margin:0.7in; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <button class="pbtn" onclick="window.print()">Save as PDF / Print</button>
+  <span class="hint">Page 1 = personalize the <span class="mark">highlighted</span> fields per recipient. Pages 2–3 are identical for everyone. Highlights vanish in print.</span>
+</div>
+
+<!-- ════ PAGE 1 — COVER LETTER ════ -->
+<div class="page">
+  <div class="mast">
+    <svg width="38" height="41" viewBox="0 0 44 48" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="b1" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+      <linearGradient id="g1" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/></linearGradient></defs>
+      <path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#g1)" stroke="url(#b1)" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="22" cy="15.2" r="2.7" fill="url(#b1)"/><path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="wm">Veri<span class="s">Stasis</span></span>
+    <div class="who">
+      <div><b>Ben Olson</b> — Co-Founder<br>(559) 207-1925 · ben@veristasis.com</div>
+      <div style="margin-top:5px"><b>Brian Olson</b> — Co-Founder &amp; CMMC RP<br>(559) 618-1763 · brian@veristasis.com</div>
+      <div style="margin-top:6px;color:var(--soft)">veristasis.com</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <div class="date"><span class="mark">[Month Day, Year]</span></div>
+  <div class="addr">
+    <span class="mark">[First Last]</span><br>
+    <span class="mark">[Title]</span>, <span class="mark">[Company]</span><br>
+    <span class="mark">[Street Address]</span> · <span class="mark">[City, ST ZIP]</span>
+  </div>
+
+  <p>Dear <span class="mark">[First]</span>,</p>
+
+  <p>I sent this by mail on purpose. If a prime hasn't already flowed a CMMC Level 2 clause down to <span class="mark">[Company]</span>, one is coming — and it's the kind of thing that's easy to leave in an inbox until it's suddenly urgent and the assessor calendar is full.</p>
+
+  <p>Here's the part most owners I talk to haven't actually done: <b>computed their real SPRS score.</b> It's the number <i>you</i> personally sign under the affirmation — with False Claims Act exposure — and the math is unforgiving (the next page lays it out plainly). "We're mostly there" is often a <i>negative</i> posted score.</p>
+
+  <p>My father Brian and I built VeriStasis to fix exactly this for shops like <span class="mark">[Company]</span>. We're two things in one: <b>software</b> that turns a scoped intake into your SSP, POA&amp;M, policies, and real SPRS score in weeks — and a <b>CMMC Registered Practitioner</b> (Brian, 30 years in the field) who reviews every package before you certify. Fixed-price. We don't touch your systems; we make the documentation defensible. We're not a C3PAO — an assessor certifies you; we make sure what you sign holds up.</p>
+
+  <p>The two pages behind this letter are a straight briefing — the liability, the SPRS math, the deadline, and exactly what we do — written to be useful whether or not we ever work together. And if it'd help, <b>we'll personally run <span class="mark">[Company]</span> a free 20-minute session and show you your real SPRS number.</b> No cost, no obligation.</p>
+
+  <p>Call or email either of us — me for the overview, Brian for the deep technical questions. Worth knowing your number before a prime or an auditor asks for it.</p>
+
+  <div class="sig">Respectfully,<b>Ben Olson</b>Co-Founder, VeriStasis</div>
+  <div class="ps"><b>P.S.</b> — CMMC Phase 2 (Level 2 third-party certification) phases in starting <b>November 10, 2026</b>. There are roughly 100 authorized assessors for tens of thousands of contractors who'll need them. The shops that know their number now are the ones still bidding next year.</div>
+  <div class="pgnum">1 / 3</div>
+</div>
+
+<!-- ════ PAGE 2 — THE REALITY ════ -->
+<div class="page">
+  <div class="mast">
+    <svg width="32" height="35" viewBox="0 0 44 48" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="b2" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+      <linearGradient id="g2" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/></linearGradient></defs>
+      <path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#g2)" stroke="url(#b2)" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="22" cy="15.2" r="2.7" fill="url(#b2)"/><path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="wm">Veri<span class="s">Stasis</span></span>
+    <div class="who">A straight briefing for the owner<br>who signs the SPRS affirmation</div>
+  </div>
+  <div class="rule"></div>
+
+  <p class="eyebrow">The reality, honestly</p>
+  <h1>What you're actually signing — <span class="grad-txt">and why the number matters.</span></h1>
+
+  <h2>1 · You sign it. Personally. Under penalty of law.</h2>
+  <p>The CMMC affirmation isn't a form your IT person files. A <b>senior official</b> attests in SPRS that the company meets the requirements — it's <b>non-delegable</b>, and it carries <b>False Claims Act</b> exposure. "Knowing" under the FCA includes <i>reckless disregard</i> — signing a number you never actually verified.</p>
+  <div class="callout c-dark">The DOJ is already collecting. Recent settlements for misstated cybersecurity compliance: <b>Georgia Tech — $875K</b> (the whistleblowers were the company's own cybersecurity team), <b>MORSECORP — $4.6M</b> (a false "−142" SPRS score), <b>Raytheon — $8.4M</b>. FCA penalties run to <b>treble damages</b>.</div>
+
+  <h2>2 · The SPRS math is unforgiving.</h2>
+  <p>You don't earn points up from zero. <b>You start at 110 and lose 5, 3, or 1 point for every unmet control, down to a −203 floor.</b> So a shop that feels "70% there" often has a <i>negative</i> posted score.</p>
+  <div class="stat">
+    <div><div class="n grad-txt">110</div><div class="l">Perfect score — all 110 NIST 800-171 controls met</div></div>
+    <div><div class="n grad-txt">≥&nbsp;88</div><div class="l">The 80% floor you must hit to even use a POA&amp;M</div></div>
+    <div><div class="n grad-txt">−203</div><div class="l">How low a real, posted score can actually go</div></div>
+  </div>
+  <div class="callout c-amber"><b>The trap that fails assessments:</b> certain controls are <b>"must-meet"</b> — they <b>cannot</b> go on a POA&amp;M. Leave one open and you fail outright, regardless of score. Anything you do defer must close within <b>180 days</b>. Most shops learn which controls are non-negotiable the expensive way — from a C3PAO.</div>
+
+  <h2>3 · The clock — and the bottleneck.</h2>
+  <p>CMMC <b>Phase 2</b> (Level 2 certification by an independent C3PAO) phases into new DoD contracts starting <b>November 10, 2026</b> — and a prime can ask for your self-assessed SPRS score <i>today</i>, as a condition of staying on the bid list.</p>
+  <div class="callout c-tint"><b>~100 authorized assessors. Tens of thousands of contractors who'll need them.</b> Readiness work takes months, and the assessor calendar fills first-come. Knowing your real number now is the difference between getting in line and getting left out.</div>
+
+  <p class="small" style="margin-top:18px;">Sources: 32 CFR Part 170 &amp; DFARS 252.204-7021; NIST SP 800-171 Rev 2 DoD Assessment Methodology; DOJ Civil Cyber-Fraud Initiative settlement releases. Educational, not legal advice.</p>
+  <div class="pgnum">2 / 3</div>
+</div>
+
+<!-- ════ PAGE 3 — WHAT WE DO + OFFER ════ -->
+<div class="page">
+  <div class="mast">
+    <svg width="32" height="35" viewBox="0 0 44 48" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="b3" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+      <linearGradient id="g3" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/></linearGradient></defs>
+      <path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#g3)" stroke="url(#b3)" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="22" cy="15.2" r="2.7" fill="url(#b3)"/><path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b3)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="wm">Veri<span class="s">Stasis</span></span>
+    <div class="who">Software + a CMMC expert,<br>in one place</div>
+  </div>
+  <div class="rule"></div>
+
+  <p class="eyebrow">What VeriStasis does</p>
+  <h1>The engine does ~80%. <span class="grad-txt">A CMMC RP does the 20% that needs judgment.</span></h1>
+
+  <div class="two">
+    <div class="pill">
+      <div class="k">The software</div>
+      <h3>Generates the package</h3>
+      <p>A scoped intake → your SSP, POA&amp;M, ~20 policies, your real SPRS score + the fastest legitimate path to raise it, and a C3PAO-ready, checksummed bundle. Weeks, fixed-price, deterministic — no AI.</p>
+    </div>
+    <div class="pill">
+      <div class="k">The advisory</div>
+      <h3>Makes it defensible</h3>
+      <p>A CMMC Registered Practitioner reviews every package before you certify — scope, narratives, N/A justifications, the score — and can guide you from a quick readiness check to fully done-<i>with</i>-you.</p>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h4>You attest</h4><p>~35 real decisions, not 110.</p></div>
+    <div class="step"><div class="num">2</div><h4>Engine generates</h4><p>Docs + your real score.</p></div>
+    <div class="step"><div class="num">3</div><h4>RP reviews</h4><p>Before you certify.</p></div>
+    <div class="step"><div class="num">4</div><h4>Stay current</h4><p>For the annual affirmation.</p></div>
+  </div>
+
+  <h2>How that compares</h2>
+  <table>
+    <tr><th>&nbsp;</th><th>VeriStasis</th><th>$40k consultant</th><th>$200/mo software</th><th>Wait and see</th></tr>
+    <tr><td>Time to ready</td><td class="us">Weeks</td><td>~2 months</td><td>DIY — your hours</td><td>Months you don't have</td></tr>
+    <tr><td>Price</td><td class="us">Fixed, a fraction of $40k</td><td>~$40k, open meter</td><td>Cheap + your labor</td><td>Lost bids later</td></tr>
+    <tr><td>Human CMMC expert</td><td class="us">RP on every file</td><td>Yes</td><td>None</td><td>None</td></tr>
+    <tr><td>Done-for-you documents</td><td class="us">Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+    <tr><td>Stays current for the affirmation</td><td class="us">Yes</td><td>No</td><td>Partial</td><td>No</td></tr>
+  </table>
+
+  <div class="creds">
+    <div class="av">BO</div>
+    <div>
+      <h4>Brian Olson — the expert who reviews your work</h4>
+      <div class="role">Co-Founder · CMMC Registered Practitioner</div>
+      <p>30 years in cybersecurity, compliance, and GRC across manufacturing, healthcare, and government. He reviews every VeriStasis package the way the official who signs your affirmation has to.</p>
+      <div class="chips"><span class="chip">CMMC RP</span><span class="chip">CISSP</span><span class="chip">CISA</span><span class="chip">CISM</span><span class="chip">CCSP</span><span class="chip">CDPSE</span><span class="chip">ISO 27001/42001 LI</span></div>
+    </div>
+  </div>
+
+  <p class="small"><b>What we don't do:</b> we're not a C3PAO and we don't certify or guarantee compliance (a C3PAO assesses; you affirm). We don't host CUI and we never touch your live systems — the SPRS score is computed from the answers you attest. We say exactly what we do, and what we don't. For someone signing under real liability, that restraint is the point.</p>
+
+  <div class="offer">
+    <div class="big">See your real SPRS score — free, in 20 minutes.</div>
+    <div class="sm">No cost, no obligation. We'll show you your number and your must-meet gaps. Call or email either of us:</div>
+    <div class="contacts">
+      <div class="ct"><div class="nm">Ben Olson</div><div class="rl">Co-Founder — start here</div><div class="li">(559) 207-1925<br>ben@veristasis.com</div></div>
+      <div class="ct"><div class="nm">Brian Olson</div><div class="rl">CMMC RP — technical depth</div><div class="li">(559) 618-1763<br>brian@veristasis.com</div></div>
+    </div>
+  </div>
+
+  <div class="foot">VeriStasis is a documentation product and advisory service — not a C3PAO, not a CUI-hosting environment, and it does not connect to your systems. The SPRS score is computed from your attested answers; a C3PAO performs the assessment and you sign the affirmation. Deterministic generation, no AI. Not legal advice. © 2026 VeriStasis, a DBA of Ensight LLC · Kingsburg, CA · veristasis.com</div>
+  <div class="pgnum">3 / 3</div>
+</div>
+
+</body>
+</html>

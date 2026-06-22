@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VeriStasis — Direct-mail cover letter</title>
+<style>
+  :root{ --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --blue:#2563eb; --cyan:#0ea5e9; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:#f1f5f9; color:var(--ink); font-family:'Segoe UI',system-ui,Arial,sans-serif; line-height:1.55; }
+  .bar{ max-width:760px; margin:18px auto 0; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  .btn{ font:600 14px 'Segoe UI',sans-serif; padding:10px 18px; border-radius:8px; border:1px solid var(--blue); background:var(--blue); color:#fff; cursor:pointer; }
+  .btn:hover{ background:#1d4ed8; }
+  .hint{ color:var(--muted); font-size:13px; }
+  .mark{ background:#fef9c3; padding:0 3px; border-radius:3px; }   /* highlights merge fields on screen */
+  .page{ max-width:760px; margin:14px auto 40px; background:#fff; padding:56px 64px; box-shadow:0 1px 8px rgba(0,0,0,.08); border-radius:6px; }
+  .head{ display:flex; align-items:center; gap:12px; border-bottom:2px solid var(--blue); padding-bottom:16px; }
+  .wm{ font-weight:800; font-size:22px; letter-spacing:-0.01em; }
+  .wm .s{ color:var(--blue); }
+  .contact{ margin-left:auto; text-align:right; font-size:12px; color:var(--muted); line-height:1.5; }
+  .date{ margin:26px 0 22px; color:var(--muted); font-size:14px; }
+  .addr{ font-size:14px; line-height:1.5; margin-bottom:26px; }
+  p{ font-size:14.5px; margin:0 0 14px; }
+  .sig{ margin-top:26px; font-size:14.5px; }
+  .sig b{ display:block; margin-top:18px; }
+  .ps{ margin-top:22px; padding-top:14px; border-top:1px solid var(--line); font-size:13.5px; color:var(--muted); }
+  @media print{
+    body{ background:#fff; } .bar{ display:none; }
+    .page{ box-shadow:none; margin:0; max-width:none; padding:0; }
+    .mark{ background:transparent; }
+    @page{ margin:0.85in; }
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <button class="btn" onclick="window.print()">Save as PDF / Print</button>
+  <span class="hint">Replace every <span class="mark">highlighted</span> field per recipient, then print. (Highlights vanish in print/PDF.)</span>
+</div>
+
+<div class="page">
+  <div class="head">
+    <svg width="34" height="37" viewBox="0 0 44 48" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="b" x1="6" y1="3" x2="40" y2="45" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="0.5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+        <linearGradient id="f" x1="22" y1="3" x2="22" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.05"/></linearGradient>
+      </defs>
+      <path d="M22 2.5 L39 9.5 V24 C39 33.5 31.7 42 22 45.5 C12.3 42 5 33.5 5 24 V9.5 Z" fill="url(#f)" stroke="url(#b)" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="22" cy="15.2" r="2.7" fill="url(#b)"/>
+      <path d="M13.4 19.6 L22 34 L30.6 19.6" fill="none" stroke="url(#b)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="wm">Veri<span class="s">Stasis</span></span>
+    <div class="contact">Ben Olson · Co-Founder<br>(559) 207-1925 · ben@veristasis.com<br>veristasis.com</div>
+  </div>
+
+  <div class="date"><span class="mark">[Month Day, Year]</span></div>
+
+  <div class="addr">
+    <span class="mark">[First Last]</span><br>
+    <span class="mark">[Title]</span>, <span class="mark">[Company]</span><br>
+    <span class="mark">[Street Address]</span><br>
+    <span class="mark">[City, ST ZIP]</span>
+  </div>
+
+  <p>Dear <span class="mark">[First]</span>,</p>
+
+  <p>I sent this by mail on purpose. If a prime hasn't already flowed a CMMC Level 2 clause down to <span class="mark">[Company]</span>, one is coming — and it's the kind of thing that's easy to let sit until it's suddenly urgent and the assessor calendar is full.</p>
+
+  <p>Here's the part most owners I talk to haven't actually done: computed their <b>real SPRS score</b>. It's the number <i>you</i> personally sign under the affirmation — with False Claims Act exposure — and the math is unforgiving. You start at 110 and lose 5, 3, or 1 point per unmet control down to a −203 floor, so "we're mostly there" is often a <i>negative</i> number.</p>
+
+  <p>I co-founded VeriStasis to fix exactly this for shops like <span class="mark">[Company]</span>. We're two things in one: <b>software</b> that turns a scoped intake into your System Security Plan, POA&amp;M, policies, and real SPRS score in weeks — and a <b>CMMC Registered Practitioner</b> (my father and co-founder, Brian — 30 years in cybersecurity and GRC) who reviews every package before you certify. Fixed-price. We don't touch your systems; we make the documentation defensible. We're not a C3PAO — an assessor certifies you; we make sure what you sign holds up.</p>
+
+  <p>I've enclosed a one-page CMMC readiness checklist — no pitch in it, just the reality check I'd want if my name were on that affirmation. And if it'd be useful, <b>I'll personally run <span class="mark">[Company]</span> a free 20-minute session and show you your real SPRS number</b> — no cost, no obligation.</p>
+
+  <p>Call or email me directly, or scan the card enclosed to grab a time. Worth knowing your number before a prime or an auditor asks for it.</p>
+
+  <div class="sig">
+    Respectfully,
+    <b>Ben Olson</b>
+    Co-Founder, VeriStasis<br>
+    (559) 207-1925 · ben@veristasis.com
+  </div>
+
+  <div class="ps"><b>P.S.</b> — CMMC Phase 2 (Level 2 third-party certification) phases in starting November 10, 2026, and assessor capacity is scarce. The shops that know their number now are the ones still bidding next year.</div>
+</div>
+</body>
+</html>
