@@ -14,7 +14,7 @@ Prepared for: [Signer name, title]        Date: [date]        Valid through: [da
 Your situation
 [1–2 lines: their CMMC L2 trigger/deadline and what they need — from the deal card.]
 
-What we'll deliver — [Tier: Complete / Managed]
+What we'll deliver — [Tier: C3PAO-Ready Package / Always Current]
 • System Security Plan (Word + OSCAL)
 • POA&M (every unmet/partial control, owners, milestones, 180-day closeouts)
 • Full policy set (~20 documents, control-linked)
@@ -22,7 +22,7 @@ What we'll deliver — [Tier: Complete / Managed]
 • C3PAO-ready bundle: per-control assessor index, README, per-file + whole-bundle SHA-256 checksums
 • Customer Responsibility Matrix + ESP service description
 • Expert review of narratives, scope, and score before you certify
-[Managed adds: LiveDoc™ version control, quarterly review, affirmation prep, unlimited re-docs on change]
+[Always Current adds: LiveDoc™ version control, quarterly review, affirmation prep, unlimited re-docs on change]
 
 What it is not: not a SIEM or monitoring tool, not a CUI hosting environment; we don't connect to your live
 systems — we generate from the answers you provide. VeriStasis is not a FedRAMP-authorized service and does

@@ -57,5 +57,5 @@ Goal: get from "interesting" to "run my intake." Show, don't tell.
 
 ## Pilot → paid conversion
 At bundle delivery: "Here's your package + checksum. To keep this current for your annual affirmation —
-re-score after changes, 180-day POA&M tracking, affirmation prep — that's the [Managed/Complete] plan at
+re-score after changes, 180-day POA&M tracking, affirmation prep — that's the [Always Current/C3PAO-Ready Package] plan at
 [price]. Want me to turn it on?" The retention hook is the affirmation; a one-time SSP churns 25–40%/yr.

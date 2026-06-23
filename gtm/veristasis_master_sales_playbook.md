@@ -173,7 +173,7 @@ rigor/trust layer, never an open-ended relationship.
 | Flag must-meet gating gaps + POA&M-eligibility | Operating/monitoring their environment (SIEM/MDR) |
 | Contextualize the risk for the affirming official | Representing them to the C3PAO / "certifying" them |
 | Prioritize the gap roadmap (ScorePath) | Legal opinions (→ qualified counsel) |
-| Bounded, time-boxed sessions (scoping / gap / readiness) | Unlimited hourly hand-holding (→ retainer or Guided) |
+| Bounded, time-boxed sessions (scoping / gap / readiness) | Unlimited hourly hand-holding (→ retainer or RP Partner) |
 
 > **Boundary line (memorize):** *"We review the documentation and advise on the gap; you (or your MSP) implement.
 > We never touch your systems, and we never verify your controls are in place — we work from what you attest."*
@@ -424,8 +424,8 @@ cite as such). NDIA Vital Signs 2026 (compliance burden top-3, 50%).
 
 > ⚠️ **Re-verify before any dated PUBLIC claim:** the live C3PAO count, the Phase-2 date, and the C3PAO fee range
 > (sources span $30k–$150k; DoD's $105k–$118k is a bundled model estimate, not a quoted fee — keep distinct).
-> **Pricing is now PUBLIC on the site** (`solutions.html`): fixed-price tiers — Starter $7,200 / Complete $11,700
-> / Managed $13,500 / Guided $19,800, plus recurring (prior draft −10%; full sheet in
+> **Pricing is now PUBLIC on the site** (`solutions.html`): fixed-price tiers — Audit Foundation $7,200 / C3PAO-Ready Package $11,700
+> / Always Current $13,500 / RP Partner $19,800, plus recurring (prior draft −10%; full sheet in
 > [gtm/05-pricing-and-packaging.md](05-pricing-and-packaging.md)). The **~$40k consultant** stays the value
 > anchor; confirm the final fixed number on a scope call, and never advertise the cut as a discount.
 > CyberSheath/PreVeil/Secureframe figures are vendor-sourced — soften or attribute in customer-facing copy.

@@ -22,7 +22,7 @@ Pure static HTML/CSS/JS — no framework, no build step.
 |---|---|
 | `index.html` | Landing — hero with ScorePath projection panel, signature capabilities, comparison, pipeline, honest data-handling band, channel band, FAQ |
 | `platform.html` | The engine — SmartScope intake, SPRS + ScorePath, generated artifacts, export/C3PAO bundle, LiveDoc control |
-| `solutions.html` | Audiences — defense contractors and the RPO/MSP channel; packaging tiers (Starter / Complete / Managed) |
+| `solutions.html` | Audiences — defense contractors and the RPO/MSP channel; packaging tiers (Audit Foundation / C3PAO-Ready Package / Always Current / RP Partner) |
 | `security.html` | Security & data handling — client-side encrypted evidence, what we can/can't read, SPD-only-pending-counsel posture |
 | `company.html` | About — leadership, location, why we build this way |
 | `contact.html` | Book-a-demo / request-access form |

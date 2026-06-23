@@ -42,7 +42,7 @@ Account:                          Signer (name/title):
 Relationship / warmth:            Intro path (who connects you):
 CUI? Y/N        Trigger + date:
 The hook (their specific pain):
-Tier likely (Complete/Managed):   Rough scope (systems/stack/inheritance):
+Tier likely (C3PAO-Ready Package/Always Current):   Rough scope (systems/stack/inheritance):
 Next action + date:               Close path (steps to signature):
 Blockers:                         Status:
 ```
